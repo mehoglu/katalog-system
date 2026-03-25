@@ -113,44 +113,44 @@ Welche Phasen welche Requirements abdecken. Wird während Roadmap-Erstellung akt
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| IMPORT-01 | TBD | Pending |
-| IMPORT-02 | TBD | Pending |
-| IMPORT-03 | TBD | Pending |
-| IMPORT-04 | TBD | Pending |
-| CSV-01 | TBD | Pending |
-| CSV-02 | TBD | Pending |
-| CSV-03 | TBD | Pending |
-| FUSION-01 | TBD | Pending |
-| FUSION-02 | TBD | Pending |
-| FUSION-03 | TBD | Pending |
-| FUSION-04 | TBD | Pending |
-| TEXT-01 | TBD | Pending |
-| TEXT-02 | TBD | Pending |
-| TEXT-03 | TBD | Pending |
-| TEXT-04 | TBD | Pending |
-| IMAGE-01 | TBD | Pending |
-| IMAGE-02 | TBD | Pending |
-| IMAGE-03 | TBD | Pending |
-| IMAGE-04 | TBD | Pending |
-| REVIEW-01 | TBD | Pending |
-| REVIEW-02 | TBD | Pending |
-| REVIEW-03 | TBD | Pending |
-| REVIEW-04 | TBD | Pending |
-| HTML-01 | TBD | Pending |
-| HTML-02 | TBD | Pending |
-| HTML-03 | TBD | Pending |
-| HTML-04 | TBD | Pending |
-| HTML-05 | TBD | Pending |
-| HTML-06 | TBD | Pending |
-| SYS-01 | TBD | Pending |
-| SYS-02 | TBD | Pending |
-| SYS-03 | TBD | Pending |
-| SYS-04 | TBD | Pending |
+| IMPORT-01 | Phase 1 | Pending |
+| IMPORT-02 | Phase 1 | Pending |
+| IMPORT-03 | Phase 1 | Pending |
+| IMPORT-04 | Phase 1 | Pending |
+| CSV-01 | Phase 2 | Pending |
+| CSV-02 | Phase 2 | Pending |
+| CSV-03 | Phase 2 | Pending |
+| FUSION-01 | Phase 3 | Pending |
+| FUSION-02 | Phase 3 | Pending |
+| FUSION-03 | Phase 3 | Pending |
+| FUSION-04 | Phase 3 | Pending |
+| TEXT-01 | Phase 5 | Pending |
+| TEXT-02 | Phase 5 | Pending |
+| TEXT-03 | Phase 5 | Pending |
+| TEXT-04 | Phase 5 | Pending |
+| IMAGE-01 | Phase 4 | Pending |
+| IMAGE-02 | Phase 4 | Pending |
+| IMAGE-03 | Phase 4 | Pending |
+| IMAGE-04 | Phase 4 | Pending |
+| REVIEW-01 | Phase 6 | Pending |
+| REVIEW-02 | Phase 6 | Pending |
+| REVIEW-03 | Phase 6 | Pending |
+| REVIEW-04 | Phase 6 | Pending |
+| HTML-01 | Phase 7 | Pending |
+| HTML-02 | Phase 7 | Pending |
+| HTML-03 | Phase 7 | Pending |
+| HTML-04 | Phase 7 | Pending |
+| HTML-05 | Phase 7 | Pending |
+| HTML-06 | Phase 7 | Pending |
+| SYS-01 | Phase 7 | Pending |
+| SYS-02 | Phase 7 | Pending |
+| SYS-03 | Phase 1 | Pending |
+| SYS-04 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 34 total
-- Mapped to phases: 0
-- Unmapped: 34 ⚠️
+- Mapped to phases: 34
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 25. März 2026*
