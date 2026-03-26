@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product.data.artikelnummer}} - Produktkatalog</title>
+    <style>
+        /* A4 Print Format: 210mm x 297mm */
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+        
+        @media print {
+            body {
+                width: 180mm;
+                margin: 0 auto;
+            }
+            @page {
+                margin: 15mm;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+        
+        .header {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10mm;
+            margin-bottom: 10mm;
+        }
+        
+        .art-nr {
+            font-size: 10pt;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5mm;
+        }
+        
+        h1 {
+            font-size: 20pt;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 3mm;
+        }
+        
+        .enhanced {
+            font-size: 14pt;
+            color: #333;
+            font-style: italic;
+            margin-bottom: 5mm;
+        }
+        
+        .description {
+            font-size: 11pt;
+            color: #444;
+            margin-bottom: 8mm;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+            margin-bottom: 10mm;
+        }
+        
+        .images {
+            grid-column: span 2;
+        }
+        
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        
+        .images .placeholder {
+            padding: 20mm;
+            background: #f5f5f5;
+            text-align: center;
+            color: #999;
+            border: 1px dashed #ccc;
+        }
+        
+        .details {
+            border: 1px solid #ddd;
+            padding: 5mm;
+        }
+        
+        .details h2 {
+            font-size: 14pt;
+            margin-bottom: 5mm;
+            color: #333;
+        }
+        
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .details td {
+            padding: 3mm;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .details td:first-child {
+            font-weight: 600;
+            width: 40%;
+        }
+        
+        .price {
+            grid-column: span 2;
+            text-align: center;
+            font-size: 24pt;
+            font-weight: 700;
+            color: #000;
+            padding: 5mm;
+            border: 2px solid #000;
+            background: #f9f9f9;
+        }
+        
+        .footer {
+            margin-top: 15mm;
+            padding-top: 5mm;
+            border-top: 1px solid #ddd;
+            font-size: 9pt;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="art-nr">Artikel-Nr: {{product.data.artikelnummer}}</div>
+        <h1>{{product.data.bezeichnung1 if product.data.bezeichnung1 else 'Produkt'}}</h1>
+        {% if product.data.bezeichnung1_enhanced %}
+        <div class="enhanced">{{product.data.bezeichnung1_enhanced}}</div>
+        {% endif %}
+        {% if product.data.bezeichnung2 %}
+        <div class="description">{{product.data.bezeichnung2}}</div>
+        {% endif %}
+    </div>
+    
+    <div class="product-grid">
+        <div class="images">
+            {% if product.data.bild_paths and product.data.bild_paths|length > 0 %}
+                {% for image_path in product.data.bild_paths[:3] %}
+                <img src="../{{image_path}}" alt="{{product.data.artikelnummer}}">
+                {% endfor %}
+            {% else %}
+            <div class="placeholder">Kein Bild verfügbar</div>
+            {% endif %}
+        </div>
+        
+        <div class="details">
+            <h2>Technische Daten</h2>
+            <table>
+                {% if product.data.breite_cm %}
+                <tr>
+                    <td>Breite</td>
+                    <td>{{product.data.breite_cm}} cm</td>
+                </tr>
+                {% endif %}
+                {% if product.data.hoehe_cm %}
+                <tr>
+                    <td>Höhe</td>
+                    <td>{{product.data.hoehe_cm}} cm</td>
+                </tr>
+                {% endif %}
+                {% if product.data.tiefe_cm %}
+                <tr>
+                    <td>Tiefe</td>
+                    <td>{{product.data.tiefe_cm}} cm</td>
+                </tr>
+                {% endif %}
+                {% if product.data.gewicht_kg %}
+                <tr>
+                    <td>Gewicht</td>
+                    <td>{{product.data.gewicht_kg}} kg</td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+        
+        <div class="details">
+            <h2>Zusatzinformationen</h2>
+            <table>
+                {% for key, value in product.data.items() %}
+                    {% if key not in ['artikelnummer', 'bezeichnung1', 'bezeichnung1_enhanced', 'bezeichnung2', 'breite_cm', 'hoehe_cm', 'tiefe_cm', 'gewicht_kg', 'preis', 'bild_paths'] and value %}
+                    <tr>
+                        <td>{{key}}</td>
+                        <td>{{value}}</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+        
+        {% if product.data.preis %}
+        <div class="price">
+            €{{product.data.preis}}
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="footer">
+        Katalog generiert: {{generation_date}}
+    </div>
+</body>
+</html>
