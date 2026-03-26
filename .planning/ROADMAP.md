@@ -93,7 +93,11 @@ Plans:
   2. User sees improved descriptions (Bezeichnung2) that are more engaging and grammatically polished
   3. System preserves technical terminology and measurements (does not hallucinate)
   4. System processes 500 products in under 10 minutes with batch optimization  
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
+
+Plans:
+- [ ] 05-01-PLAN.md — Text enhancement service with LLM batching (Wave 1, autonomous)
+- [ ] 05-02-PLAN.md — API endpoint + performance verification (Wave 2, has checkpoint)
 
 ### Phase 6: Data Review & Correction
 **Goal**: User can review all mapped data in table format and correct errors before generating catalogs  
