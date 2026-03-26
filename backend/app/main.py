@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.api import upload
+from app.api import upload, csv_analysis
 
 app = FastAPI(
     title="Katalog API",
     description="Backend für Produktkatalog-Generierung",
-    version="1.0.0"
+    version="0.2.0"
 )
 
 # CORS für Frontend
@@ -20,6 +20,7 @@ app.add_middleware(
 
 # Routers
 app.include_router(upload.router, prefix="/api", tags=["upload"])
+app.include_router(csv_analysis.router, prefix="/api", tags=["analysis"])
 
 @app.get("/health")
 async def health_check():
