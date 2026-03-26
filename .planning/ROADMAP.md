@@ -82,7 +82,7 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md — Image Linking Service + Models (Wave 1)
-- [ ] 04-02-PLAN.md — API Endpoint + Integration Tests (Wave 2)
+- [x] 04-02-PLAN.md — API Endpoint + Integration Tests (Wave 2)
 
 ### Phase 5: German Text Enhancement
 **Goal**: System improves product texts to be more readable and professional in German  
