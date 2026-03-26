@@ -81,7 +81,7 @@ Plans:
 **Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 04-01-PLAN.md — Image Linking Service + Models (Wave 1)
+- [x] 04-01-PLAN.md — Image Linking Service + Models (Wave 1)
 - [ ] 04-02-PLAN.md — API Endpoint + Integration Tests (Wave 2)
 
 ### Phase 5: German Text Enhancement
