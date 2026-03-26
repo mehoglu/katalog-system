@@ -78,7 +78,11 @@ Plans:
   2. System finds multiple images per product when available
   3. System matches images case-insensitively (D80950.jpg = d80950.JPG)
   4. Products without matching images show placeholder instead of breaking  
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
+
+Plans:
+- [ ] 04-01-PLAN.md — Image Linking Service + Models (Wave 1)
+- [ ] 04-02-PLAN.md — API Endpoint + Integration Tests (Wave 2)
 
 ### Phase 5: German Text Enhancement
 **Goal**: System improves product texts to be more readable and professional in German  
