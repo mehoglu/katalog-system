@@ -7,20 +7,28 @@
     <style>
         /* A4 Print Format: 210mm x 297mm */
         @page {
-            size: A4;
-            margin: 15mm;
+            size: A4 landscape;
+            margin: 12mm;
         }
         
         @media print {
             body {
-                width: 180mm;
+                width: 277mm;
                 margin: 0 auto;
+                background: #fff !important;
             }
             @page {
-                margin: 15mm;
+                margin: 12mm;
             }
             thead {
                 display: table-header-group;
+            }
+            .header-gradient {
+                background: #f8f9fa !important;
+                box-shadow: none !important;
+            }
+            tbody tr:hover {
+                background: transparent !important;
             }
         }
         
@@ -31,156 +39,306 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             font-size: 10pt;
             line-height: 1.5;
-            color: #000;
-            background: #fff;
-            max-width: 210mm;
+            color: #1f2937;
+            background: #f9fafb;
+            max-width: 297mm;
             margin: 0 auto;
-            padding: 15mm;
+            padding: 12mm;
         }
         
+        /* === HEADER SECTION === */
         .header {
-            border-bottom: 3px solid #000;
-            padding-bottom: 8mm;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8mm;
+            border-radius: 10px;
             margin-bottom: 8mm;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.25);
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);
+            padding: 6mm;
+            border-radius: 8px;
         }
         
         h1 {
-            font-size: 24pt;
-            font-weight: 700;
-            color: #000;
+            font-size: 26pt;
+            font-weight: 800;
             margin-bottom: 3mm;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            letter-spacing: -0.5px;
         }
         
         .stats {
-            font-size: 10pt;
-            color: #666;
+            font-size: 11pt;
+            display: flex;
+            gap: 5mm;
+            flex-wrap: wrap;
+            opacity: 0.95;
         }
         
-        .stats strong {
-            color: #000;
+        .stat-item {
+            background: rgba(255,255,255,0.2);
+            padding: 2mm 4mm;
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+        }
+        
+        .stat-item strong {
+            font-weight: 700;
+            font-size: 12pt;
+        }
+        
+        /* === TABLE SECTION === */
+        .table-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 5mm;
         }
         
         thead {
-            background: #f5f5f5;
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
         }
         
         th {
-            padding: 3mm;
+            padding: 4mm;
             text-align: left;
             font-weight: 700;
-            font-size: 9pt;
+            font-size: 9.5pt;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            white-space: nowrap;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 0;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 0;
         }
         
         tbody tr {
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e5e7eb;
+            transition: background-color 0.15s ease;
         }
         
-        tbody tr:hover {
-            background: #fafafa;
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+        
+        @media screen {
+            tbody tr:hover {
+                background: #f3f4f6;
+            }
         }
         
         td {
-            padding: 3mm;
-            font-size: 9pt;
+            padding: 3.5mm 4mm;
+            font-size: 9.5pt;
+            vertical-align: middle;
         }
         
         td:first-child {
+            font-weight: 700;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .product-name {
+            color: #1f2937;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .product-name-enhanced {
+            color: #374151;
             font-weight: 600;
         }
         
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
+        .price-cell {
+            font-weight: 700;
+            color: #059669;
+            font-size: 10pt;
         }
         
         .images-count {
-            color: #666;
+            text-align: center;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .image-badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 1mm 3mm;
+            border-radius: 4px;
+            font-size: 8.5pt;
+            font-weight: 600;
+        }
+        
+        .no-data {
+            color: #d1d5db;
             text-align: center;
         }
         
-        .footer {
-            margin-top: 10mm;
-            padding-top: 5mm;
-            border-top: 1px solid #ddd;
+        /* === LINK STYLING === */
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 2mm 4mm;
+            border-radius: 6px;
+            background: #eff6ff;
+            transition: all 0.2s ease;
+            display: inline-block;
             font-size: 9pt;
-            color: #666;
+        }
+        
+        @media screen {
+            a:hover {
+                background: #667eea;
+                color: white;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            }
+        }
+        
+        /* === FOOTER === */
+        .footer {
+            margin-top: 8mm;
+            padding: 5mm;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            font-size: 9.5pt;
+            color: #6b7280;
             text-align: center;
+            font-weight: 500;
+        }
+        
+        .footer-gradient {
+            background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+            height: 2px;
+            margin-bottom: 3mm;
+            opacity: 0.3;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3mm;
+        }
+        
+        .footer-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5mm 4mm;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 9pt;
+        }
+        
+        /* === RESPONSIVE === */
+        @media screen and (max-width: 900px) {
+            body {
+                padding: 5mm;
+            }
+            
+            table {
+                font-size: 8.5pt;
+            }
+            
+            th, td {
+                padding: 2.5mm;
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Produktkatalog</h1>
-        <div class="stats">
-            <strong>{{total_products}}</strong> Produkte insgesamt | 
-            Generiert: <strong>{{generation_date}}</strong>
+        <div class="header-gradient">
+            <h1>📦 Produktkatalog</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <strong>{{total_products}}</strong> Produkte
+                </div>
+                <div class="stat-item">
+                    Generiert: <strong>{{generation_date}}</strong>
+                </div>
+            </div>
         </div>
     </div>
     
-    <table>
-        <thead>
-            <tr>
-                <th>Artikel-Nr</th>
-                <th>Bezeichnung</th>
-                <th style="width: 80px;">Preis (€)</th>
-                <th style="width: 60px; text-align: center;">Bilder</th>
-                <th style="width: 80px; text-align: center;">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for product in products %}
-            <tr>
-                <td>{{product.artikelnummer}}</td>
-                <td>
-                    {% if product.data.bezeichnung1_enhanced %}
-                        {{product.data.bezeichnung1_enhanced}}
-                    {% elif product.data.bezeichnung1 %}
-                        {{product.data.bezeichnung1}}
-                    {% else %}
-                        —
-                    {% endif %}
-                </td>
-                <td>
-                    {% if product.data.preis %}
-                        {{product.data.preis}}
-                    {% else %}
-                        —
-                    {% endif %}
-                </td>
-                <td class="images-count">
-                    {% if product.data.bild_paths and product.data.bild_paths|length > 0 %}
-                        {{product.data.bild_paths|length}} 📷
-                    {% else %}
-                        —
-                    {% endif %}
-                </td>
-                <td style="text-align: center;">
-                    <a href="{{product.artikelnummer}}.html">Öffnen</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 100px;">Artikel-Nr</th>
+                    <th>Produktbezeichnung</th>
+                    <th style="width: 90px;">Preis</th>
+                    <th style="width: 80px; text-align: center;">Bilder</th>
+                    <th style="width: 100px; text-align: center;">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{product.artikelnummer}}</td>
+                    <td>
+                        {% if product.data.bezeichnung1_enhanced %}
+                            <div class="product-name product-name-enhanced">{{product.data.bezeichnung1_enhanced}}</div>
+                        {% elif product.data.bezeichnung1 %}
+                            <div class="product-name">{{product.data.bezeichnung1}}</div>
+                        {% else %}
+                            <span class="no-data">—</span>
+                        {% endif %}
+                    </td>
+                    <td class="price-cell">
+                        {% if product.data.preis %}
+                            € {{product.data.preis}}
+                        {% else %}
+                            <span class="no-data">—</span>
+                        {% endif %}
+                    </td>
+                    <td class="images-count">
+                        {% if product.data.bild_paths and product.data.bild_paths|length > 0 %}
+                            <span class="image-badge">{{product.data.bild_paths|length}} 📷</span>
+                        {% else %}
+                            <span class="no-data">—</span>
+                        {% endif %}
+                    </td>
+                    <td style="text-align: center;">
+                        <a href="{{product.artikelnummer}}.html">Ansehen →</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
     
     <div class="footer">
-        Katalog-System v0.7.0 | {{total_products}} Produkte
+        <div class="footer-gradient"></div>
+        <div class="footer-content">
+            <span>Katalog-System</span>
+            <span class="footer-badge">v0.9.0</span>
+            <span>•</span>
+            <span>{{total_products}} Produkte</span>
+        </div>
     </div>
 </body>
 </html>

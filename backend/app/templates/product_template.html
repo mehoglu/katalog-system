@@ -8,16 +8,27 @@
         /* A4 Print Format: 210mm x 297mm */
         @page {
             size: A4;
-            margin: 15mm;
+            margin: 12mm;
         }
         
         @media print {
             body {
-                width: 180mm;
+                width: 186mm;
                 margin: 0 auto;
+                background: #fff !important;
             }
             @page {
-                margin: 15mm;
+                margin: 12mm;
+            }
+            .header-gradient,
+            .price-card {
+                background: #f8f9fa !important;
+                box-shadow: none !important;
+            }
+            .price-badge {
+                background: #667eea !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
             }
         }
         
@@ -28,146 +39,269 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            font-size: 11pt;
-            line-height: 1.6;
-            color: #000;
-            background: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.65;
+            color: #1f2937;
+            background: #ffffff;
             max-width: 210mm;
             margin: 0 auto;
-            padding: 20mm;
+            padding: 15mm;
         }
         
+        /* === HEADER SECTION === */
         .header {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10mm;
-            margin-bottom: 10mm;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8mm;
+            border-radius: 8px;
+            margin-bottom: 8mm;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            padding: 6mm;
+            border-radius: 6px;
         }
         
         .art-nr {
-            font-size: 10pt;
-            color: #666;
+            font-size: 9pt;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5mm;
+            letter-spacing: 1.2px;
+            opacity: 0.95;
+            margin-bottom: 4mm;
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 2mm 4mm;
+            border-radius: 4px;
         }
         
         h1 {
-            font-size: 20pt;
-            font-weight: 600;
-            color: #000;
-            margin-bottom: 3mm;
+            font-size: 22pt;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 4mm;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .enhanced {
-            font-size: 14pt;
-            color: #333;
-            font-style: italic;
-            margin-bottom: 5mm;
+            font-size: 13pt;
+            font-weight: 500;
+            opacity: 0.95;
+            line-height: 1.5;
+            margin-bottom: 3mm;
         }
         
         .description {
-            font-size: 11pt;
-            color: #444;
-            margin-bottom: 8mm;
+            font-size: 10.5pt;
+            opacity: 0.9;
+            line-height: 1.6;
         }
         
+        /* === PRODUCT GRID === */
         .product-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10mm;
-            margin-bottom: 10mm;
+            gap: 6mm;
+            margin-bottom: 6mm;
         }
         
+        /* === IMAGES SECTION === */
         .images {
             grid-column: span 2;
+            background: #f8f9fa;
+            padding: 6mm;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80mm, 1fr));
+            gap: 4mm;
         }
         
         .images img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        
+        @media screen {
+            .images img:hover {
+                transform: scale(1.02);
+            }
         }
         
         .images .placeholder {
-            padding: 20mm;
-            background: #f5f5f5;
+            padding: 15mm;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
             text-align: center;
-            color: #999;
-            border: 1px dashed #ccc;
+            color: #9ca3af;
+            border: 2px dashed #d1d5db;
+            border-radius: 6px;
+            font-weight: 500;
         }
         
-        .details {
-            border: 1px solid #ddd;
+        /* === DETAILS CARDS === */
+        .details-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
             padding: 5mm;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
         
-        .details h2 {
-            font-size: 14pt;
-            margin-bottom: 5mm;
-            color: #333;
+        .details-card h2 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 4mm;
+            padding-bottom: 3mm;
+            border-bottom: 2px solid #667eea;
+            display: flex;
+            align-items: center;
         }
         
-        .details table {
+        .details-card h2::before {
+            content: '●';
+            color: #667eea;
+            margin-right: 2mm;
+            font-size: 10pt;
+        }
+        
+        .details-card table {
             width: 100%;
             border-collapse: collapse;
         }
         
-        .details td {
-            padding: 3mm;
-            border-bottom: 1px solid #eee;
+        .details-card td {
+            padding: 2.5mm 0;
+            font-size: 10pt;
+            border-bottom: 1px solid #f3f4f6;
         }
         
-        .details td:first-child {
+        .details-card tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .details-card td:first-child {
             font-weight: 600;
-            width: 40%;
+            color: #6b7280;
+            width: 45%;
         }
         
-        .price {
+        .details-card td:last-child {
+            color: #1f2937;
+            font-weight: 500;
+        }
+        
+        /* === PRICE CARD === */
+        .price-card {
             grid-column: span 2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6mm;
+            border-radius: 8px;
             text-align: center;
-            font-size: 24pt;
-            font-weight: 700;
-            color: #000;
-            padding: 5mm;
-            border: 2px solid #000;
-            background: #f9f9f9;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
         }
         
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+        }
+        
+        .price-label {
+            font-size: 10pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 2mm;
+            position: relative;
+        }
+        
+        .price-value {
+            font-size: 28pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+        
+        .price-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            padding: 3mm 6mm;
+            border-radius: 6px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* === FOOTER === */
         .footer {
-            margin-top: 15mm;
-            padding-top: 5mm;
-            border-top: 1px solid #ddd;
+            margin-top: 8mm;
+            padding-top: 4mm;
+            border-top: 2px solid #e5e7eb;
             font-size: 9pt;
-            color: #666;
+            color: #9ca3af;
             text-align: center;
+            font-weight: 500;
+        }
+        
+        .footer::before {
+            content: '◆';
+            color: #667eea;
+            margin-right: 2mm;
+        }
+        
+        .footer::after {
+            content: '◆';
+            color: #764ba2;
+            margin-left: 2mm;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="art-nr">Artikel-Nr: {{product.data.artikelnummer}}</div>
-        <h1>{{product.data.bezeichnung1 if product.data.bezeichnung1 else 'Produkt'}}</h1>
-        {% if product.data.bezeichnung1_enhanced %}
-        <div class="enhanced">{{product.data.bezeichnung1_enhanced}}</div>
-        {% endif %}
-        {% if product.data.bezeichnung2 %}
-        <div class="description">{{product.data.bezeichnung2}}</div>
-        {% endif %}
+        <div class="header-gradient">
+            <div class="art-nr">Art.-Nr. {{product.data.artikelnummer}}</div>
+            <h1>{{product.data.bezeichnung1 if product.data.bezeichnung1 else 'Produkt'}}</h1>
+            {% if product.data.bezeichnung1_enhanced %}
+            <div class="enhanced">{{product.data.bezeichnung1_enhanced}}</div>
+            {% endif %}
+            {% if product.data.bezeichnung2 %}
+            <div class="description">{{product.data.bezeichnung2}}</div>
+            {% endif %}
+        </div>
     </div>
     
     <div class="product-grid">
+        <!-- Images Section -->
         <div class="images">
             {% if product.data.bild_paths and product.data.bild_paths|length > 0 %}
+            <div class="image-grid">
                 {% for image_path in product.data.bild_paths[:3] %}
-                <img src="../{{image_path}}" alt="{{product.data.artikelnummer}}">
+                <img src="../{{image_path}}" alt="{{product.data.artikelnummer}}" loading="lazy">
                 {% endfor %}
+            </div>
             {% else %}
-            <div class="placeholder">Kein Bild verfügbar</div>
+            <div class="placeholder">📷 Kein Bild verfügbar</div>
             {% endif %}
         </div>
         
-        <div class="details">
+        <!-- Technical Specifications -->
+        <div class="details-card">
             <h2>Technische Daten</h2>
             <table>
                 {% if product.data.breite_cm %}
@@ -194,26 +328,47 @@
                     <td>{{product.data.gewicht_kg}} kg</td>
                 </tr>
                 {% endif %}
+                {% if not (product.data.breite_cm or product.data.hoehe_cm or product.data.tiefe_cm or product.data.gewicht_kg) %}
+                <tr>
+                    <td colspan="2" style="text-align: center; color: #9ca3af;">Keine technischen Daten verfügbar</td>
+                </tr>
+                {% endif %}
             </table>
         </div>
         
-        <div class="details">
+        <!-- Additional Information -->
+        <div class="details-card">
             <h2>Zusatzinformationen</h2>
             <table>
+                {% set filtered_items = [] %}
                 {% for key, value in product.data.items() %}
-                    {% if key not in ['artikelnummer', 'bezeichnung1', 'bezeichnung1_enhanced', 'bezeichnung2', 'breite_cm', 'hoehe_cm', 'tiefe_cm', 'gewicht_kg', 'preis', 'bild_paths'] and value %}
+                    {% if key not in ['artikelnummer', 'bezeichnung1', 'bezeichnung1_enhanced', 'bezeichnung2', 'bezeichnung2_enhanced', 'breite_cm', 'hoehe_cm', 'tiefe_cm', 'gewicht_kg', 'preis', 'bild_paths'] and value %}
+                        {% set _ = filtered_items.append((key, value)) %}
+                    {% endif %}
+                {% endfor %}
+                
+                {% if filtered_items|length > 0 %}
+                    {% for key, value in filtered_items[:10] %}
                     <tr>
                         <td>{{key}}</td>
                         <td>{{value}}</td>
                     </tr>
-                    {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="2" style="text-align: center; color: #9ca3af;">Keine Zusatzinformationen verfügbar</td>
+                    </tr>
+                {% endif %}
             </table>
         </div>
         
+        <!-- Price Card -->
         {% if product.data.preis %}
-        <div class="price">
-            €{{product.data.preis}}
+        <div class="price-card">
+            <div class="price-label">Preis</div>
+            <div class="price-value">
+                <div class="price-badge">€ {{product.data.preis}}</div>
+            </div>
         </div>
         {% endif %}
     </div>
