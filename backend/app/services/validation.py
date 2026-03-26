@@ -44,16 +44,18 @@ def validate_csv_structure(
     # CONTEXT D-12: Early-exit - stop at first critical error
     try:
         # Try to parse CSV with Polars (lazy evaluation)
-        df = pl.scan_csv(
+        # Note: Use read_csv (eager) first to detect delimiter, then scan_csv for lazy ops
+        df = pl.read_csv(
             csv_path,
             encoding=encoding,
+            separator=None,  # Auto-detect delimiter (comma, semicolon, tab, etc.)
             ignore_errors=False,  # Fail on parse errors
             truncate_ragged_lines=True  # Handle rows with varying column counts (common in real CSVs)
         )
         
         # Check 1: Empty file?
         try:
-            row_count = df.select(pl.count()).collect().item()
+            row_count = len(df)  # Already eager, no need for .collect()
         except Exception as e:
             errors.append(ValidationError(
                 severity=ErrorSeverity.CRITICAL,
@@ -129,7 +131,7 @@ def validate_csv_structure(
             stats["artikelnummer_column"] = artikelnummer_col
             
             # CONTEXT D-12: Early-exit - only check first 500 rows for duplicates
-            sample_df = df.select(artikelnummer_col).head(500).collect()
+            sample_df = df.select(artikelnummer_col).head(500)  # Already eager
             
             duplicated = sample_df.filter(pl.col(artikelnummer_col).is_duplicated())
             if len(duplicated) > 0:
@@ -145,7 +147,7 @@ def validate_csv_structure(
         
         # Check 5: Validate German umlauts present (encoding check)
         # Sample first 100 rows to look for German characters
-        sample_text = df.head(100).collect().to_pandas().to_string()
+        sample_text = df.head(100).to_pandas().to_string()  # Already eager
         has_german_chars = any(char in sample_text for char in ['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü'])
         
         if not has_german_chars:
