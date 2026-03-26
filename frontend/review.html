@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktdaten Review & Korrektur - Katalog</title>
+    <link rel="stylesheet" href="css/review.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Produktdaten Review & Korrektur</h1>
+            <div class="header-info">
+                <span id="upload-id-display" class="upload-id"></span>
+                <span id="product-count" class="product-count">Lädt...</span>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="filter-input" 
+                    placeholder="Filter Produkte (Artikel-Nr, Bezeichnung, etc.)"
+                >
+            </div>
+            <div class="action-buttons">
+                <button id="catalog-btn" class="btn-primary" disabled>
+                    📄 HTML-Katalog generieren
+                </button>
+                <button id="refresh-btn" class="btn-secondary">
+                    🔄 Aktualisieren
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Lade Produktdaten...</p>
+        </div>
+
+        <div id="error-message" class="error" style="display: none;"></div>
+
+        <div class="table-container">
+            <table id="review-table">
+                <thead>
+                    <tr>
+                        <th class="col-art-nr">Artikel-Nr</th>
+                        <th class="col-bez1">Bezeichnung 1</th>
+                        <th class="col-bez1-enh">Bezeichnung 1 (Verbessert)</th>
+                        <th class="col-bez2">Bezeichnung 2</th>
+                        <th class="col-price">Preis (€)</th>
+                        <th class="col-dim">Breite (cm)</th>
+                        <th class="col-dim">Höhe (cm)</th>
+                        <th class="col-dim">Tiefe (cm)</th>
+                        <th class="col-dim">Gewicht (kg)</th>
+                        <th class="col-images">Bilder</th>
+                        <th class="col-sources">Quellen</th>
+                    </tr>
+                </thead>
+                <tbody id="review-table-body">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <p class="hint">💡 Klicken Sie in eine Zelle um sie zu bearbeiten. Änderungen werden automatisch gespeichert.</p>
+        </footer>
+    </div>
+
+    <script src="js/review.js"></script>
+</body>
+</html>
