@@ -3,14 +3,17 @@ CSV Analysis Service using Anthropic Claude.
 CONTEXT D-01: Direct API calls, no frameworks
 CONTEXT D-09: Tool Use with JSON Schema
 CONTEXT D-13 to D-17: Confidence scoring and user confirmation
+Phase 1 Enhancement: Array column group detection (e.g., PREIS0-9).
 """
 from pathlib import Path
 from anthropic import Anthropic, RateLimitError, APITimeoutError, AnthropicError
 import time
-from typing import Tuple
+import re
+from typing import Tuple, List
+from collections import defaultdict
 
 from app.core.config import settings
-from app.models.csv_analysis import ColumnMapping, CSVAnalysisResult
+from app.models.csv_analysis import ColumnMapping, CSVAnalysisResult, ArrayColumnGroup
 from app.services.csv_sampling import sample_csv_for_llm
 
 
@@ -50,6 +53,76 @@ def get_anthropic_client() -> Anthropic:
     return Anthropic(api_key=settings.anthropic_api_key)
 
 
+# Array column patterns (Phase 1 Enhancement)
+ARRAY_COLUMN_PATTERNS = [
+    {
+        "pattern": r"^(PREIS|PRICE)(\d+)$",
+        "group_type": "price_tiers",
+        "recommendation": "These columns appear to be price tiers. Consider combining into a single array field: preis_nach_menge[]"
+    },
+    {
+        "pattern": r"^(ABMENGE|MENGE|QUANTITY|QTY)(\d+)$",
+        "group_type": "quantity_tiers",
+        "recommendation": "These columns appear to be quantity tiers. Consider combining into a single array field: abnahmemenge[]"
+    },
+    {
+        "pattern": r"^(STAFFEL|TIER|LEVEL)(\d+)$",
+        "group_type": "tier_levels",
+        "recommendation": "These columns appear to be tier levels. Consider combining into a single array field."
+    }
+]
+
+
+def detect_array_column_groups(headers: List[str]) -> List[ArrayColumnGroup]:
+    """
+    Detect columns that follow array patterns (e.g., PREIS0, PREIS1, ..., PREIS9).
+    
+    Phase 1 Enhancement: Identifies columns with numeric suffixes that should be
+    treated as arrays rather than separate fields.
+    
+    Args:
+        headers: List of CSV column names
+        
+    Returns:
+        List of detected array column groups with recommendations
+    """
+    groups = []
+    matched_columns = set()
+    
+    for pattern_config in ARRAY_COLUMN_PATTERNS:
+        pattern = pattern_config["pattern"]
+        group_type = pattern_config["group_type"]
+        recommendation = pattern_config["recommendation"]
+        
+        # Find all columns matching this pattern
+        matches = defaultdict(list)
+        for header in headers:
+            match = re.match(pattern, header, re.IGNORECASE)
+            if match and header not in matched_columns:
+                base_name = match.group(1)
+                digit = int(match.group(2))
+                matches[base_name.upper()].append((digit, header))
+        
+        # Create groups for bases with multiple matches
+        for base_name, column_list in matches.items():
+            if len(column_list) >= 2:  # At least 2 columns to form an array
+                # Sort by digit
+                column_list.sort(key=lambda x: x[0])
+                columns = [col for _, col in column_list]
+                
+                groups.append(ArrayColumnGroup(
+                    base_name=base_name,
+                    columns=columns,
+                    pattern_type=group_type,
+                    recommendation=recommendation
+                ))
+                
+                # Mark these columns as matched
+                matched_columns.update(columns)
+    
+    return groups if groups else None
+
+
 def validate_join_key_detection(result: CSVAnalysisResult) -> Tuple[bool, str]:
     """
     Ensure exactly ONE column is marked as join key.
@@ -79,6 +152,7 @@ def analyze_csv_structure(
     CONTEXT D-02/D-03: Uses Claude 3.5 Haiku primarily
     CONTEXT D-05/D-06: Samples header + 5-10 rows
     CONTEXT D-09: Tool Use (structured JSON via tool schema)
+    Phase 1 Enhancement: Detects array column groups (e.g., PREIS0-9)
     
     Args:
         csv_path: Path to UTF-8 CSV file
@@ -87,7 +161,7 @@ def analyze_csv_structure(
         max_retries: Max retry attempts for rate limits
     
     Returns:
-        CSVAnalysisResult with validated column mappings
+        CSVAnalysisResult with validated column mappings and array warnings
         
     Raises:
         ValueError: If join-key validation fails
@@ -95,6 +169,12 @@ def analyze_csv_structure(
     """
     # Step 1: Sample CSV (CONTEXT D-05/D-06)
     csv_sample = sample_csv_for_llm(csv_path, max_rows=10)
+    
+    # Phase 1 Enhancement: Extract headers from CSV sample and detect array columns
+    # Extract first line (header) from csv_sample
+    first_line = csv_sample.split('\n')[0] if csv_sample else ""
+    headers = [h.strip() for h in first_line.split(';')] if first_line else []
+    array_groups = detect_array_column_groups(headers)
     
     # Step 2: Prepare user prompt
     user_prompt = f"""Analyze this German product CSV:
@@ -137,7 +217,10 @@ Provide confidence scores and mark the unique article identifier as join key.
             
             result = CSVAnalysisResult.model_validate(tool_use.input)
             
-            # Step 6: Validate join-key detection (CONTEXT D-20)
+            # Step 6: Add array column groups to result (Phase 1 Enhancement)
+            result.array_column_groups = array_groups
+            
+            # Step 7: Validate join-key detection (CONTEXT D-20)
             is_valid, message = validate_join_key_detection(result)
             if not is_valid:
                 raise ValueError(f"Join-key validation failed: {message}")

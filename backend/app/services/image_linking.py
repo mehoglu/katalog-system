@@ -1,12 +1,14 @@
 """
 Image linking service for matching products to images via artikelnummer.
 Implements Phase 4 requirements IMAGE-01 through IMAGE-04.
+Phase 1 Enhancement: Browser-compatible image format validation.
 """
 from pathlib import Path
 import json
 from typing import Dict, List
+from collections import defaultdict
 
-from app.models.image_linking import ImageLinkResult
+from app.models.image_linking import ImageLinkResult, ImageFormatWarning
 
 
 def normalize_artikelnummer(art_nr: str) -> str:
@@ -30,6 +32,47 @@ def normalize_artikelnummer(art_nr: str) -> str:
         '210100125'
     """
     return art_nr.strip().lower()
+
+
+# Browser-compatible image formats (Phase 1 Enhancement)
+BROWSER_COMPATIBLE_FORMATS = {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
+
+
+def detect_image_format_warnings(image_mapping: dict) -> List[ImageFormatWarning]:
+    """
+    Detect non-browser-compatible image formats in the image mapping.
+    
+    Phase 1 Enhancement: Warn users about TIF, BMP, RAW files that browsers cannot display.
+    
+    Args:
+        image_mapping: Loaded manual_image_mapping.json dict
+        
+    Returns:
+        List of warnings grouped by format with recommendations
+    """
+    warnings = []
+    format_counts = defaultdict(list)
+    
+    # Collect all image paths and group by format
+    for images in image_mapping["mappings"].values():
+        for img in images:
+            img_path = Path(img["path"])
+            suffix = img_path.suffix.lower()
+            
+            # Check if format is not browser-compatible
+            if suffix and suffix not in BROWSER_COMPATIBLE_FORMATS:
+                format_counts[suffix].append(img_path.name)
+    
+    # Create warnings for each incompatible format
+    for format_ext, files in format_counts.items():
+        warnings.append(ImageFormatWarning(
+            format=format_ext,
+            count=len(files),
+            example_files=files[:3],  # First 3 examples
+            recommendation=f"Convert {format_ext} files to JPG or PNG for browser display. Browser-compatible formats: JPG, PNG, GIF, WebP, SVG."
+        ))
+    
+    return warnings if warnings else None
 
 
 def link_images_to_products(
@@ -135,9 +178,13 @@ def link_images_to_products(
         if art_nr not in matched_ids
     )
     
+    # Phase 1 Enhancement: Detect image format warnings
+    format_warnings = detect_image_format_warnings(image_mapping)
+    
     return ImageLinkResult(
         total_products=total_products,
         products_with_images=products_with_images,
         products_without_images=products_without_images,
-        unused_image_mappings=unused_mappings
+        unused_image_mappings=unused_mappings,
+        format_warnings=format_warnings
     )
