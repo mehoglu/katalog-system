@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.api import upload, csv_analysis, merge, image_linking
+from app.api import upload, csv_analysis, merge, image_linking, text_enhancement
 
 app = FastAPI(
     title="Katalog API",
     description="Backend für Produktkatalog-Generierung",
-    version="0.4.0"  # Phase 4: Automatic Image Linking
+    version="0.5.0"  # Phase 5: German Text Enhancement
 )
 
 # CORS für Frontend
@@ -23,6 +23,7 @@ app.include_router(upload.router, prefix="/api", tags=["upload"])
 app.include_router(csv_analysis.router, prefix="/api", tags=["analysis"])
 app.include_router(merge.router, prefix="/api", tags=["merge"])
 app.include_router(image_linking.router, tags=["images"])
+app.include_router(text_enhancement.router, tags=["texts"])
 
 @app.get("/health")
 async def health_check():
