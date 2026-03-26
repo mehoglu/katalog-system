@@ -6,6 +6,9 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from pathlib import Path
 
+from app.services.image_linking import link_images_to_products
+from app.core.config import settings
+
 router = APIRouter(prefix="/api/images", tags=["images"])
 
 
@@ -40,9 +43,6 @@ def link_images(request: ImageLinkRequest):
     Raises:
         HTTPException 404: If merged_products.json or manual_image_mapping.json not found
     """
-    from app.services.image_linking import link_images_to_products
-    from app.config import settings
-    
     # Construct paths
     upload_dir = Path(settings.upload_dir) / request.upload_id
     merged_products_path = upload_dir / "merged_products.json"
