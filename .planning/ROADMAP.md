@@ -44,7 +44,14 @@ Plans:
   2. System detects article number column automatically as join key across both CSVs
   3. User sees mapping proposal showing which CSV columns map to which product fields
   4. System processes CSV analysis within 30 seconds for 500+ products  
-**Plans**: TBD
+**Plans**: 5 plans in 4 waves
+
+Plans:
+- [ ] 02-01-PLAN.md — OpenAI Integration Setup (Wave 1)
+- [ ] 02-02-PLAN.md — CSV Sampling Service (Wave 1)
+- [ ] 02-03-PLAN.md — LLM CSV Analysis Service (Wave 2)
+- [ ] 02-04-PLAN.md — FastAPI Analysis Endpoint (Wave 3)
+- [ ] 02-05-PLAN.md — CSV Analysis Tests + Manual Verification (Wave 4)
 
 ### Phase 3: Multi-Source Data Fusion
 **Goal**: System merges product data from multiple CSVs correctly via article number  
