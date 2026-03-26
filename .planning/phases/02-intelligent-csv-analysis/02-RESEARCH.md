@@ -49,7 +49,7 @@
 
 **PRIMARY:**
 ```python
-openai==1.12.0+           # Official OpenAI Python SDK (2026 current)
+anthropic==0.25.0+        # Official Anthropic Python SDK (2026 current)
 pydantic==2.6.0+          # Data validation, JSON schema generation
 polars==0.20.10           # CSV reading (already in Phase 1)
 ```
@@ -61,20 +61,20 @@ pydantic-settings==2.2.0+ # Config management
 ```
 
 **Rationale:**
-- `openai` SDK has native Structured Outputs support (since v1.0+)
-- `pydantic` v2 generates OpenAI-compatible JSON schemas automatically
+- `anthropic` SDK has native Tool Use support (since Claude 3)
+- `pydantic` v2 defines tool schemas for Claude
 - `polars` already proven for CSV processing in Phase 1
 
 ---
 
 ## Architecture Patterns
 
-### 1. OpenAI Structured Outputs Pattern (2024+)
+### 1. Claude Tool Use Pattern (2024+)
 
 **HIGH CONFIDENCE** — This is the current standard as of late 2024/2026.
 
 ```python
-from openai import OpenAI
+from anthropic import Anthropic
 from pydantic import BaseModel
 
 class ColumnMapping(BaseModel):
@@ -87,25 +87,37 @@ class ColumnMapping(BaseModel):
 class CSVAnalysisResult(BaseModel):
     mappings: list[ColumnMapping]
 
-client = OpenAI(api_key=settings.openai_api_key)
+client = Anthropic(api_key=settings.anthropic_api_key)
 
-response = client.beta.chat.completions.parse(
-    model="gpt-4o-mini-2024-07-18",  # Structured Outputs support
-    messages=[
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": csv_context}
-    ],
-    response_format=CSVAnalysisResult
+# Define tool for structured output
+tools = [{
+    "name": "analyze_csv_columns",
+    "description": "Analyze CSV columns and return structured mappings",
+    "input_schema": CSVAnalysisResult.model_json_schema()
+}]
+
+response = client.messages.create(
+    model="claude-3-5-haiku-20241022",
+    max_tokens=4096,
+    tools=tools,
+    tool_choice={"type": "tool", "name": "analyze_csv_columns"},
+    messages=[{
+        "role": "user",
+        "content": f"Analyze this CSV:\n\n{csv_sample}"
+    }],
+    system=system_prompt
 )
 
-result = response.choices[0].message.parsed  # Type-safe Pydantic model
+# Extract tool use result
+tool_use = next(block for block in response.content if block.type == "tool_use")
+result = CSVAnalysisResult.model_validate(tool_use.input)
 ```
 
 **Key features:**
-- `beta.chat.completions.parse()` enforces schema
-- Returns Pydantic model directly (no JSON parsing)
+- Tool Use forces structured JSON output
+- Pydantic schema → Claude tool definition
+- Single call returns all mappings
 - Guaranteed valid output matching schema
-- Refusal handling built-in
 
 ### 2. CSV Sampling Strategy
 
@@ -150,7 +162,7 @@ def sample_csv_for_llm(csv_path: Path, max_rows: int = 10) -> str:
 
 ### 3. Model Selection Strategy
 
-**HIGH CONFIDENCE** — Based on OpenAI pricing and capabilities.
+**HIGH CONFIDENCE** — Based on Anthropic pricing and capabilities.
 
 ```python
 def get_model_for_csv_analysis(
@@ -159,33 +171,33 @@ def get_model_for_csv_analysis(
     has_previous_failure: bool = False
 ) -> str:
     """
-    Select appropriate model based on complexity.
+    Select appropriate Claude model based on complexity.
     
-    GPT-4o-mini: $0.15/1M input, $0.60/1M output
-    GPT-4o: $2.50/1M input, $10/1M output
+    Claude 3.5 Haiku: $0.25/1M input, $1.25/1M output (fast, cost-effective)
+    Claude 3.5 Sonnet: $3/1M input, $15/1M output (highest quality)
     """
     # Cost estimate per analysis
-    est_tokens = (column_count * 20) + (sample_row_count * 50)  # Rough estimate
+    est_tokens = (column_count * 20) + (sample_row_count * 50)
     
     # Decision logic
     if has_previous_failure:
-        # Previous analysis was ambiguous → upgrade to GPT-4o
-        return "gpt-4o-2024-08-06"
+        # Previous analysis was ambiguous → upgrade to Sonnet
+        return "claude-3-5-sonnet-20241022"
     elif column_count > 20 or est_tokens > 2000:
-        # Complex CSV → use GPT-4o for better reasoning
-        return "gpt-4o-2024-08-06"
+        # Complex CSV → use Sonnet for better reasoning
+        return "claude-3-5-sonnet-20241022"
     else:
-        # Standard case → GPT-4o-mini is sufficient
-        return "gpt-4o-mini-2024-07-18"
+        # Standard case → Haiku is sufficient
+        return "claude-3-5-haiku-20241022"
 ```
 
 **Cost estimates (500 products, 8 columns, 10 sample rows):**
-- GPT-4o-mini: ~$0.01-0.03 per CSV analysis
-- GPT-4o: ~$0.10-0.20 per CSV analysis
+- Claude 3.5 Haiku: ~$0.01-0.02 per CSV analysis
+- Claude 3.5 Sonnet: ~$0.15-0.25 per CSV analysis
 
-**When to upgrade to GPT-4o:**
+**When to upgrade to Sonnet:**
 - Many columns (>20) or ambiguous headers
-- Previous GPT-4o-mini analysis had low confidence (<0.7)
+- Previous Haiku analysis had low confidence (<0.7)
 - Complex domain-specific terminology
 
 ### 4. Confidence Score Calibration
@@ -435,7 +447,7 @@ if avg_confidence > actual_accuracy + 0.15:
 
 ```python
 from pathlib import Path
-from openai import OpenAI
+from anthropic import Anthropic
 from pydantic import BaseModel, Field
 from typing import List
 import polars as pl
@@ -495,10 +507,10 @@ Mark exactly ONE column as is_join_key: true (the unique product identifier).
 def analyze_csv_structure(
     upload_id: str,
     csv_path: Path,
-    openai_client: OpenAI
+    client: Anthropic
 ) -> CSVAnalysisResult:
     """
-    Analyze CSV structure with LLM.
+    Analyze CSV structure with Claude.
     
     Returns: CSVAnalysisResult with column mappings
     """
@@ -513,20 +525,37 @@ def analyze_csv_structure(
 Identify what each column represents and map to product fields.
 """
     
-    # Step 3: Call OpenAI with Structured Outputs
-    response = openai_client.beta.chat.completions.parse(
-        model="gpt-4o-mini-2024-07-18",
+    # Step 3: Prepare tool definition from Pydantic schema
+    tools = [{
+        "name": "analyze_csv_columns",
+        "description": "Report the analysis of CSV column meanings",
+        "input_schema": CSVAnalysisResult.model_json_schema()
+    }]
+    
+    # Step 4: Call Claude with Tool Use
+    response = client.messages.create(
+        model="claude-3-5-haiku-20241022",
+        max_tokens=2000,
+        system=SYSTEM_PROMPT,
         messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt}
         ],
-        response_format=CSVAnalysisResult,
+        tools=tools,
+        tool_choice={"type": "tool", "name": "analyze_csv_columns"},
         temperature=0.0  # Deterministic for consistency
     )
     
-    result = response.choices[0].message.parsed
+    # Step 5: Extract tool_use block and parse result
+    tool_use = next(
+        (block for block in response.content if block.type == "tool_use"),
+        None
+    )
+    if not tool_use:
+        raise ValueError("Claude did not return a tool_use block")
     
-    # Step 4: Validate join-key detection
+    result = CSVAnalysisResult.model_validate(tool_use.input)
+    
+    # Step 6: Validate join-key detection
     is_valid, message = validate_join_key_detection(result)
     if not is_valid:
         raise ValueError(f"Join-key validation failed: {message}")
@@ -538,18 +567,18 @@ Identify what each column represents and map to product fields.
 
 ```python
 from fastapi import APIRouter, HTTPException, Depends
-from openai import OpenAI
+from anthropic import Anthropic
 
 router = APIRouter()
 
-def get_openai_client() -> OpenAI:
-    """Dependency for OpenAI client."""
-    return OpenAI(api_key=settings.openai_api_key)
+def get_anthropic_client() -> Anthropic:
+    """Dependency for Anthropic client."""
+    return Anthropic(api_key=settings.anthropic_api_key)
 
 @router.post("/analyze/csv/{upload_id}")
 async def analyze_uploaded_csv(
     upload_id: str,
-    openai_client: OpenAI = Depends(get_openai_client)
+    anthropic_client: Anthropic = Depends(get_anthropic_client)
 ):
     """
     Analyze uploaded CSV structure.
@@ -571,8 +600,8 @@ async def analyze_uploaded_csv(
     csv_path = csv_files[0]
     
     try:
-        # Analyze with LLM
-        result = analyze_csv_structure(upload_id, csv_path, openai_client)
+        # Analyze with Claude
+        result = analyze_csv_structure(upload_id, csv_path, anthropic_client)
         
         # Prepare response
         join_key = next(m.csv_column for m in result.mappings if m.is_join_key)
@@ -600,7 +629,7 @@ async def analyze_uploaded_csv(
 
 **Breakdown:**
 - CSV sampling: <1 second (Polars is fast)
-- OpenAI API call: 3-10 seconds (depends on token count, model)
+- Claude API call: 3-10 seconds (depends on token count, model)
 - Response parsing: <1 second (Pydantic validation)
 - **Total per CSV:** 5-12 seconds
 
