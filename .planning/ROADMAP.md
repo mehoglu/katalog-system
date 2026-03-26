@@ -47,7 +47,7 @@ Plans:
 **Plans**: 5 plans in 4 waves
 
 Plans:
-- [ ] 02-01-PLAN.md — OpenAI Integration Setup (Wave 1)
+- [x] 02-01-PLAN.md — OpenAI Integration Setup (Wave 1)
 - [ ] 02-02-PLAN.md — CSV Sampling Service (Wave 1)
 - [ ] 02-03-PLAN.md — LLM CSV Analysis Service (Wave 2)
 - [ ] 02-04-PLAN.md — FastAPI Analysis Endpoint (Wave 3)
