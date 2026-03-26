@@ -15,6 +15,9 @@ from app.models.merge import (
 from app.models.image_linking import (
     ImageLinkResult
 )
+from app.models.text_enhancement import (
+    EnhancementResult
+)
 
 __all__ = [
     "UploadSession",
@@ -25,4 +28,5 @@ __all__ = [
     "MergedProduct",
     "MergeResult",
     "ImageLinkResult",
+    "EnhancementResult",
 ]
