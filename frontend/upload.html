@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog System - Upload</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        .content {
+            padding: 2.5rem;
+        }
+        
+        .upload-section {
+            margin-bottom: 2rem;
+        }
+        
+        .upload-section h2 {
+            font-size: 1.25rem;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .drop-zone {
+            border: 2px dashed var(--gray-300);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: var(--gray-50);
+        }
+        
+        .drop-zone:hover {
+            border-color: var(--primary);
+            background: #eff6ff;
+        }
+        
+        .drop-zone.drag-over {
+            border-color: var(--primary);
+            background: #dbeafe;
+            transform: scale(1.02);
+        }
+        
+        .drop-zone-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .drop-zone h3 {
+            color: var(--gray-700);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .drop-zone p {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-list {
+            margin-top: 1rem;
+            background: var(--gray-50);
+            border-radius: 8px;
+            padding: 1rem;
+            display: none;
+        }
+        
+        .file-list.has-files {
+            display: block;
+        }
+        
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .file-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .file-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .file-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .file-details h4 {
+            color: var(--gray-900);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .file-details p {
+            color: var(--gray-600);
+            font-size: 0.75rem;
+        }
+        
+        .file-remove {
+            background: var(--danger);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        
+        .file-remove:hover {
+            background: #dc2626;
+        }
+        
+        .btn {
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .progress-section {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--gray-50);
+            border-radius: 12px;
+        }
+        
+        .progress-section.active {
+            display: block;
+        }
+        
+        .progress-step {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+        
+        .progress-step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .step-icon.pending {
+            background: var(--gray-200);
+            color: var(--gray-600);
+        }
+        
+        .step-icon.active {
+            background: var(--primary);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        .step-icon.complete {
+            background: var(--success);
+            color: white;
+        }
+        
+        .step-icon.error {
+            background: var(--danger);
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            color: var(--gray-900);
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+        
+        .step-description {
+            color: var(--gray-600);
+            font-size: 0.8125rem;
+        }
+        
+        .alert {
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: start;
+        }
+        
+        .alert-icon {
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+        }
+        
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border-left: 4px solid var(--success);
+        }
+        
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid var(--danger);
+        }
+        
+        .alert-info {
+            background: #dbeafe;
+            color: #1e40af;
+            border-left: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📦 Katalog System</h1>
+            <p>Upload CSV-Dateien und Produktbilder</p>
+        </div>
+        
+        <div class="content">
+            <!-- CSV Upload Section -->
+            <div class="upload-section">
+                <h2>1. CSV-Dateien hochladen</h2>
+                <div class="drop-zone" id="csvDropZone">
+                    <div class="drop-zone-icon">📄</div>
+                    <h3>CSV-Dateien hier ablegen</h3>
+                    <p>oder klicken zum Auswählen</p>
+                </div>
+                <input type="file" id="csvInput" class="file-input" accept=".csv" multiple>
+                
+                <div class="file-list" id="csvFileList"></div>
+            </div>
+            
+            <!-- Image Upload Section -->
+            <div class="upload-section">
+                <h2>2. Produktbilder hochladen</h2>
+                <div class="drop-zone" id="imageDropZone">
+                    <div class="drop-zone-icon">🖼️</div>
+                    <h3>Bilder hier ablegen</h3>
+                    <p>JPG, PNG, GIF, WebP, SVG (mehrere Dateien möglich)</p>
+                </div>
+                <input type="file" id="imageInput" class="file-input" accept="image/*" multiple>
+                
+                <div class="file-list" id="imageFileList"></div>
+            </div>
+            
+            <!-- Upload Button -->
+            <button class="btn btn-primary" id="uploadBtn" disabled>
+                Hochladen und Verarbeiten starten
+            </button>
+            
+            <!-- Progress Section -->
+            <div class="progress-section" id="progressSection">
+                <div class="progress-step">
+                    <div class="step-icon pending" id="step1Icon">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Upload</div>
+                        <div class="step-description">Dateien werden hochgeladen...</div>
+                    </div>
+                </div>
+                
+                <div class="progress-step">
+                    <div class="step-icon pending" id="step2Icon">2</div>
+                    <div class="step-content">
+                        <div class="step-title">CSV-Analyse</div>
+                        <div class="step-description">Spaltenerkennung mit KI...</div>
+                    </div>
+                </div>
+                
+                <div class="progress-step">
+                    <div class="step-icon pending" id="step3Icon">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Daten-Merge</div>
+                        <div class="step-description">Produktdaten werden zusammengeführt...</div>
+                    </div>
+                </div>
+                
+                <div class="progress-step">
+                    <div class="step-icon pending" id="step4Icon">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Bilder verknüpfen</div>
+                        <div class="step-description">Bilder werden Produkten zugeordnet...</div>
+                    </div>
+                </div>
+                
+                <div class="progress-step">
+                    <div class="step-icon pending" id="step5Icon">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Text-Enhancement</div>
+                        <div class="step-description">Produkttexte werden verbessert...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // File storage
+        let csvFiles = [];
+        let imageFiles = [];
+        
+        // DOM Elements
+        const csvDropZone = document.getElementById('csvDropZone');
+        const csvInput = document.getElementById('csvInput');
+        const csvFileList = document.getElementById('csvFileList');
+        
+        const imageDropZone = document.getElementById('imageDropZone');
+        const imageInput = document.getElementById('imageInput');
+        const imageFileList = document.getElementById('imageFileList');
+        
+        const uploadBtn = document.getElementById('uploadBtn');
+        const progressSection = document.getElementById('progressSection');
+        
+        // CSV Drop Zone
+        csvDropZone.addEventListener('click', () => csvInput.click());
+        csvDropZone.addEventListener('dragover', handleDragOver);
+        csvDropZone.addEventListener('dragleave', handleDragLeave);
+        csvDropZone.addEventListener('drop', (e) => handleDrop(e, 'csv'));
+        csvInput.addEventListener('change', (e) => handleFileSelect(e, 'csv'));
+        
+        // Image Drop Zone
+        imageDropZone.addEventListener('click', () => imageInput.click());
+        imageDropZone.addEventListener('dragover', handleDragOver);
+        imageDropZone.addEventListener('dragleave', handleDragLeave);
+        imageDropZone.addEventListener('drop', (e) => handleDrop(e, 'image'));
+        imageInput.addEventListener('change', (e) => handleFileSelect(e, 'image'));
+        
+        // Upload Button
+        uploadBtn.addEventListener('click', startUpload);
+        
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('drag-over');
+        }
+        
+        function handleDragLeave(e) {
+            e.currentTarget.classList.remove('drag-over');
+        }
+        
+        function handleDrop(e, type) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('drag-over');
+            
+            const files = Array.from(e.dataTransfer.files);
+            if (type === 'csv') {
+                csvFiles = [...csvFiles, ...files.filter(f => f.name.endsWith('.csv'))];
+                renderFileList(csvFiles, csvFileList, 'csv');
+            } else {
+                imageFiles = [...imageFiles, ...files.filter(f => f.type.startsWith('image/'))];
+                renderFileList(imageFiles, imageFileList, 'image');
+            }
+            
+            updateUploadButton();
+        }
+        
+        function handleFileSelect(e, type) {
+            const files = Array.from(e.target.files);
+            if (type === 'csv') {
+                csvFiles = [...csvFiles, ...files];
+                renderFileList(csvFiles, csvFileList, 'csv');
+            } else {
+                imageFiles = [...imageFiles, ...files];
+                renderFileList(imageFiles, imageFileList, 'image');
+            }
+            
+            updateUploadButton();
+        }
+        
+        function renderFileList(files, container, type) {
+            if (files.length === 0) {
+                container.classList.remove('has-files');
+                return;
+            }
+            
+            container.classList.add('has-files');
+            container.innerHTML = files.map((file, index) => `
+                <div class="file-item">
+                    <div class="file-info">
+                        <div class="file-icon">${type === 'csv' ? '📄' : '🖼️'}</div>
+                        <div class="file-details">
+                            <h4>${file.name}</h4>
+                            <p>${formatFileSize(file.size)}</p>
+                        </div>
+                    </div>
+                    <button class="file-remove" onclick="removeFile('${type}', ${index})">
+                        Entfernen
+                    </button>
+                </div>
+            `).join('');
+        }
+        
+        function removeFile(type, index) {
+            if (type === 'csv') {
+                csvFiles.splice(index, 1);
+                renderFileList(csvFiles, csvFileList, 'csv');
+            } else {
+                imageFiles.splice(index, 1);
+                renderFileList(imageFiles, imageFileList, 'image');
+            }
+            updateUploadButton();
+        }
+        
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+        
+        function updateUploadButton() {
+            uploadBtn.disabled = csvFiles.length === 0;
+        }
+        
+        async function startUpload() {
+            // Show progress section
+            progressSection.classList.add('active');
+            uploadBtn.disabled = true;
+            
+            try {
+                // Step 1: Upload files
+                updateStepStatus(1, 'active', 'Dateien werden hochgeladen...');
+                
+                const formData = new FormData();
+                
+                // Add CSV files
+                csvFiles.forEach(file => {
+                    formData.append('csv_files', file);
+                });
+                
+                // Add image files
+                imageFiles.forEach(file => {
+                    formData.append('image_files', file);
+                });
+                
+                const uploadResponse = await fetch('http://localhost:8000/api/upload/combined', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!uploadResponse.ok) {
+                    throw new Error(`Upload failed: ${uploadResponse.statusText}`);
+                }
+                
+                const uploadData = await uploadResponse.json();
+                const uploadId = uploadData.upload_id;
+                
+                updateStepStatus(1, 'complete', `Upload erfolgreich: ${uploadData.csv_count} CSVs, ${uploadData.image_count} Bilder`);
+                
+                // Step 2: Start workflow
+                updateStepStatus(2, 'active', 'CSV-Analyse wird gestartet...');
+                
+                const workflowResponse = await fetch('http://localhost:8000/api/workflow/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ upload_id: uploadId })
+                });
+                
+                if (!workflowResponse.ok) {
+                    throw new Error(`Workflow start failed: ${workflowResponse.statusText}`);
+                }
+                
+                // Poll workflow status
+                await pollWorkflowStatus(uploadId);
+                
+            } catch (error) {
+                console.error('Upload error:', error);
+                showError(error.message);
+                uploadBtn.disabled = false;
+            }
+        }
+        
+        async function pollWorkflowStatus(uploadId) {
+            let lastStep = 1;
+            
+            while (true) {
+                const response = await fetch(`http://localhost:8000/api/workflow/status/${uploadId}`);
+                const status = await response.json();
+                
+                // Update step if changed
+                if (status.current_step > lastStep) {
+                    // Complete previous step
+                    updateStepStatus(lastStep, 'complete');
+                    lastStep = status.current_step;
+                }
+                
+                // Update current step
+                if (status.status === 'analyzing') {
+                    updateStepStatus(2, 'active', 'CSV-Analyse mit AI läuft...');
+                } else if (status.status === 'merging') {
+                    updateStepStatus(2, 'complete');
+                    updateStepStatus(3, 'active', 'Produktdaten werden zusammengeführt...');
+                } else if (status.status === 'linking') {
+                    updateStepStatus(3, 'complete');
+                    updateStepStatus(4, 'active', 'Bilder werden verknüpft...');
+                } else if (status.status === 'enhancing') {
+                    updateStepStatus(4, 'complete');
+                    updateStepStatus(5, 'active', 'Texte werden mit AI verbessert...');
+                } else if (status.status === 'generating') {
+                    updateStepStatus(5, 'active', 'HTML-Katalog wird erstellt...');
+                } else if (status.status === 'complete') {
+                    updateStepStatus(5, 'complete', 'Katalog erfolgreich erstellt!');
+                    
+                    // Show success message and redirect
+                    setTimeout(() => {
+                        showSuccess('Katalog wurde erfolgreich generiert!');
+                        setTimeout(() => {
+                            window.location.href = `/frontend/review.html?upload_id=${uploadId}`;
+                        }, 1500);
+                    }, 1000);
+                    
+                    return;
+                } else if (status.status === 'error') {
+                    throw new Error(status.error || 'Workflow failed');
+                }
+                
+                // Poll every 2 seconds
+                await new Promise(resolve => setTimeout(resolve, 2000));
+            }
+        }
+        
+        function updateStepStatus(stepNumber, status, message = null) {
+            const icon = document.getElementById(`step${stepNumber}Icon`);
+            const step = icon.closest('.progress-step');
+            const description = step.querySelector('.step-description');
+            
+            // Remove all status classes
+            icon.classList.remove('pending', 'active', 'complete', 'error');
+            
+            // Add new status
+            icon.classList.add(status);
+            
+            // Update icon content
+            if (status === 'active') {
+                icon.textContent = '⏳';
+            } else if (status === 'complete') {
+                icon.textContent = '✓';
+            } else if (status === 'error') {
+                icon.textContent = '✗';
+            } else {
+                icon.textContent = stepNumber;
+            }
+            
+            // Update message if provided
+            if (message && description) {
+                description.textContent = message;
+            }
+        }
+        
+        function showSuccess(message) {
+            const alert = document.createElement('div');
+            alert.className = 'alert alert-success';
+            alert.innerHTML = `
+                <span class="alert-icon">✓</span>
+                <div>${message}</div>
+            `;
+            
+            const content = document.querySelector('.content');
+            content.insertBefore(alert, content.firstChild);
+        }
+        
+        function showError(message) {
+            const alert = document.createElement('div');
+            alert.className = 'alert alert-error';
+            alert.innerHTML = `
+                <span class="alert-icon">✗</span>
+                <div>${message}</div>
+            `;
+            
+            const content = document.querySelector('.content');
+            content.insertBefore(alert, content.firstChild);
+            
+            // Mark current step as error
+            for (let i = 1; i <= 5; i++) {
+                const icon = document.getElementById(`step${i}Icon`);
+                if (icon.classList.contains('active')) {
+                    updateStepStatus(i, 'error');
+                    break;
+                }
+            }
+        }
+        
+        async function simulateStep(step, duration) {
+            // Deprecated - using real API now
+        }
+    </script>
+</body>
+</html>

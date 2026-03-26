@@ -230,3 +230,82 @@ async def get_upload_session(upload_id: str):
         "image_count": len(image_files),
         "upload_dir": str(upload_dir)
     }
+
+
+@router.post("/upload/combined")
+async def upload_combined(
+    csv_files: list[UploadFile] = File(...),
+    image_files: list[UploadFile] = File(default=[]),
+):
+    """
+    Combined upload endpoint for CSV files and images
+    Phase 9: Simplified upload UI - both file types in one request
+    
+    Returns:
+        {
+            "upload_id": str,
+            "csv_count": int,
+            "image_count": int,
+            "status": str
+        }
+    """
+    # Validate at least one CSV file
+    if not csv_files:
+        raise HTTPException(
+            status_code=400,
+            detail="At least one CSV file required"
+        )
+    
+    # Create upload session
+    upload_id, upload_dir = create_upload_session()
+    
+    # Save CSV files
+    csv_count = 0
+    for csv_file in csv_files:
+        if not csv_file.filename.lower().endswith('.csv'):
+            continue  # Skip non-CSV files
+        
+        # Save original
+        original_path = upload_dir / f"{csv_file.filename}.original"
+        async with aiofiles.open(original_path, 'wb') as f:
+            content = await csv_file.read()
+            await f.write(content)
+        
+        # Detect encoding
+        encoding_result = detect_encoding(original_path)
+        
+        # Convert to UTF-8
+        utf8_path = upload_dir / csv_file.filename
+        success, error = convert_to_utf8(
+            original_path,
+            utf8_path,
+            encoding_result.detected_encoding
+        )
+        
+        if success:
+            csv_count += 1
+    
+    # Save image files
+    images_dir = upload_dir / "bilder"
+    images_dir.mkdir(exist_ok=True)
+    
+    image_count = 0
+    for image_file in image_files:
+        ext = Path(image_file.filename).suffix.lower()
+        if ext not in settings.allowed_image_extensions:
+            continue  # Skip invalid extensions
+        
+        image_path = images_dir / image_file.filename
+        async with aiofiles.open(image_path, 'wb') as f:
+            content = await image_file.read()
+            await f.write(content)
+        
+        image_count += 1
+    
+    return {
+        "upload_id": upload_id,
+        "csv_count": csv_count,
+        "image_count": image_count,
+        "status": "uploaded",
+        "message": f"Upload complete: {csv_count} CSV files, {image_count} images"
+    }
