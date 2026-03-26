@@ -129,7 +129,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 07-01-PLAN.md — HTML catalog generation (templates + API + tests) (Wave 1, has checkpoint)
+- [x] 07-01-PLAN.md — HTML catalog generation (templates + API + tests) (Wave 1, has checkpoint)
 
 ## Progress
 
