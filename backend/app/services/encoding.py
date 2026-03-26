@@ -38,7 +38,7 @@ def detect_encoding(file_path: Path) -> EncodingResult:
     best_match = results.best()
     
     if best_match and best_match.encoding:
-        confidence = float(best_match.encoding_confidence)  
+        confidence = float(best_match.coherence)  # charset_normalizer uses coherence (0-1)
         detected = best_match.encoding
         
         # RESEARCH: High confidence threshold for German text
