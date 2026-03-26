@@ -8,7 +8,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Backend Foundation & Data Import** - Upload infrastructure with encoding handling and validation
+- [x] **Phase 1: Backend Foundation & Data Import** - Upload infrastructure with encoding handling and validation
 - [ ] **Phase 2: Intelligent CSV Analysis** - Auto-detect column semantics via LLM agent
 - [ ] **Phase 3: Multi-Source Data Fusion** - Merge CSVs via article number with conflict resolution
 - [ ] **Phase 4: Automatic Image Linking** - Match images to products via article number patterns
@@ -27,7 +27,12 @@
   2. System displays German product names with correct umlauts (ä, ö, ü, ß) from uploaded CSVs
   3. User can upload image folder and see count of images detected
   4. System shows validation errors with specific line numbers when CSV structure is invalid  
-**Plans**: TBD  
+**Plans**: 2 plans  
+
+Plans:
+- [x] 01-01-PLAN.md — Backend upload API with FastAPI (✅ Complete - commit bfeae6c)
+- [x] 01-02-PLAN.md — Encoding detection + CSV validation (✅ Complete - commit b435ea1)
+
 **UI hint**: yes
 
 ### Phase 2: Intelligent CSV Analysis
