@@ -79,7 +79,7 @@ async def upload_csv(
     validation_result = validate_csv_structure(
         utf8_path,
         upload_id,
-        encoding="utf-8"
+        encoding="utf8"  # Polars expects "utf8" not "utf-8"
     )
     
     # Build response

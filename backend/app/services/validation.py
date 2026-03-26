@@ -12,7 +12,7 @@ from app.models.validation import ValidationError, ValidationResult, ErrorSeveri
 def validate_csv_structure(
     csv_path: Path,
     upload_id: str,
-    encoding: str = "utf-8"
+    encoding: str = "utf8"  # Polars expects "utf8" not "utf-8"
 ) -> ValidationResult:
     """
     Validiert CSV-Struktur und Inhalt (CONTEXT D-11)
@@ -32,7 +32,7 @@ def validate_csv_structure(
     Args:
         csv_path: Path to CSV file (already UTF-8 converted)
         upload_id: Upload session ID
-        encoding: File encoding (should be utf-8 after conversion)
+        encoding: File encoding (should be "utf8" for Polars after conversion)
         
     Returns:
         ValidationResult with errors/warnings
