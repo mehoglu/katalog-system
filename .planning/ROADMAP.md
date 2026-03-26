@@ -112,7 +112,7 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Review API (GET all products, PATCH single field) (Wave 1, autonomous)
-- [ ] 06-02-PLAN.md — Review UI table with inline editing (Wave 2, has checkpoint)
+- [x] 06-02-PLAN.md — Review UI table with inline editing (Wave 2, has checkpoint)
 
 **UI hint**: yes
 
