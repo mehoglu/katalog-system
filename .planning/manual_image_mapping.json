@@ -1,0 +1,7789 @@
+{
+  "created_at": "2026-03-26T14:30:00",
+  "source": "manual_mapping",
+  "statistics": {
+    "total_products_with_images": 545,
+    "total_images": 954,
+    "products_with_1_image": 282,
+    "products_with_2_images": 152,
+    "products_with_3_images": 76,
+    "products_with_4+_images": 35
+  },
+  "image_types": {
+    "main": "Hauptbild ohne Suffix",
+    "A": "Frontansicht",
+    "AA": "Detailansicht",
+    "E": "Einzelbild",
+    "G": "Gruppenbild"
+  },
+  "mappings": {
+    "210100725": [
+      {
+        "filename": "210100725A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100725A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100725AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100725AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100725G.jpg",
+        "type": "group"
+      }
+    ],
+    "222105201": [
+      {
+        "filename": "222105201A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105201A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105201AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105201AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105201E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105201G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105201G.jpg",
+        "type": "group"
+      }
+    ],
+    "942105030": [
+      {
+        "filename": "942105030.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942105030.tif",
+        "type": "main"
+      }
+    ],
+    "211105120": [
+      {
+        "filename": "211105120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211105120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211105120AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211105120AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211105120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211105120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211105120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211105120G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101825": [
+      {
+        "filename": "211101825A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101825A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101825AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101825AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101825E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101825E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101825G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101825G.jpg",
+        "type": "group"
+      }
+    ],
+    "243122106": [
+      {
+        "filename": "243122106E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243122106E.jpg",
+        "type": "single"
+      }
+    ],
+    "211111925": [
+      {
+        "filename": "211111925A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211111925A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211111925AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211111925AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211111925E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111925E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211111925G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211111925G.jpg",
+        "type": "group"
+      }
+    ],
+    "211111050": [
+      {
+        "filename": "211111050A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211111050A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211111050E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111050E.jpg",
+        "type": "single"
+      }
+    ],
+    "211101925": [
+      {
+        "filename": "211101925A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101925A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101925AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101925AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101925E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101925E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101925G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101925G.jpg",
+        "type": "group"
+      }
+    ],
+    "210102025": [
+      {
+        "filename": "210102025A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210102025A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210102025AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210102025AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210102025E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210102025E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210102025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210102025G.jpg",
+        "type": "group"
+      }
+    ],
+    "211103220": [
+      {
+        "filename": "211103220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103220AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211103220AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211103220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103220G.jpg",
+        "type": "group"
+      }
+    ],
+    "211103520": [
+      {
+        "filename": "211103520A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103520A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103520AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211103520AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211103520G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103520G.jpg",
+        "type": "group"
+      }
+    ],
+    "211102520": [
+      {
+        "filename": "211102520A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211102520A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211102520AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211102520AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211102520G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211102520G.jpg",
+        "type": "group"
+      }
+    ],
+    "212151420": [
+      {
+        "filename": "212151420E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212151420E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212151420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212151420G.jpg",
+        "type": "group"
+      }
+    ],
+    "222105305": [
+      {
+        "filename": "222105305E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105305E.jpg",
+        "type": "single"
+      }
+    ],
+    "942104070": [
+      {
+        "filename": "942104070.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104070.tif",
+        "type": "main"
+      },
+      {
+        "filename": "942104070.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942104070.jpg",
+        "type": "main"
+      }
+    ],
+    "253103150": [
+      {
+        "filename": "253103150A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253103150A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253103150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253103150E.jpg",
+        "type": "single"
+      }
+    ],
+    "322201001": [
+      {
+        "filename": "322201001G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322201001G.jpg",
+        "type": "group"
+      }
+    ],
+    "343112102": [
+      {
+        "filename": "343112102E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343112102E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343112102G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343112102G.jpg",
+        "type": "group"
+      }
+    ],
+    "222104001": [
+      {
+        "filename": "222104001.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/222104001.jpg",
+        "type": "main"
+      }
+    ],
+    "343102102": [
+      {
+        "filename": "343102102E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343102102E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343102102G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343102102G.jpg",
+        "type": "group"
+      }
+    ],
+    "311100420": [
+      {
+        "filename": "311100420A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/311100420A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311100420E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311100420E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "311100420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311100420G.jpg",
+        "type": "group"
+      }
+    ],
+    "226161220": [
+      {
+        "filename": "226161220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226161220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226161220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226161220G.jpg",
+        "type": "group"
+      }
+    ],
+    "244170410": [
+      {
+        "filename": "244170410A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/244170410A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "244170410AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/244170410AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "244170410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244170410E.jpg",
+        "type": "single"
+      }
+    ],
+    "226151120": [
+      {
+        "filename": "226151120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226151120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226151120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226151120G.jpg",
+        "type": "group"
+      }
+    ],
+    "942183020": [
+      {
+        "filename": "942183020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942183020E.jpg",
+        "type": "single"
+      }
+    ],
+    "211102020": [
+      {
+        "filename": "211102020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211102020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211102020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211102020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211102020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211102020G.jpg",
+        "type": "group"
+      }
+    ],
+    "226141120": [
+      {
+        "filename": "226141120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226141120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226141120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226141120G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101525": [
+      {
+        "filename": "211101525A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101525A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101525AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101525AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101525E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101525E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101525G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101525G.jpg",
+        "type": "group"
+      }
+    ],
+    "211111525": [
+      {
+        "filename": "211111525A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211111525A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211111525AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211111525AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211111525E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111525E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211111525G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211111525G.jpg",
+        "type": "group"
+      }
+    ],
+    "227160510": [
+      {
+        "filename": "227160510E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227160510E.jpg",
+        "type": "single"
+      }
+    ],
+    "222103005": [
+      {
+        "filename": "222103005A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103005A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103005E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103005E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103005G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103005G.jpg",
+        "type": "group"
+      }
+    ],
+    "244160612": [
+      {
+        "filename": "244160612jpg.jpg",
+        "suffix": "jpg",
+        "extension": "jpg",
+        "path": "assets/bilder/244160612jpg.jpg",
+        "type": "other"
+      }
+    ],
+    "244170201": [
+      {
+        "filename": "244170201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244170201E.jpg",
+        "type": "single"
+      }
+    ],
+    "343104150": [
+      {
+        "filename": "343104150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343104150E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343104150G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343104150G.jpg",
+        "type": "group"
+      }
+    ],
+    "212103110": [
+      {
+        "filename": "212103110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212103110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212103110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212103110G.jpg",
+        "type": "group"
+      }
+    ],
+    "322405110": [
+      {
+        "filename": "322405110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322405110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "322405110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322405110G.jpg",
+        "type": "group"
+      }
+    ],
+    "273160201": [
+      {
+        "filename": "273160201A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/273160201A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "273160201AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/273160201AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "273160201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/273160201E.jpg",
+        "type": "single"
+      }
+    ],
+    "211109725": [
+      {
+        "filename": "211109725E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211109725E.jpg",
+        "type": "single"
+      }
+    ],
+    "212106220": [
+      {
+        "filename": "212106220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212106220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212106220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212106220G.jpg",
+        "type": "group"
+      }
+    ],
+    "226164350": [
+      {
+        "filename": "226164350E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226164350E.jpg",
+        "type": "single"
+      }
+    ],
+    "222105001": [
+      {
+        "filename": "222105001A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105001A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105001AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105001AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105001E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105001E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105001G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105001G.jpg",
+        "type": "group"
+      }
+    ],
+    "264141924": [
+      {
+        "filename": "264141924A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/264141924A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "264141924E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264141924E.jpg",
+        "type": "single"
+      }
+    ],
+    "264161701": [
+      {
+        "filename": "264161701A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/264161701A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "264161701AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/264161701AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "264161701E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264161701E.jpg",
+        "type": "single"
+      }
+    ],
+    "210100425": [
+      {
+        "filename": "210100425A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100425A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100425AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100425AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100425E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210100425E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210100425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100425G.jpg",
+        "type": "group"
+      }
+    ],
+    "222115020": [
+      {
+        "filename": "222115020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222115020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222115020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222115020G.jpg",
+        "type": "group"
+      }
+    ],
+    "311103201": [
+      {
+        "filename": "311103201G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311103201G.jpg",
+        "type": "group"
+      }
+    ],
+    "212100120": [
+      {
+        "filename": "212100120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212100120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212100120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212100120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212100120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212100120G.jpg",
+        "type": "group"
+      }
+    ],
+    "230110325": [
+      {
+        "filename": "230110325A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110325A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110325AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110325AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110325E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230110325E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230110325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110325G.jpg",
+        "type": "group"
+      }
+    ],
+    "210100825": [
+      {
+        "filename": "210100825A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100825A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100825AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100825AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100825E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210100825E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210100825G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100825G.jpg",
+        "type": "group"
+      }
+    ],
+    "212102310": [
+      {
+        "filename": "212102310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102310G.jpg",
+        "type": "group"
+      }
+    ],
+    "230100325": [
+      {
+        "filename": "230100325E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230100325E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230100325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100325G.jpg",
+        "type": "group"
+      }
+    ],
+    "244171001": [
+      {
+        "filename": "244171001E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244171001E.jpg",
+        "type": "single"
+      }
+    ],
+    "322401120": [
+      {
+        "filename": "322401120.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/322401120.jpg",
+        "type": "main"
+      }
+    ],
+    "231101120": [
+      {
+        "filename": "231101120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101120G.jpg",
+        "type": "group"
+      }
+    ],
+    "222105410": [
+      {
+        "filename": "222105410A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105410A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105410AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105410AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105410E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105410G.jpg",
+        "type": "group"
+      }
+    ],
+    "230110125": [
+      {
+        "filename": "230110125A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110125A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110125AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110125AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230110125E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230110125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110125G.jpg",
+        "type": "group"
+      }
+    ],
+    "321100015": [
+      {
+        "filename": "321100015e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100015e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "244171406": [
+      {
+        "filename": "244171406E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244171406E.jpg",
+        "type": "single"
+      }
+    ],
+    "222103205": [
+      {
+        "filename": "222103205A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103205A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103205E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103205E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103205G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103205G.jpg",
+        "type": "group"
+      }
+    ],
+    "343111201": [
+      {
+        "filename": "343111201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343111201E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343111201G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343111201G.jpg",
+        "type": "group"
+      }
+    ],
+    "343101201": [
+      {
+        "filename": "343101201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343101201E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343101201G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343101201G.jpg",
+        "type": "group"
+      }
+    ],
+    "212101320": [
+      {
+        "filename": "212101320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212101320E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212101320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101320G.jpg",
+        "type": "group"
+      }
+    ],
+    "222114220": [
+      {
+        "filename": "222114220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222114220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222114220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222114220G.jpg",
+        "type": "group"
+      }
+    ],
+    "212111320": [
+      {
+        "filename": "212111320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212111320E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212111320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212111320G.jpg",
+        "type": "group"
+      }
+    ],
+    "343103050": [
+      {
+        "filename": "343103050E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343103050E.jpg",
+        "type": "single"
+      }
+    ],
+    "343113050": [
+      {
+        "filename": "343113050E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343113050E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343113050G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343113050G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402010": [
+      {
+        "filename": "322402010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402010G.jpg",
+        "type": "group"
+      }
+    ],
+    "742100456": [
+      {
+        "filename": "742100456G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/742100456G.jpg",
+        "type": "group"
+      }
+    ],
+    "211166520": [
+      {
+        "filename": "211166520.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/211166520.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "211166520A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211166520A.jpg",
+        "type": "front"
+      }
+    ],
+    "231102110": [
+      {
+        "filename": "231102110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102110G.jpg",
+        "type": "group"
+      }
+    ],
+    "245100237": [
+      {
+        "filename": "245100237.png",
+        "suffix": "main",
+        "extension": "png",
+        "path": "assets/bilder/245100237.png",
+        "type": "main"
+      },
+      {
+        "filename": "245100237.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/245100237.tif",
+        "type": "main"
+      }
+    ],
+    "211102220": [
+      {
+        "filename": "211102220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211102220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211102220AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211102220AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211102220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211102220G.jpg",
+        "type": "group"
+      }
+    ],
+    "226103125": [
+      {
+        "filename": "226103125A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226103125A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226103125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226103125E.jpg",
+        "type": "single"
+      }
+    ],
+    "343100410": [
+      {
+        "filename": "343100410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100410G.jpg",
+        "type": "group"
+      }
+    ],
+    "942115020": [
+      {
+        "filename": "942115020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/942115020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "942115020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/942115020G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110410": [
+      {
+        "filename": "343110410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110410G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101725": [
+      {
+        "filename": "211101725A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101725A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101725AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101725AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101725E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101725E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101725G.jpg",
+        "type": "group"
+      }
+    ],
+    "243114018": [
+      {
+        "filename": "243114018G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243114018G.jpg",
+        "type": "group"
+      }
+    ],
+    "210102225": [
+      {
+        "filename": "210102225A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210102225A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210102225AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210102225AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210102225E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210102225E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210102225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210102225G.jpg",
+        "type": "group"
+      }
+    ],
+    "244140101": [
+      {
+        "filename": "244140101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244140101E.jpg",
+        "type": "single"
+      }
+    ],
+    "211103020": [
+      {
+        "filename": "211103020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211103020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211103020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103020G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101125": [
+      {
+        "filename": "211101125AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101125AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101125E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101125G.jpg",
+        "type": "group"
+      }
+    ],
+    "264141401": [
+      {
+        "filename": "264141401E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264141401E.jpg",
+        "type": "single"
+      }
+    ],
+    "942183305": [
+      {
+        "filename": "942183305E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942183305E.jpg",
+        "type": "single"
+      }
+    ],
+    "321600610": [
+      {
+        "filename": "321600610A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/321600610A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "321600610AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/321600610AA.jpg",
+        "type": "detail"
+      }
+    ],
+    "343110810": [
+      {
+        "filename": "343110810G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110810G.jpg",
+        "type": "group"
+      }
+    ],
+    "230111125": [
+      {
+        "filename": "230111125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230111125E.jpg",
+        "type": "single"
+      }
+    ],
+    "343100810": [
+      {
+        "filename": "343100810G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100810G.jpg",
+        "type": "group"
+      }
+    ],
+    "311102010": [
+      {
+        "filename": "311102010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311102010E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "311102010EE.jpg",
+        "suffix": "EE",
+        "extension": "jpg",
+        "path": "assets/bilder/311102010EE.jpg",
+        "type": "other"
+      }
+    ],
+    "245141336": [
+      {
+        "filename": "245141336.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/245141336.jpg",
+        "type": "main"
+      }
+    ],
+    "212102110": [
+      {
+        "filename": "212102110A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102110A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212102110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212102110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102110G.jpg",
+        "type": "group"
+      }
+    ],
+    "222104003": [
+      {
+        "filename": "222104003.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/222104003.jpg",
+        "type": "main"
+      }
+    ],
+    "343421106": [
+      {
+        "filename": "343421106.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/343421106.jpg",
+        "type": "main"
+      }
+    ],
+    "244120501": [
+      {
+        "filename": "244120501E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120501E.jpg",
+        "type": "single"
+      }
+    ],
+    "210100625": [
+      {
+        "filename": "210100625A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100625A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100625AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100625AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100625G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100625G.jpg",
+        "type": "group"
+      }
+    ],
+    "321610511": [
+      {
+        "filename": "321610511.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/321610511.jpg",
+        "type": "main"
+      }
+    ],
+    "358112125": [
+      {
+        "filename": "358112125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358112125G.jpg",
+        "type": "group"
+      }
+    ],
+    "358102125": [
+      {
+        "filename": "358102125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358102125G.jpg",
+        "type": "group"
+      }
+    ],
+    "244120901": [
+      {
+        "filename": "244120901E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120901E.jpg",
+        "type": "single"
+      }
+    ],
+    "253401401": [
+      {
+        "filename": "253401401A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253401401A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253401401E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253401401E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253401401G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253401401G.jpg",
+        "type": "group"
+      }
+    ],
+    "210102125": [
+      {
+        "filename": "210102125A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210102125A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210102125AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210102125AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210102125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210102125G.jpg",
+        "type": "group"
+      }
+    ],
+    "942183105": [
+      {
+        "filename": "942183105E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942183105E.jpg",
+        "type": "single"
+      }
+    ],
+    "245141736": [
+      {
+        "filename": "245141736.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/245141736.jpg",
+        "type": "main"
+      }
+    ],
+    "212106020": [
+      {
+        "filename": "212106020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212106020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212106020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212106020G.jpg",
+        "type": "group"
+      }
+    ],
+    "226100510": [
+      {
+        "filename": "226100510A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226100510A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226100510AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/226100510AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "226100510E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226100510E.jpg",
+        "type": "single"
+      }
+    ],
+    "253101316": [
+      {
+        "filename": "253101316E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101316E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101316G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101316G.jpg",
+        "type": "group"
+      }
+    ],
+    "343112103": [
+      {
+        "filename": "343112103E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343112103E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343112103G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343112103G.jpg",
+        "type": "group"
+      }
+    ],
+    "343102103": [
+      {
+        "filename": "343102103E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343102103E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343102103G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343102103G.jpg",
+        "type": "group"
+      }
+    ],
+    "230100125": [
+      {
+        "filename": "230100125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230100125E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230100125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100125G.jpg",
+        "type": "group"
+      }
+    ],
+    "322201020": [
+      {
+        "filename": "322201020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322201020G.jpg",
+        "type": "group"
+      }
+    ],
+    "212101120": [
+      {
+        "filename": "212101120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212101120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212101120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101120G.jpg",
+        "type": "group"
+      }
+    ],
+    "222114020": [
+      {
+        "filename": "222114020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222114020E.jpg",
+        "type": "single"
+      }
+    ],
+    "212111120": [
+      {
+        "filename": "212111120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212111120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212111120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212111120G.jpg",
+        "type": "group"
+      }
+    ],
+    "243121101": [
+      {
+        "filename": "243121101E.JPG",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243121101E.JPG",
+        "type": "single"
+      },
+      {
+        "filename": "243121101G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243121101G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402210": [
+      {
+        "filename": "322402210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402210G.jpg",
+        "type": "group"
+      }
+    ],
+    "231102310": [
+      {
+        "filename": "231102310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102310G.jpg",
+        "type": "group"
+      }
+    ],
+    "321100115": [
+      {
+        "filename": "321100115e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100115e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "343100610": [
+      {
+        "filename": "343100610G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100610G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110610": [
+      {
+        "filename": "343110610G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110610G.jpg",
+        "type": "group"
+      }
+    ],
+    "226100125": [
+      {
+        "filename": "226100125A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226100125A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226100125AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/226100125AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "226100125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226100125E.jpg",
+        "type": "single"
+      }
+    ],
+    "311104125": [
+      {
+        "filename": "311104125A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/311104125A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311104125AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/311104125AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "311104125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311104125E.jpg",
+        "type": "single"
+      }
+    ],
+    "343421301": [
+      {
+        "filename": "343421301.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/343421301.jpg",
+        "type": "main"
+      }
+    ],
+    "322401410": [
+      {
+        "filename": "322401410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322401410G.jpg",
+        "type": "group"
+      }
+    ],
+    "243122240": [
+      {
+        "filename": "243122240.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/243122240.jpg",
+        "type": "main"
+      }
+    ],
+    "253101025": [
+      {
+        "filename": "253101025E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101025E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101025G.jpg",
+        "type": "group"
+      }
+    ],
+    "211117825": [
+      {
+        "filename": "211117825E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211117825E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211117825G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211117825G.jpg",
+        "type": "group"
+      }
+    ],
+    "243120100": [
+      {
+        "filename": "243120100E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243120100E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "243120100G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120100G.jpg",
+        "type": "group"
+      }
+    ],
+    "343104110": [
+      {
+        "filename": "343104110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343104110G.jpg",
+        "type": "group"
+      }
+    ],
+    "244120701": [
+      {
+        "filename": "244120701E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120701E.jpg",
+        "type": "single"
+      }
+    ],
+    "221110325": [
+      {
+        "filename": "221110325.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221110325.jpg",
+        "type": "main"
+      }
+    ],
+    "211101220": [
+      {
+        "filename": "211101220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101220AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101220AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101220G.jpg",
+        "type": "group"
+      }
+    ],
+    "226134220": [
+      {
+        "filename": "226134220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226134220G.jpg",
+        "type": "group"
+      }
+    ],
+    "221110125": [
+      {
+        "filename": "221110125.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221110125.jpg",
+        "type": "main"
+      }
+    ],
+    "311310210": [
+      {
+        "filename": "311310210.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311310210.tif",
+        "type": "main"
+      }
+    ],
+    "231110225": [
+      {
+        "filename": "231110225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110225G.jpg",
+        "type": "group"
+      }
+    ],
+    "321201310": [
+      {
+        "filename": "321201310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321201310E.jpg",
+        "type": "single"
+      }
+    ],
+    "226164310": [
+      {
+        "filename": "226164310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226164310E.jpg",
+        "type": "single"
+      }
+    ],
+    "211111325": [
+      {
+        "filename": "211111325A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211111325A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211111325AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211111325AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211111325E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111325E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211111325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211111325G.jpg",
+        "type": "group"
+      }
+    ],
+    "311101010": [
+      {
+        "filename": "311101010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311101010.tif",
+        "type": "main"
+      }
+    ],
+    "245121836": [
+      {
+        "filename": "245121836E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/245121836E.jpg",
+        "type": "single"
+      }
+    ],
+    "322455101": [
+      {
+        "filename": "322455101.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/322455101.tif",
+        "type": "main"
+      }
+    ],
+    "211107825": [
+      {
+        "filename": "211107825G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211107825G.jpg",
+        "type": "group"
+      }
+    ],
+    "243122306": [
+      {
+        "filename": "243122306E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243122306E.jpg",
+        "type": "single"
+      }
+    ],
+    "244171606": [
+      {
+        "filename": "244171606E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244171606E.jpg",
+        "type": "single"
+      }
+    ],
+    "942104010": [
+      {
+        "filename": "942104010.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942104010.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "942104010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104010.tif",
+        "type": "main"
+      }
+    ],
+    "211109925": [
+      {
+        "filename": "211109925.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/211109925.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "211109925E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211109925E.jpg",
+        "type": "single"
+      }
+    ],
+    "311104100": [
+      {
+        "filename": "311104100A.frei.jpg",
+        "suffix": "A",
+        "extension": "frei.jpg",
+        "path": "assets/bilder/311104100A.frei.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311104100E. frei.jpg",
+        "suffix": "E",
+        "extension": " frei.jpg",
+        "path": "assets/bilder/311104100E. frei.jpg",
+        "type": "single"
+      }
+    ],
+    "231101320": [
+      {
+        "filename": "231101320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101320G.jpg",
+        "type": "group"
+      }
+    ],
+    "264161901": [
+      {
+        "filename": "264161901.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/264161901.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "264161901E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264161901E.jpg",
+        "type": "single"
+      }
+    ],
+    "942104060": [
+      {
+        "filename": "942104060.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104060.tif",
+        "type": "main"
+      },
+      {
+        "filename": "942104060.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942104060.jpg",
+        "type": "main"
+      }
+    ],
+    "522101005": [
+      {
+        "filename": "522101005.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/522101005.jpg",
+        "type": "main"
+      }
+    ],
+    "227100310": [
+      {
+        "filename": "227100310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227100310E.jpg",
+        "type": "single"
+      }
+    ],
+    "311102120": [
+      {
+        "filename": "311102120.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311102120.tif",
+        "type": "main"
+      },
+      {
+        "filename": "311102120.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311102120.jpg",
+        "type": "main"
+      }
+    ],
+    "942105020": [
+      {
+        "filename": "942105020.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942105020.tif",
+        "type": "main"
+      }
+    ],
+    "212160320": [
+      {
+        "filename": "212160320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212160320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212160320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212160320E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212160320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212160320G.jpg",
+        "type": "group"
+      }
+    ],
+    "244120301": [
+      {
+        "filename": "244120301E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120301E.jpg",
+        "type": "single"
+      }
+    ],
+    "221110625": [
+      {
+        "filename": "221110625.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221110625.jpg",
+        "type": "main"
+      }
+    ],
+    "222105010": [
+      {
+        "filename": "222105010A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105010A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105010AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105010AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105010E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105010G.jpg",
+        "type": "group"
+      }
+    ],
+    "211104520": [
+      {
+        "filename": "211104520A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211104520A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211104520E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211104520E.jpg",
+        "type": "single"
+      }
+    ],
+    "321600510": [
+      {
+        "filename": "321600510A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/321600510A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "321600510AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/321600510AA.jpg",
+        "type": "detail"
+      }
+    ],
+    "230110725": [
+      {
+        "filename": "230110725A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110725A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110725AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110725AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110725E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230110725E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230110725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110725G.jpg",
+        "type": "group"
+      }
+    ],
+    "226110830": [
+      {
+        "filename": "226110830E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226110830E.jpg",
+        "type": "single"
+      }
+    ],
+    "211101225": [
+      {
+        "filename": "211101225A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101225A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101225AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101225AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101225E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101225E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101225G.jpg",
+        "type": "group"
+      }
+    ],
+    "249140310": [
+      {
+        "filename": "249140310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/249140310E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "249140310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/249140310G.jpg",
+        "type": "group"
+      }
+    ],
+    "253101609": [
+      {
+        "filename": "253101609A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253101609A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253101609E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101609E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101609G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101609G.jpg",
+        "type": "group"
+      }
+    ],
+    "942112110": [
+      {
+        "filename": "942112110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942112110E.jpg",
+        "type": "single"
+      }
+    ],
+    "211101325": [
+      {
+        "filename": "211101325A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101325A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101325AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101325AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101325E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101325E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101325G.jpg",
+        "type": "group"
+      }
+    ],
+    "321201360": [
+      {
+        "filename": "321201360E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321201360E.jpg",
+        "type": "single"
+      }
+    ],
+    "212103120": [
+      {
+        "filename": "212103120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212103120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212103120AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212103120AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212103120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212103120G.jpg",
+        "type": "group"
+      }
+    ],
+    "244131101": [
+      {
+        "filename": "244131101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244131101E.jpg",
+        "type": "single"
+      }
+    ],
+    "311600210": [
+      {
+        "filename": "311600210.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311600210.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "311600210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311600210E.jpg",
+        "type": "single"
+      }
+    ],
+    "222105401": [
+      {
+        "filename": "222105401A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105401A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105401AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105401AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105401E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105401E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105401G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105401G.jpg",
+        "type": "group"
+      }
+    ],
+    "253101110": [
+      {
+        "filename": "253101110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101110G.jpg",
+        "type": "group"
+      }
+    ],
+    "211103420": [
+      {
+        "filename": "211103420A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103420A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103420E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211103420E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211103420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103420G.jpg",
+        "type": "group"
+      }
+    ],
+    "740799501": [
+      {
+        "filename": "740799501A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/740799501A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "740799501E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/740799501E.jpg",
+        "type": "single"
+      }
+    ],
+    "322401010": [
+      {
+        "filename": "322401010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322401010G.jpg",
+        "type": "group"
+      }
+    ],
+    "212151220": [
+      {
+        "filename": "212151220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212151220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212151220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212151220G.jpg",
+        "type": "group"
+      }
+    ],
+    "212102320": [
+      {
+        "filename": "212102320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102320AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212102320AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212102320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102320G.jpg",
+        "type": "group"
+      }
+    ],
+    "312401220": [
+      {
+        "filename": "312401220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/312401220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "312401220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/312401220G.jpg",
+        "type": "group"
+      }
+    ],
+    "253101901": [
+      {
+        "filename": "253101901A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253101901A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253101901E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101901E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101901G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101901G.jpg",
+        "type": "group"
+      }
+    ],
+    "230100525": [
+      {
+        "filename": "230100525E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230100525E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230100525G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100525G.jpg",
+        "type": "group"
+      }
+    ],
+    "211104720": [
+      {
+        "filename": "211104720A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211104720A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211104720E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211104720E.jpg",
+        "type": "single"
+      }
+    ],
+    "321300150": [
+      {
+        "filename": "321300150.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/321300150.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "321300150A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/321300150A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "321300150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321300150E.jpg",
+        "type": "single"
+      }
+    ],
+    "321200320": [
+      {
+        "filename": "321200320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321200320E.jpg",
+        "type": "single"
+      }
+    ],
+    "358111125": [
+      {
+        "filename": "358111125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358111125G.jpg",
+        "type": "group"
+      }
+    ],
+    "358101125": [
+      {
+        "filename": "358101125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358101125G.jpg",
+        "type": "group"
+      }
+    ],
+    "343100210": [
+      {
+        "filename": "343100210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100210G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101020": [
+      {
+        "filename": "211101020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101020G.jpg",
+        "type": "group"
+      }
+    ],
+    "210101025": [
+      {
+        "filename": "210101025E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210101025E.jpg",
+        "type": "single"
+      }
+    ],
+    "226100220": [
+      {
+        "filename": "226100220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226100220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226100220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226100220E.jpg",
+        "type": "single"
+      }
+    ],
+    "343110210": [
+      {
+        "filename": "343110210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110210G.jpg",
+        "type": "group"
+      }
+    ],
+    "211102420": [
+      {
+        "filename": "211102420A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211102420A.jpg",
+        "type": "front"
+      }
+    ],
+    "343102104": [
+      {
+        "filename": "343102104E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343102104E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343102104G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343102104G.jpg",
+        "type": "group"
+      }
+    ],
+    "321610411": [
+      {
+        "filename": "321610411.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/321610411.jpg",
+        "type": "main"
+      }
+    ],
+    "322101025": [
+      {
+        "filename": "322101025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322101025G.jpg",
+        "type": "group"
+      }
+    ],
+    "343112104": [
+      {
+        "filename": "343112104E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343112104E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343112104G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343112104G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402610": [
+      {
+        "filename": "322402610G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402610G.jpg",
+        "type": "group"
+      }
+    ],
+    "322403001": [
+      {
+        "filename": "322403001G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322403001G.jpg",
+        "type": "group"
+      }
+    ],
+    "245141236": [
+      {
+        "filename": "245141236.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/245141236.jpg",
+        "type": "main"
+      }
+    ],
+    "942115210": [
+      {
+        "filename": "942115210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/942115210A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "942115210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/942115210G.jpg",
+        "type": "group"
+      }
+    ],
+    "353190601": [
+      {
+        "filename": "353190601A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/353190601A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "353190601E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/353190601E.jpg",
+        "type": "single"
+      }
+    ],
+    "212101110": [
+      {
+        "filename": "212101110A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212101110A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212101110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101110G.jpg",
+        "type": "group"
+      }
+    ],
+    "321100400": [
+      {
+        "filename": "321100400e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100400e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "226154220": [
+      {
+        "filename": "226154220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226154220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226154220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226154220G.jpg",
+        "type": "group"
+      }
+    ],
+    "212102420": [
+      {
+        "filename": "212102420A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102420A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102420AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212102420AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212102420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102420G.jpg",
+        "type": "group"
+      }
+    ],
+    "226144220": [
+      {
+        "filename": "226144220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226144220G.jpg",
+        "type": "group"
+      }
+    ],
+    "244170420": [
+      {
+        "filename": "244170420.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/244170420.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "244170420A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/244170420A.jpg",
+        "type": "front"
+      }
+    ],
+    "343111010": [
+      {
+        "filename": "343111010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343111010G.jpg",
+        "type": "group"
+      }
+    ],
+    "210100225": [
+      {
+        "filename": "210100225A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100225A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100225AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100225AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100225E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210100225E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210100225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100225G.jpg",
+        "type": "group"
+      }
+    ],
+    "226111020": [
+      {
+        "filename": "226111020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226111020E.jpg",
+        "type": "single"
+      }
+    ],
+    "226164120": [
+      {
+        "filename": "226164120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226164120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226164120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226164120G.jpg",
+        "type": "group"
+      }
+    ],
+    "740799701": [
+      {
+        "filename": "740799701A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/740799701A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "740799701E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/740799701E.jpg",
+        "type": "single"
+      }
+    ],
+    "211166720": [
+      {
+        "filename": "211166720A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211166720A.jpg",
+        "type": "front"
+      }
+    ],
+    "960115110": [
+      {
+        "filename": "960115110A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/960115110A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "960115110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/960115110G.jpg",
+        "type": "group"
+      }
+    ],
+    "211103620": [
+      {
+        "filename": "211103620A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103620A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103620AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211103620AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211103620G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103620G.jpg",
+        "type": "group"
+      }
+    ],
+    "321100300": [
+      {
+        "filename": "321100300e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100300e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "243120701": [
+      {
+        "filename": "243120701E.JPG",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243120701E.JPG",
+        "type": "single"
+      },
+      {
+        "filename": "243120701G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120701G.jpg",
+        "type": "group"
+      }
+    ],
+    "945106001": [
+      {
+        "filename": "945106001.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/945106001.jpg",
+        "type": "main"
+      }
+    ],
+    "311103401": [
+      {
+        "filename": "311103401G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311103401G.jpg",
+        "type": "group"
+      }
+    ],
+    "212102120": [
+      {
+        "filename": "212102120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102120AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212102120AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212102120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102120G.jpg",
+        "type": "group"
+      }
+    ],
+    "244191101": [
+      {
+        "filename": "244191101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244191101E.jpg",
+        "type": "single"
+      }
+    ],
+    "264170201": [
+      {
+        "filename": "264170201.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/264170201.jpg",
+        "type": "main"
+      }
+    ],
+    "264191501": [
+      {
+        "filename": "264191501A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/264191501A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "264191501AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/264191501AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "264191501E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264191501E.jpg",
+        "type": "single"
+      }
+    ],
+    "222103110": [
+      {
+        "filename": "222103110A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103110A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103110AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222103110AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222103110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103110G.jpg",
+        "type": "group"
+      }
+    ],
+    "244171206": [
+      {
+        "filename": "244171206E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244171206E.jpg",
+        "type": "single"
+      }
+    ],
+    "212103320": [
+      {
+        "filename": "212103320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212103320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212103320AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212103320AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212103320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212103320G.jpg",
+        "type": "group"
+      }
+    ],
+    "343401920": [
+      {
+        "filename": "343401920.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/343401920.jpg",
+        "type": "main"
+      }
+    ],
+    "212160120": [
+      {
+        "filename": "212160120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212160120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212160120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212160120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212160120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212160120G.jpg",
+        "type": "group"
+      }
+    ],
+    "222105210": [
+      {
+        "filename": "222105210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105210A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105210AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105210AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105210E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105210G.jpg",
+        "type": "group"
+      }
+    ],
+    "321610611": [
+      {
+        "filename": "321610611.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/321610611.jpg",
+        "type": "main"
+      }
+    ],
+    "222115210": [
+      {
+        "filename": "222115210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222115210A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222115210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222115210G.jpg",
+        "type": "group"
+      }
+    ],
+    "231101720": [
+      {
+        "filename": "231101720G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101720G.jpg",
+        "type": "group"
+      }
+    ],
+    "253101701": [
+      {
+        "filename": "253101701A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253101701A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253101701E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101701E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101701G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101701G.jpg",
+        "type": "group"
+      }
+    ],
+    "230110525": [
+      {
+        "filename": "230110525A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110525A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110525AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110525AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110525G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110525G.jpg",
+        "type": "group"
+      }
+    ],
+    "343421201": [
+      {
+        "filename": "343421201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343421201E.jpg",
+        "type": "single"
+      }
+    ],
+    "290200202": [
+      {
+        "filename": "290200202E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/290200202E.jpg",
+        "type": "single"
+      }
+    ],
+    "230110225": [
+      {
+        "filename": "230110225A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110225A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110225AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110225AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110225G.jpg",
+        "type": "group"
+      }
+    ],
+    "226100410": [
+      {
+        "filename": "226100410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226100410E.jpg",
+        "type": "single"
+      }
+    ],
+    "212101310": [
+      {
+        "filename": "212101310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212101310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212101310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101310G.jpg",
+        "type": "group"
+      }
+    ],
+    "253102101": [
+      {
+        "filename": "253102101A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253102101A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253102101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253102101E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253102101G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253102101G.jpg",
+        "type": "group"
+      }
+    ],
+    "243120520": [
+      {
+        "filename": "243120520G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120520G.jpg",
+        "type": "group"
+      }
+    ],
+    "243122205": [
+      {
+        "filename": "243122205E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243122205E.jpg",
+        "type": "single"
+      }
+    ],
+    "211114150": [
+      {
+        "filename": "211114150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211114150E.jpg",
+        "type": "single"
+      }
+    ],
+    "243123101": [
+      {
+        "filename": "243123101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243123101E.jpg",
+        "type": "single"
+      }
+    ],
+    "321600410": [
+      {
+        "filename": "321600410A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/321600410A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "321600410AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/321600410AA.jpg",
+        "type": "detail"
+      }
+    ],
+    "231110625": [
+      {
+        "filename": "231110625G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110625G.jpg",
+        "type": "group"
+      }
+    ],
+    "311100220": [
+      {
+        "filename": "311100220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/311100220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311100220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311100220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "311100220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311100220G.jpg",
+        "type": "group"
+      }
+    ],
+    "243120901": [
+      {
+        "filename": "243120901A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/243120901A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "243120901E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243120901E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "243120901G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120901G.jpg",
+        "type": "group"
+      }
+    ],
+    "243120425": [
+      {
+        "filename": "243120425E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243120425E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "243120425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120425G.jpg",
+        "type": "group"
+      }
+    ],
+    "230100725": [
+      {
+        "filename": "230100725E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230100725E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "230100725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100725G.jpg",
+        "type": "group"
+      }
+    ],
+    "944100114": [
+      {
+        "filename": "944100114E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/944100114E.jpg",
+        "type": "single"
+      }
+    ],
+    "231101520": [
+      {
+        "filename": "231101520G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101520G.jpg",
+        "type": "group"
+      }
+    ],
+    "321100200": [
+      {
+        "filename": "321100200e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100200e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "226131120": [
+      {
+        "filename": "226131120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226131120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226131120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226131120G.jpg",
+        "type": "group"
+      }
+    ],
+    "322405510": [
+      {
+        "filename": "322405510E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322405510E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "322405510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322405510G.jpg",
+        "type": "group"
+      }
+    ],
+    "210100525": [
+      {
+        "filename": "210100525A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100525A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100525AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100525AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100525G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100525G.jpg",
+        "type": "group"
+      }
+    ],
+    "321201300": [
+      {
+        "filename": "321201300E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321201300E.jpg",
+        "type": "single"
+      }
+    ],
+    "321100500": [
+      {
+        "filename": "321100500e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100500e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "311310310": [
+      {
+        "filename": "311310310.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311310310.tif",
+        "type": "main"
+      }
+    ],
+    "253101424": [
+      {
+        "filename": "253101424E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101424E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101424G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101424G.jpg",
+        "type": "group"
+      }
+    ],
+    "264171301": [
+      {
+        "filename": "264171301E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264171301E.jpg",
+        "type": "single"
+      }
+    ],
+    "253101516": [
+      {
+        "filename": "253101516E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101516E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101516G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101516G.jpg",
+        "type": "group"
+      }
+    ],
+    "222104015": [
+      {
+        "filename": "222104015.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/222104015.tif",
+        "type": "main"
+      }
+    ],
+    "231110425": [
+      {
+        "filename": "231110425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110425G.jpg",
+        "type": "group"
+      }
+    ],
+    "245141436": [
+      {
+        "filename": "245141436.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/245141436.jpg",
+        "type": "main"
+      }
+    ],
+    "226114350": [
+      {
+        "filename": "226114350E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226114350E.jpg",
+        "type": "single"
+      }
+    ],
+    "343102105": [
+      {
+        "filename": "343102105E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343102105E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343102105G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343102105G.jpg",
+        "type": "group"
+      }
+    ],
+    "343112105": [
+      {
+        "filename": "343112105E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343112105E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343112105G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343112105G.jpg",
+        "type": "group"
+      }
+    ],
+    "249140110": [
+      {
+        "filename": "249140110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/249140110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "249140110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/249140110G.jpg",
+        "type": "group"
+      }
+    ],
+    "227160805": [
+      {
+        "filename": "227160805E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227160805E.jpg",
+        "type": "single"
+      }
+    ],
+    "212151020": [
+      {
+        "filename": "212151020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212151020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212151020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212151020G.jpg",
+        "type": "group"
+      }
+    ],
+    "243122101": [
+      {
+        "filename": "243122101E.JPG",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243122101E.JPG",
+        "type": "single"
+      }
+    ],
+    "222106010": [
+      {
+        "filename": "222106010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/222106010.tif",
+        "type": "main"
+      }
+    ],
+    "231110825": [
+      {
+        "filename": "231110825G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110825G.jpg",
+        "type": "group"
+      }
+    ],
+    "312401020": [
+      {
+        "filename": "312401020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/312401020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "312401020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/312401020G.jpg",
+        "type": "group"
+      }
+    ],
+    "322102425": [
+      {
+        "filename": "322102425E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322102425E.jpg",
+        "type": "single"
+      }
+    ],
+    "942105040": [
+      {
+        "filename": "942105040.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942105040.tif",
+        "type": "main"
+      }
+    ],
+    "311101950": [
+      {
+        "filename": "311101950A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/311101950A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311101950AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/311101950AA.jpg",
+        "type": "detail"
+      }
+    ],
+    "322401210": [
+      {
+        "filename": "322401210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322401210G.jpg",
+        "type": "group"
+      }
+    ],
+    "311600010": [
+      {
+        "filename": "311600010.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311600010.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "311600010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311600010E.jpg",
+        "type": "single"
+      }
+    ],
+    "264161120": [
+      {
+        "filename": "264161120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264161120E.jpg",
+        "type": "single"
+      }
+    ],
+    "249110450": [
+      {
+        "filename": "249110450E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/249110450E.jpg",
+        "type": "single"
+      }
+    ],
+    "290100100": [
+      {
+        "filename": "290100100.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/290100100.jpg",
+        "type": "main"
+      }
+    ],
+    "244120101": [
+      {
+        "filename": "244120101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120101E.jpg",
+        "type": "single"
+      }
+    ],
+    "249190101": [
+      {
+        "filename": "249190101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/249190101E.jpg",
+        "type": "single"
+      }
+    ],
+    "942210210": [
+      {
+        "filename": "942210210.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942210210.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "942210210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/942210210A.jpg",
+        "type": "front"
+      }
+    ],
+    "211101120": [
+      {
+        "filename": "211101120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101120AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101120AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101120G.jpg",
+        "type": "group"
+      }
+    ],
+    "322105510": [
+      {
+        "filename": "322105510.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/322105510.jpg",
+        "type": "main"
+      }
+    ],
+    "222105101": [
+      {
+        "filename": "222105101A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105101A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105101AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105101AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105101E.jpg",
+        "type": "single"
+      }
+    ],
+    "210102325": [
+      {
+        "filename": "210102325A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210102325A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210102325AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210102325AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210102325E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210102325E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210102325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210102325G.jpg",
+        "type": "group"
+      }
+    ],
+    "311310110": [
+      {
+        "filename": "311310110.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311310110.tif",
+        "type": "main"
+      }
+    ],
+    "221110225": [
+      {
+        "filename": "221110225.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221110225.jpg",
+        "type": "main"
+      }
+    ],
+    "343100010": [
+      {
+        "filename": "343100010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100010G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110010": [
+      {
+        "filename": "343110010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110010G.jpg",
+        "type": "group"
+      }
+    ],
+    "358111325": [
+      {
+        "filename": "358111325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358111325G.jpg",
+        "type": "group"
+      }
+    ],
+    "222105510": [
+      {
+        "filename": "222105510A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105510A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105510AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105510AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105510E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105510E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105510G.jpg",
+        "type": "group"
+      }
+    ],
+    "358101325": [
+      {
+        "filename": "358101325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358101325G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402410": [
+      {
+        "filename": "322402410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402410G.jpg",
+        "type": "group"
+      }
+    ],
+    "231102510": [
+      {
+        "filename": "231102510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102510G.jpg",
+        "type": "group"
+      }
+    ],
+    "211117725": [
+      {
+        "filename": "211117725E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211117725E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211117725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211117725G.jpg",
+        "type": "group"
+      }
+    ],
+    "244120401": [
+      {
+        "filename": "244120401E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120401E.jpg",
+        "type": "single"
+      }
+    ],
+    "212102010": [
+      {
+        "filename": "212102010A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102010A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212102010E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212102010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102010G.jpg",
+        "type": "group"
+      }
+    ],
+    "942210410": [
+      {
+        "filename": "942210410.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942210410.tif",
+        "type": "main"
+      }
+    ],
+    "321100700": [
+      {
+        "filename": "321100700e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100700e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "249140410": [
+      {
+        "filename": "249140410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/249140410G.jpg",
+        "type": "group"
+      }
+    ],
+    "222114120": [
+      {
+        "filename": "222114120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222114120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222114120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222114120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222114120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222114120G.jpg",
+        "type": "group"
+      }
+    ],
+    "222103105": [
+      {
+        "filename": "222103105A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103105A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103105E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103105E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103105G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103105G.jpg",
+        "type": "group"
+      }
+    ],
+    "211111425": [
+      {
+        "filename": "211111425A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211111425A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211111425E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111425E.jpg",
+        "type": "single"
+      }
+    ],
+    "211101425": [
+      {
+        "filename": "211101425A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101425A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101425AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101425AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101425E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101425E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101425G.jpg",
+        "type": "group"
+      }
+    ],
+    "740910605": [
+      {
+        "filename": "740910605.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/740910605.jpg",
+        "type": "main"
+      }
+    ],
+    "243120312": [
+      {
+        "filename": "243120312E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243120312E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "243120312G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120312G.jpg",
+        "type": "group"
+      }
+    ],
+    "322455301": [
+      {
+        "filename": "322455301E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322455301E.jpg",
+        "type": "single"
+      }
+    ],
+    "343112106": [
+      {
+        "filename": "343112106E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343112106E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343112106G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343112106G.jpg",
+        "type": "group"
+      }
+    ],
+    "343102106": [
+      {
+        "filename": "343102106E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343102106E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343102106G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343102106G.jpg",
+        "type": "group"
+      }
+    ],
+    "245101836": [
+      {
+        "filename": "245101836E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/245101836E.jpg",
+        "type": "single"
+      }
+    ],
+    "222103020": [
+      {
+        "filename": "222103020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103020G.jpg",
+        "type": "group"
+      }
+    ],
+    "211105020": [
+      {
+        "filename": "211105020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211105020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211105020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211105020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211105020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211105020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211105020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211105020G.jpg",
+        "type": "group"
+      }
+    ],
+    "358102025": [
+      {
+        "filename": "358102025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358102025G.jpg",
+        "type": "group"
+      }
+    ],
+    "212102020": [
+      {
+        "filename": "212102020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212102020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212102020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102020G.jpg",
+        "type": "group"
+      }
+    ],
+    "244120801": [
+      {
+        "filename": "244120801E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120801E.jpg",
+        "type": "single"
+      }
+    ],
+    "212103020": [
+      {
+        "filename": "212103020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212103020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212103020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212103020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212103020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212103020G.jpg",
+        "type": "group"
+      }
+    ],
+    "358112025": [
+      {
+        "filename": "358112025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358112025G.jpg",
+        "type": "group"
+      }
+    ],
+    "243122006": [
+      {
+        "filename": "243122006.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/243122006.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "243122006E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243122006E.jpg",
+        "type": "single"
+      }
+    ],
+    "210100925": [
+      {
+        "filename": "210100925A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100925A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100925AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100925AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100925E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210100925E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210100925G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100925G.jpg",
+        "type": "group"
+      }
+    ],
+    "226104020": [
+      {
+        "filename": "226104020A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226104020A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226104020AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/226104020AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "226104020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226104020E.jpg",
+        "type": "single"
+      }
+    ],
+    "212102210": [
+      {
+        "filename": "212102210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102210A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212102210E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212102210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102210G.jpg",
+        "type": "group"
+      }
+    ],
+    "243113230": [
+      {
+        "filename": "243113230.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/243113230.jpg",
+        "type": "main"
+      }
+    ],
+    "211101625": [
+      {
+        "filename": "211101625A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211101625A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211101625AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211101625AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211101625E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211101625E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211101625G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211101625G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110510": [
+      {
+        "filename": "343110510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110510G.jpg",
+        "type": "group"
+      }
+    ],
+    "343401240": [
+      {
+        "filename": "343401240.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/343401240.jpg",
+        "type": "main"
+      }
+    ],
+    "343100510": [
+      {
+        "filename": "343100510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100510G.jpg",
+        "type": "group"
+      }
+    ],
+    "212022010": [
+      {
+        "filename": "212022010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/212022010.tif",
+        "type": "main"
+      }
+    ],
+    "244170730": [
+      {
+        "filename": "244170730A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/244170730A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "244170730E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244170730E.jpg",
+        "type": "single"
+      }
+    ],
+    "231102010": [
+      {
+        "filename": "231102010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102010G.jpg",
+        "type": "group"
+      }
+    ],
+    "343113150": [
+      {
+        "filename": "343113150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343113150E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343113150G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343113150G.jpg",
+        "type": "group"
+      }
+    ],
+    "243121201": [
+      {
+        "filename": "243121201A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/243121201A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "243121201E.JPG",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243121201E.JPG",
+        "type": "single"
+      },
+      {
+        "filename": "243121201G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243121201G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402110": [
+      {
+        "filename": "322402110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402110G.jpg",
+        "type": "group"
+      }
+    ],
+    "343103150": [
+      {
+        "filename": "343103150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343103150E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343103150G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343103150G.jpg",
+        "type": "group"
+      }
+    ],
+    "212111220": [
+      {
+        "filename": "212111220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212111220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212111220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212111220G.jpg",
+        "type": "group"
+      }
+    ],
+    "211102320": [
+      {
+        "filename": "211102320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211102320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211102320AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211102320AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211102320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211102320G.jpg",
+        "type": "group"
+      }
+    ],
+    "212101220": [
+      {
+        "filename": "212101220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212101220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212101220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101220G.jpg",
+        "type": "group"
+      }
+    ],
+    "211105220": [
+      {
+        "filename": "211105220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211105220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211105220AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211105220AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211105220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211105220G.jpg",
+        "type": "group"
+      }
+    ],
+    "212106320": [
+      {
+        "filename": "212106320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212106320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212106320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212106320E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212106320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212106320G.jpg",
+        "type": "group"
+      }
+    ],
+    "230111025": [
+      {
+        "filename": "230111025A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230111025A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230111025E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/230111025E.jpg",
+        "type": "single"
+      }
+    ],
+    "343100910": [
+      {
+        "filename": "343100910G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100910G.jpg",
+        "type": "group"
+      }
+    ],
+    "226110920": [
+      {
+        "filename": "226110920E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226110920E.jpg",
+        "type": "single"
+      }
+    ],
+    "322405010": [
+      {
+        "filename": "322405010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322405010E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "322405010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322405010G.jpg",
+        "type": "group"
+      }
+    ],
+    "212103010": [
+      {
+        "filename": "212103010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212103010E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212103010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212103010G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110910": [
+      {
+        "filename": "343110910G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110910G.jpg",
+        "type": "group"
+      }
+    ],
+    "226100310": [
+      {
+        "filename": "226100310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226100310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226100310AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/226100310AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "226100310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226100310E.jpg",
+        "type": "single"
+      }
+    ],
+    "942183205": [
+      {
+        "filename": "942183205E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942183205E.jpg",
+        "type": "single"
+      }
+    ],
+    "358103025": [
+      {
+        "filename": "358103025.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/358103025.jpg",
+        "type": "main"
+      }
+    ],
+    "311104002": [
+      {
+        "filename": "311104002.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311104002.jpg",
+        "type": "main"
+      }
+    ],
+    "230112025": [
+      {
+        "filename": "230112025A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230112025A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230112025AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230112025AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230112025AAA.jpg",
+        "suffix": "AAA",
+        "extension": "jpg",
+        "path": "assets/bilder/230112025AAA.jpg",
+        "type": "other"
+      }
+    ],
+    "211117925": [
+      {
+        "filename": "211117925A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211117925A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211117925E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211117925E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211117925G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211117925G.jpg",
+        "type": "group"
+      }
+    ],
+    "211109825": [
+      {
+        "filename": "211109825.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/211109825.jpg",
+        "type": "main"
+      }
+    ],
+    "211103120": [
+      {
+        "filename": "211103120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103120AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211103120AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211103120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211103120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "211103120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103120G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101010": [
+      {
+        "filename": "211101010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/211101010.tif",
+        "type": "main"
+      }
+    ],
+    "311103301": [
+      {
+        "filename": "311103301G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311103301G.jpg",
+        "type": "group"
+      }
+    ],
+    "226114410": [
+      {
+        "filename": "226114410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226114410E.jpg",
+        "type": "single"
+      }
+    ],
+    "230110625": [
+      {
+        "filename": "230110625A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110625A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110625AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110625AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110625G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110625G.jpg",
+        "type": "group"
+      }
+    ],
+    "264161601": [
+      {
+        "filename": "264161601E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264161601E.jpg",
+        "type": "single"
+      }
+    ],
+    "211101210": [
+      {
+        "filename": "211101210.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/211101210.tif",
+        "type": "main"
+      }
+    ],
+    "212160302": [
+      {
+        "filename": "212160302A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212160302A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212160302G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212160302G.jpg",
+        "type": "group"
+      }
+    ],
+    "222115005": [
+      {
+        "filename": "222115005.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/222115005.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "222115005.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/222115005.tif",
+        "type": "main"
+      }
+    ],
+    "244170301": [
+      {
+        "filename": "244170301E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244170301E.jpg",
+        "type": "single"
+      }
+    ],
+    "211614620": [
+      {
+        "filename": "211614620.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/211614620.jpg",
+        "type": "main"
+      }
+    ],
+    "311100410": [
+      {
+        "filename": "311100410.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311100410.tif",
+        "type": "main"
+      }
+    ],
+    "244171506": [
+      {
+        "filename": "244171506E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244171506E.jpg",
+        "type": "single"
+      }
+    ],
+    "230100225": [
+      {
+        "filename": "230100225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100225G.jpg",
+        "type": "group"
+      }
+    ],
+    "231101020": [
+      {
+        "filename": "231101020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101020G.jpg",
+        "type": "group"
+      }
+    ],
+    "212022210": [
+      {
+        "filename": "212022210.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/212022210.tif",
+        "type": "main"
+      }
+    ],
+    "942104040": [
+      {
+        "filename": "942104040.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942104040.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "942104040.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104040.tif",
+        "type": "main"
+      }
+    ],
+    "212100220": [
+      {
+        "filename": "212100220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212100220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212100220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212100220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212100220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212100220G.jpg",
+        "type": "group"
+      }
+    ],
+    "211103320": [
+      {
+        "filename": "211103320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211103320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211103320AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211103320AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211103320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211103320G.jpg",
+        "type": "group"
+      }
+    ],
+    "222402610": [
+      {
+        "filename": "222402610.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/222402610.jpg",
+        "type": "main"
+      }
+    ],
+    "942103505": [
+      {
+        "filename": "942103505.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942103505.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "942103505.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942103505.tif",
+        "type": "main"
+      }
+    ],
+    "312910010": [
+      {
+        "filename": "312910010.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/312910010.jpg",
+        "type": "main"
+      }
+    ],
+    "222105301": [
+      {
+        "filename": "222105301E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105301E.jpg",
+        "type": "single"
+      }
+    ],
+    "942104030": [
+      {
+        "filename": "942104030.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104030.tif",
+        "type": "main"
+      },
+      {
+        "filename": "942104030.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942104030.jpg",
+        "type": "main"
+      }
+    ],
+    "227160410": [
+      {
+        "filename": "227160410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227160410E.jpg",
+        "type": "single"
+      }
+    ],
+    "321600310": [
+      {
+        "filename": "321600310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/321600310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "321600310AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/321600310AA.jpg",
+        "type": "detail"
+      }
+    ],
+    "211102120": [
+      {
+        "filename": "211102120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211102120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211102120AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/211102120AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "211102120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211102120G.jpg",
+        "type": "group"
+      }
+    ],
+    "231110125": [
+      {
+        "filename": "231110125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110125G.jpg",
+        "type": "group"
+      }
+    ],
+    "211110350": [
+      {
+        "filename": "211110350A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211110350A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211110350E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211110350E.jpg",
+        "type": "single"
+      }
+    ],
+    "253103050": [
+      {
+        "filename": "253103050A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253103050A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253103050E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253103050E.jpg",
+        "type": "single"
+      }
+    ],
+    "322201101": [
+      {
+        "filename": "322201101G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322201101G.jpg",
+        "type": "group"
+      }
+    ],
+    "211107725": [
+      {
+        "filename": "211107725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211107725G.jpg",
+        "type": "group"
+      }
+    ],
+    "942103405": [
+      {
+        "filename": "942103405.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942103405.tif",
+        "type": "main"
+      },
+      {
+        "filename": "942103405.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942103405.jpg",
+        "type": "main"
+      }
+    ],
+    "942210102": [
+      {
+        "filename": "942210102.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942210102.jpg",
+        "type": "main"
+      }
+    ],
+    "311100005": [
+      {
+        "filename": "311100005.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311100005.tif",
+        "type": "main"
+      }
+    ],
+    "231101220": [
+      {
+        "filename": "231101220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101220G.jpg",
+        "type": "group"
+      }
+    ],
+    "311104005": [
+      {
+        "filename": "311104005.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311104005.jpg",
+        "type": "main"
+      }
+    ],
+    "264161801": [
+      {
+        "filename": "264161801E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264161801E.jpg",
+        "type": "single"
+      }
+    ],
+    "221102010": [
+      {
+        "filename": "221102010.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221102010.jpg",
+        "type": "main"
+      }
+    ],
+    "212111020": [
+      {
+        "filename": "212111020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212111020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212111020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212111020G.jpg",
+        "type": "group"
+      }
+    ],
+    "212101020": [
+      {
+        "filename": "212101020E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212101020E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212101020G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101020G.jpg",
+        "type": "group"
+      }
+    ],
+    "942104020": [
+      {
+        "filename": "942104020.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104020.tif",
+        "type": "main"
+      }
+    ],
+    "227100210": [
+      {
+        "filename": "227100210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227100210E.jpg",
+        "type": "single"
+      }
+    ],
+    "322405505": [
+      {
+        "filename": "322405505.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/322405505.jpg",
+        "type": "main"
+      }
+    ],
+    "212106120": [
+      {
+        "filename": "212106120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212106120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212106120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212106120G.jpg",
+        "type": "group"
+      }
+    ],
+    "322405210": [
+      {
+        "filename": "322405210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322405210E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "322405210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322405210G.jpg",
+        "type": "group"
+      }
+    ],
+    "244170101": [
+      {
+        "filename": "244170101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244170101E.jpg",
+        "type": "single"
+      }
+    ],
+    "211111150": [
+      {
+        "filename": "211111150E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111150E.jpg",
+        "type": "single"
+      }
+    ],
+    "311103101": [
+      {
+        "filename": "311103101G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311103101G.jpg",
+        "type": "group"
+      }
+    ],
+    "945103001": [
+      {
+        "filename": "945103001.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/945103001.jpg",
+        "type": "main"
+      }
+    ],
+    "210102525": [
+      {
+        "filename": "210102525.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/210102525.jpg",
+        "type": "main"
+      }
+    ],
+    "942104050": [
+      {
+        "filename": "942104050.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942104050.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "942104050.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942104050.tif",
+        "type": "main"
+      }
+    ],
+    "226161120": [
+      {
+        "filename": "226161120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226161120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226161120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226161120G.jpg",
+        "type": "group"
+      }
+    ],
+    "231110325": [
+      {
+        "filename": "231110325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110325G.jpg",
+        "type": "group"
+      }
+    ],
+    "321100100": [
+      {
+        "filename": "321100100e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100100e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "222115105": [
+      {
+        "filename": "222115105.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/222115105.tif",
+        "type": "main"
+      }
+    ],
+    "227160610": [
+      {
+        "filename": "227160610E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227160610E.jpg",
+        "type": "single"
+      }
+    ],
+    "321100600": [
+      {
+        "filename": "321100600e.75dpi.tif",
+        "suffix": "e",
+        "extension": "75dpi.tif",
+        "path": "assets/bilder/321100600e.75dpi.tif",
+        "type": "other"
+      }
+    ],
+    "243122210": [
+      {
+        "filename": "243122210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243122210E.jpg",
+        "type": "single"
+      }
+    ],
+    "226141220": [
+      {
+        "filename": "226141220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226141220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226141220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226141220G.jpg",
+        "type": "group"
+      }
+    ],
+    "226151220": [
+      {
+        "filename": "226151220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226151220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226151220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226151220G.jpg",
+        "type": "group"
+      }
+    ],
+    "229101005": [
+      {
+        "filename": "229101005E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/229101005E.jpg",
+        "type": "single"
+      }
+    ],
+    "210100125": [
+      {
+        "filename": "210100125A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100125A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100125AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100125AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210100125E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "210100125G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100125G.jpg",
+        "type": "group"
+      }
+    ],
+    "311100010": [
+      {
+        "filename": "311100010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311100010.tif",
+        "type": "main"
+      }
+    ],
+    "211107925": [
+      {
+        "filename": "211107925G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/211107925G.jpg",
+        "type": "group"
+      }
+    ],
+    "322401510": [
+      {
+        "filename": "322401510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322401510G.jpg",
+        "type": "group"
+      }
+    ],
+    "222105501": [
+      {
+        "filename": "222105501A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222105501A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222105501AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105501AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105501E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105501E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105501G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105501G.jpg",
+        "type": "group"
+      }
+    ],
+    "243123240": [
+      {
+        "filename": "243123240.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/243123240.jpg",
+        "type": "main"
+      }
+    ],
+    "211101410": [
+      {
+        "filename": "211101410.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/211101410.tif",
+        "type": "main"
+      }
+    ],
+    "244120601": [
+      {
+        "filename": "244120601E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120601E.jpg",
+        "type": "single"
+      }
+    ],
+    "212100410": [
+      {
+        "filename": "212100410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212100410E.jpg",
+        "type": "single"
+      }
+    ],
+    "222105110": [
+      {
+        "filename": "222105110AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/222105110AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "222105110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222105110E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222105110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222105110G.jpg",
+        "type": "group"
+      }
+    ],
+    "311113501": [
+      {
+        "filename": "311113501E.tif",
+        "suffix": "E",
+        "extension": "tif",
+        "path": "assets/bilder/311113501E.tif",
+        "type": "single"
+      },
+      {
+        "filename": "311113501E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311113501E.jpg",
+        "type": "single"
+      }
+    ],
+    "211166820": [
+      {
+        "filename": "211166820.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/211166820.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "211166820A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211166820A.jpg",
+        "type": "front"
+      }
+    ],
+    "321601510": [
+      {
+        "filename": "321601510.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/321601510.jpg",
+        "type": "main"
+      }
+    ],
+    "942183005": [
+      {
+        "filename": "942183005E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942183005E.jpg",
+        "type": "single"
+      }
+    ],
+    "942103305": [
+      {
+        "filename": "942103305.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/942103305.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "942103305.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/942103305.tif",
+        "type": "main"
+      }
+    ],
+    "358101425": [
+      {
+        "filename": "358101425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358101425G.jpg",
+        "type": "group"
+      }
+    ],
+    "358111425": [
+      {
+        "filename": "358111425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358111425G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110710": [
+      {
+        "filename": "343110710G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110710G.jpg",
+        "type": "group"
+      }
+    ],
+    "343100710": [
+      {
+        "filename": "343100710G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100710G.jpg",
+        "type": "group"
+      }
+    ],
+    "950100100": [
+      {
+        "filename": "950100100A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/950100100A.jpg",
+        "type": "front"
+      }
+    ],
+    "322201120": [
+      {
+        "filename": "322201120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322201120G.jpg",
+        "type": "group"
+      }
+    ],
+    "231102210": [
+      {
+        "filename": "231102210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102210G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402310": [
+      {
+        "filename": "322402310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402310G.jpg",
+        "type": "group"
+      }
+    ],
+    "212101210": [
+      {
+        "filename": "212101210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212101210A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212101210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101210G.jpg",
+        "type": "group"
+      }
+    ],
+    "253102001": [
+      {
+        "filename": "253102001A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253102001A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253102001E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253102001E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253102001G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253102001G.jpg",
+        "type": "group"
+      }
+    ],
+    "343111203": [
+      {
+        "filename": "343111203E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343111203E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343111203G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343111203G.jpg",
+        "type": "group"
+      }
+    ],
+    "294190101": [
+      {
+        "filename": "294190101A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/294190101A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "294190101B.jpg",
+        "suffix": "B",
+        "extension": "jpg",
+        "path": "assets/bilder/294190101B.jpg",
+        "type": "other"
+      },
+      {
+        "filename": "294190101C.jpg",
+        "suffix": "C",
+        "extension": "jpg",
+        "path": "assets/bilder/294190101C.jpg",
+        "type": "other"
+      },
+      {
+        "filename": "294190101D.jpg",
+        "suffix": "D",
+        "extension": "jpg",
+        "path": "assets/bilder/294190101D.jpg",
+        "type": "other"
+      }
+    ],
+    "311100510": [
+      {
+        "filename": "311100510.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311100510.tif",
+        "type": "main"
+      }
+    ],
+    "244140532": [
+      {
+        "filename": "244140532A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/244140532A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "244140532E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244140532E.jpg",
+        "type": "single"
+      }
+    ],
+    "253101801": [
+      {
+        "filename": "253101801A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253101801A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "253101801E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101801E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101801G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101801G.jpg",
+        "type": "group"
+      }
+    ],
+    "212151320": [
+      {
+        "filename": "212151320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212151320E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212151320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212151320G.jpg",
+        "type": "group"
+      }
+    ],
+    "211101310": [
+      {
+        "filename": "211101310.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/211101310.tif",
+        "type": "main"
+      }
+    ],
+    "243123150": [
+      {
+        "filename": "243123150.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/243123150.jpg",
+        "type": "main"
+      }
+    ],
+    "311100320": [
+      {
+        "filename": "311100320A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/311100320A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311100320E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311100320E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "311100320G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311100320G.jpg",
+        "type": "group"
+      }
+    ],
+    "231110725": [
+      {
+        "filename": "231110725G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110725G.jpg",
+        "type": "group"
+      }
+    ],
+    "249140210": [
+      {
+        "filename": "249140210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/249140210E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "249140210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/249140210G.jpg",
+        "type": "group"
+      }
+    ],
+    "222103210": [
+      {
+        "filename": "222103210A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103210A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103210E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103210E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103210G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103210G.jpg",
+        "type": "group"
+      }
+    ],
+    "227160705": [
+      {
+        "filename": "227160705E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227160705E.jpg",
+        "type": "single"
+      }
+    ],
+    "321300104": [
+      {
+        "filename": "321300104.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/321300104.jpg",
+        "type": "main"
+      }
+    ],
+    "222106205": [
+      {
+        "filename": "222106205E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222106205E.jpg",
+        "type": "single"
+      }
+    ],
+    "322405610": [
+      {
+        "filename": "322405610E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322405610E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "322405610G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322405610G.jpg",
+        "type": "group"
+      }
+    ],
+    "311103120": [
+      {
+        "filename": "311103120.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311103120.jpg",
+        "type": "main"
+      }
+    ],
+    "226131220": [
+      {
+        "filename": "226131220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226131220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226131220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226131220G.jpg",
+        "type": "group"
+      }
+    ],
+    "294110201": [
+      {
+        "filename": "294110201A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/294110201A.jpg",
+        "type": "front"
+      }
+    ],
+    "210100325": [
+      {
+        "filename": "210100325A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/210100325A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "210100325AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/210100325AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "210100325G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/210100325G.jpg",
+        "type": "group"
+      }
+    ],
+    "226161310": [
+      {
+        "filename": "226161310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/226161310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "226161310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226161310E.jpg",
+        "type": "single"
+      }
+    ],
+    "231101620": [
+      {
+        "filename": "231101620G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101620G.jpg",
+        "type": "group"
+      }
+    ],
+    "230100425": [
+      {
+        "filename": "230100425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100425G.jpg",
+        "type": "group"
+      }
+    ],
+    "311100120": [
+      {
+        "filename": "311100120A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/311100120A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "311100120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311100120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "311100120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/311100120G.jpg",
+        "type": "group"
+      }
+    ],
+    "230110425": [
+      {
+        "filename": "230110425A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/230110425A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "230110425AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/230110425AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "230110425G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230110425G.jpg",
+        "type": "group"
+      }
+    ],
+    "322201015": [
+      {
+        "filename": "322201015G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322201015G.jpg",
+        "type": "group"
+      }
+    ],
+    "383411201": [
+      {
+        "filename": "383411201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/383411201E.jpg",
+        "type": "single"
+      }
+    ],
+    "222115310": [
+      {
+        "filename": "222115310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222115310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222115310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222115310G.jpg",
+        "type": "group"
+      }
+    ],
+    "222103010": [
+      {
+        "filename": "222103010A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222103010A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222103010E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/222103010E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "222103010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222103010G.jpg",
+        "type": "group"
+      }
+    ],
+    "244171306": [
+      {
+        "filename": "244171306E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244171306E.jpg",
+        "type": "single"
+      }
+    ],
+    "212103220": [
+      {
+        "filename": "212103220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212103220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212103220AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212103220AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212103220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212103220G.jpg",
+        "type": "group"
+      }
+    ],
+    "212111420": [
+      {
+        "filename": "212111420E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212111420E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212111420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212111420G.jpg",
+        "type": "group"
+      }
+    ],
+    "212101420": [
+      {
+        "filename": "212101420E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212101420E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212101420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101420G.jpg",
+        "type": "group"
+      }
+    ],
+    "231102610": [
+      {
+        "filename": "231102610G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102610G.jpg",
+        "type": "group"
+      }
+    ],
+    "358101025": [
+      {
+        "filename": "358101025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358101025G.jpg",
+        "type": "group"
+      }
+    ],
+    "358111025": [
+      {
+        "filename": "358111025G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358111025G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110310": [
+      {
+        "filename": "343110310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110310G.jpg",
+        "type": "group"
+      }
+    ],
+    "343100310": [
+      {
+        "filename": "343100310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100310G.jpg",
+        "type": "group"
+      }
+    ],
+    "211114620": [
+      {
+        "filename": "211114620A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211114620A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211114620E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211114620E.jpg",
+        "type": "single"
+      }
+    ],
+    "211104620": [
+      {
+        "filename": "211104620A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211104620A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211104620E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211104620E.jpg",
+        "type": "single"
+      }
+    ],
+    "311103501": [
+      {
+        "filename": "311103501E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311103501E.jpg",
+        "type": "single"
+      }
+    ],
+    "740799601": [
+      {
+        "filename": "740799601A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/740799601A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "740799601E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/740799601E.jpg",
+        "type": "single"
+      }
+    ],
+    "243120601": [
+      {
+        "filename": "243120601G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120601G.jpg",
+        "type": "group"
+      }
+    ],
+    "321300103": [
+      {
+        "filename": "321300103E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321300103E.jpg",
+        "type": "single"
+      }
+    ],
+    "212101010": [
+      {
+        "filename": "212101010A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212101010A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212101010G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212101010G.jpg",
+        "type": "group"
+      }
+    ],
+    "322101001": [
+      {
+        "filename": "322101001A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/322101001A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "322101001E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322101001E.jpg",
+        "type": "single"
+      }
+    ],
+    "942183405": [
+      {
+        "filename": "942183405E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/942183405E.jpg",
+        "type": "single"
+      }
+    ],
+    "314112110": [
+      {
+        "filename": "314112110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/314112110E.jpg",
+        "type": "single"
+      }
+    ],
+    "942115310": [
+      {
+        "filename": "942115310A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/942115310A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "942115310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/942115310G.jpg",
+        "type": "group"
+      }
+    ],
+    "211111225": [
+      {
+        "filename": "211111225A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/211111225A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "211111225E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211111225E.jpg",
+        "type": "single"
+      }
+    ],
+    "211101110": [
+      {
+        "filename": "211101110.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/211101110.tif",
+        "type": "main"
+      }
+    ],
+    "211104420": [
+      {
+        "filename": "211104420E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/211104420E.jpg",
+        "type": "single"
+      }
+    ],
+    "212160220": [
+      {
+        "filename": "212160220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212160220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212160220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212160220G.jpg",
+        "type": "group"
+      }
+    ],
+    "244120201": [
+      {
+        "filename": "244120201E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244120201E.jpg",
+        "type": "single"
+      }
+    ],
+    "740799801": [
+      {
+        "filename": "740799801A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/740799801A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "740799801E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/740799801E.jpg",
+        "type": "single"
+      }
+    ],
+    "222115110": [
+      {
+        "filename": "222115110A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/222115110A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "222115110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/222115110G.jpg",
+        "type": "group"
+      }
+    ],
+    "322401110": [
+      {
+        "filename": "322401110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322401110G.jpg",
+        "type": "group"
+      }
+    ],
+    "212022110": [
+      {
+        "filename": "212022110.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/212022110.tif",
+        "type": "main"
+      }
+    ],
+    "212102220": [
+      {
+        "filename": "212102220A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/212102220A.jpg",
+        "type": "front"
+      },
+      {
+        "filename": "212102220AA.jpg",
+        "suffix": "AA",
+        "extension": "jpg",
+        "path": "assets/bilder/212102220AA.jpg",
+        "type": "detail"
+      },
+      {
+        "filename": "212102220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212102220G.jpg",
+        "type": "group"
+      }
+    ],
+    "243123060": [
+      {
+        "filename": "243123060E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243123060E.jpg",
+        "type": "single"
+      }
+    ],
+    "264161220": [
+      {
+        "filename": "264161220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/264161220E.jpg",
+        "type": "single"
+      }
+    ],
+    "243114108": [
+      {
+        "filename": "243114108G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243114108G.jpg",
+        "type": "group"
+      }
+    ],
+    "244121001": [
+      {
+        "filename": "244121001E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/244121001E.jpg",
+        "type": "single"
+      }
+    ],
+    "311600310": [
+      {
+        "filename": "311600310.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311600310.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "311600310E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311600310E.jpg",
+        "type": "single"
+      }
+    ],
+    "343101202": [
+      {
+        "filename": "343101202E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343101202E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343101202G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343101202G.jpg",
+        "type": "group"
+      }
+    ],
+    "322405410": [
+      {
+        "filename": "322405410E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/322405410E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "322405410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322405410G.jpg",
+        "type": "group"
+      }
+    ],
+    "343111202": [
+      {
+        "filename": "343111202E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343111202E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343111202G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343111202G.jpg",
+        "type": "group"
+      }
+    ],
+    "343471106": [
+      {
+        "filename": "343471106.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/343471106.jpg",
+        "type": "main"
+      }
+    ],
+    "226164220": [
+      {
+        "filename": "226164220E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/226164220E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "226164220G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/226164220G.jpg",
+        "type": "group"
+      }
+    ],
+    "210110125": [
+      {
+        "filename": "210110125E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/210110125E.jpg",
+        "type": "single"
+      }
+    ],
+    "311100310": [
+      {
+        "filename": "311100310.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/311100310.tif",
+        "type": "main"
+      }
+    ],
+    "243120801": [
+      {
+        "filename": "243120801E.JPG",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/243120801E.JPG",
+        "type": "single"
+      },
+      {
+        "filename": "243120801G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/243120801G.jpg",
+        "type": "group"
+      }
+    ],
+    "231102410": [
+      {
+        "filename": "231102410G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231102410G.jpg",
+        "type": "group"
+      }
+    ],
+    "322402510": [
+      {
+        "filename": "322402510G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322402510G.jpg",
+        "type": "group"
+      }
+    ],
+    "343110110": [
+      {
+        "filename": "343110110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343110110G.jpg",
+        "type": "group"
+      }
+    ],
+    "343100110": [
+      {
+        "filename": "343100110G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343100110G.jpg",
+        "type": "group"
+      }
+    ],
+    "358101225": [
+      {
+        "filename": "358101225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358101225G.jpg",
+        "type": "group"
+      }
+    ],
+    "358111225": [
+      {
+        "filename": "358111225G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/358111225G.jpg",
+        "type": "group"
+      }
+    ],
+    "311600110": [
+      {
+        "filename": "311600110.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/311600110.jpg",
+        "type": "main"
+      },
+      {
+        "filename": "311600110E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/311600110E.jpg",
+        "type": "single"
+      }
+    ],
+    "321200260": [
+      {
+        "filename": "321200260E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/321200260E.jpg",
+        "type": "single"
+      }
+    ],
+    "312401120": [
+      {
+        "filename": "312401120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/312401120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "312401120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/312401120G.jpg",
+        "type": "group"
+      }
+    ],
+    "222402110": [
+      {
+        "filename": "222402110.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/222402110.jpg",
+        "type": "main"
+      }
+    ],
+    "322401310": [
+      {
+        "filename": "322401310G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322401310G.jpg",
+        "type": "group"
+      }
+    ],
+    "212151120": [
+      {
+        "filename": "212151120E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/212151120E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "212151120G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/212151120G.jpg",
+        "type": "group"
+      }
+    ],
+    "253101230": [
+      {
+        "filename": "253101230E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/253101230E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "253101230G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/253101230G.jpg",
+        "type": "group"
+      }
+    ],
+    "343102101": [
+      {
+        "filename": "343102101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343102101E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343102101G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343102101G.jpg",
+        "type": "group"
+      }
+    ],
+    "343112101": [
+      {
+        "filename": "343112101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343112101E.jpg",
+        "type": "single"
+      },
+      {
+        "filename": "343112101G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/343112101G.jpg",
+        "type": "group"
+      }
+    ],
+    "253160108": [
+      {
+        "filename": "253160108A.jpg",
+        "suffix": "A",
+        "extension": "jpg",
+        "path": "assets/bilder/253160108A.jpg",
+        "type": "front"
+      }
+    ],
+    "222115010": [
+      {
+        "filename": "222115010.tif",
+        "suffix": "main",
+        "extension": "tif",
+        "path": "assets/bilder/222115010.tif",
+        "type": "main"
+      }
+    ],
+    "231110525": [
+      {
+        "filename": "231110525G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110525G.jpg",
+        "type": "group"
+      }
+    ],
+    "221102110": [
+      {
+        "filename": "221102110.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221102110.jpg",
+        "type": "main"
+      }
+    ],
+    "231110925": [
+      {
+        "filename": "231110925G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231110925G.jpg",
+        "type": "group"
+      }
+    ],
+    "343421101": [
+      {
+        "filename": "343421101E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/343421101E.jpg",
+        "type": "single"
+      }
+    ],
+    "222402310": [
+      {
+        "filename": "222402310.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/222402310.jpg",
+        "type": "main"
+      }
+    ],
+    "230100625": [
+      {
+        "filename": "230100625G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/230100625G.jpg",
+        "type": "group"
+      }
+    ],
+    "231101420": [
+      {
+        "filename": "231101420G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101420G.jpg",
+        "type": "group"
+      }
+    ],
+    "322201215": [
+      {
+        "filename": "322201215G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/322201215G.jpg",
+        "type": "group"
+      }
+    ],
+    "231101820": [
+      {
+        "filename": "231101820G.jpg",
+        "suffix": "G",
+        "extension": "jpg",
+        "path": "assets/bilder/231101820G.jpg",
+        "type": "group"
+      }
+    ],
+    "273160301": [
+      {
+        "filename": "273160301.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/273160301.jpg",
+        "type": "main"
+      }
+    ],
+    "227100105": [
+      {
+        "filename": "227100105E.jpg",
+        "suffix": "E",
+        "extension": "jpg",
+        "path": "assets/bilder/227100105E.jpg",
+        "type": "single"
+      }
+    ],
+    "221101020": [
+      {
+        "filename": "221101020.jpg",
+        "suffix": "main",
+        "extension": "jpg",
+        "path": "assets/bilder/221101020.jpg",
+        "type": "main"
+      }
+    ]
+  }
+}

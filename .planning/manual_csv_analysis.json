@@ -1,0 +1,307 @@
+{
+  "upload_id": "manual_2026-03-26",
+  "csv_file": "EDI Export Artikeldaten.csv",
+  "join_key": "Artikelnummer",
+  "join_key_confidence": 0.99,
+  "analysis_timestamp": "2026-03-26T14:30:00",
+  "total_rows": 464,
+  "total_columns": 33,
+  "delimiter": ";",
+  "mappings": [
+    {
+      "csv_column": "Artikelnummer",
+      "semantic_type": "product_code",
+      "confidence": 0.99,
+      "sample_values": ["210100125", "210100225", "210100325"],
+      "is_join_key": true,
+      "description": "Eindeutige Produktnummer/SKU"
+    },
+    {
+      "csv_column": "Bezeichnung1",
+      "semantic_type": "product_name",
+      "confidence": 0.98,
+      "sample_values": ["VERSANDTASCHE AUS WELLPAPPE CD, 145x190x-25mm", "VERSANDTASCHE AUS WELLPAPPE DVD, 150x250x-50mm"],
+      "is_join_key": false,
+      "description": "Hauptproduktbezeichnung mit Maßen"
+    },
+    {
+      "csv_column": "Bezeichnung2",
+      "semantic_type": "product_description",
+      "confidence": 0.95,
+      "sample_values": ["sk m. Aufreißfaden, braun, var. Höhe, VE 4x25 St."],
+      "is_join_key": false,
+      "description": "Zusätzliche Produktdetails und Verpackungseinheit"
+    },
+    {
+      "csv_column": "EANNummer",
+      "semantic_type": "ean_barcode",
+      "confidence": 0.99,
+      "sample_values": ["4250414103682", "4250414103705"],
+      "is_join_key": false,
+      "description": "EAN-13 Barcode"
+    },
+    {
+      "csv_column": "Gewicht",
+      "semantic_type": "weight_kg",
+      "confidence": 0.98,
+      "sample_values": ["0.028", "0.045", "0.056"],
+      "is_join_key": false,
+      "description": "Produktgewicht in Kilogramm"
+    },
+    {
+      "csv_column": "GewichtLME",
+      "semantic_type": "weight_lme",
+      "confidence": 0.70,
+      "sample_values": ["0.036", "0.045", "0.056"],
+      "is_join_key": false,
+      "description": "Gewicht LME (Lademetereinheit?)"
+    },
+    {
+      "csv_column": "USER_AABreite",
+      "semantic_type": "outer_width_cm",
+      "confidence": 0.85,
+      "sample_values": ["20.3", "26.8", "28.8"],
+      "is_join_key": false,
+      "description": "Außenabmessung Breite in cm"
+    },
+    {
+      "csv_column": "USER_AAHoehe",
+      "semantic_type": "outer_height_cm",
+      "confidence": 0.85,
+      "sample_values": ["2.8", "5.2", "5.2"],
+      "is_join_key": false,
+      "description": "Außenabmessung Höhe in cm"
+    },
+    {
+      "csv_column": "USER_AATiefe",
+      "semantic_type": "outer_depth_cm",
+      "confidence": 0.85,
+      "sample_values": ["15.8", "16.7", "20"],
+      "is_join_key": false,
+      "description": "Außenabmessung Tiefe in cm"
+    },
+    {
+      "csv_column": "USER_AFBreite",
+      "semantic_type": "carton_width_cm",
+      "confidence": 0.80,
+      "sample_values": ["20", "37", "39.5"],
+      "is_join_key": false,
+      "description": "Faltkarton Breite in cm"
+    },
+    {
+      "csv_column": "USER_AFGewicht",
+      "semantic_type": "carton_weight_kg",
+      "confidence": 0.85,
+      "sample_values": ["0.7", "4.5", "1.4"],
+      "is_join_key": false,
+      "description": "Faltkarton Gewicht in kg"
+    },
+    {
+      "csv_column": "USER_AFHoehe",
+      "semantic_type": "carton_height_cm",
+      "confidence": 0.80,
+      "sample_values": ["7.5", "10", "10"],
+      "is_join_key": false,
+      "description": "Faltkarton Höhe in cm"
+    },
+    {
+      "csv_column": "USER_AFLaenge",
+      "semantic_type": "carton_length_cm",
+      "confidence": 0.80,
+      "sample_values": ["38", "42.5", "38"],
+      "is_join_key": false,
+      "description": "Faltkarton Länge in cm"
+    },
+    {
+      "csv_column": "USER_AFVolumen",
+      "semantic_type": "carton_volume",
+      "confidence": 0.90,
+      "sample_values": ["100", "100", "100"],
+      "is_join_key": false,
+      "description": "Faltkarton Volumen"
+    },
+    {
+      "csv_column": "USER_AI",
+      "semantic_type": "inner_packaging_info",
+      "confidence": 0.50,
+      "sample_values": ["", "", ""],
+      "is_join_key": false,
+      "description": "Innenverpackung Info (oft leer)"
+    },
+    {
+      "csv_column": "USER_AIBreite",
+      "semantic_type": "inner_width_cm",
+      "confidence": 0.75,
+      "sample_values": ["19", "37", "27.2"],
+      "is_join_key": false,
+      "description": "Innenmaß Breite in cm"
+    },
+    {
+      "csv_column": "USER_AIHoehe",
+      "semantic_type": "inner_height_cm",
+      "confidence": 0.75,
+      "sample_values": ["2.5", "18", "5"],
+      "is_join_key": false,
+      "description": "Innenmaß Höhe in cm"
+    },
+    {
+      "csv_column": "USER_AILaenge",
+      "semantic_type": "inner_length_cm",
+      "confidence": 0.75,
+      "sample_values": ["14.5", "42.5", "18.7"],
+      "is_join_key": false,
+      "description": "Innenmaß Länge in cm"
+    },
+    {
+      "csv_column": "USER_EANNummerVerp",
+      "semantic_type": "ean_packaging",
+      "confidence": 0.90,
+      "sample_values": ["4250414103699", "4250414103712"],
+      "is_join_key": false,
+      "description": "EAN-Nummer Verpackung"
+    },
+    {
+      "csv_column": "USER_EANNummerVerp2",
+      "semantic_type": "ean_packaging_secondary",
+      "confidence": 0.90,
+      "sample_values": ["4250414110246", "4250414110178"],
+      "is_join_key": false,
+      "description": "Zweite EAN-Nummer Verpackung"
+    },
+    {
+      "csv_column": "USER_Farbe",
+      "semantic_type": "color",
+      "confidence": 0.99,
+      "sample_values": ["braun", "braun", "schwarz"],
+      "is_join_key": false,
+      "description": "Produktfarbe"
+    },
+    {
+      "csv_column": "USER_GewVE1",
+      "semantic_type": "packaging_unit_weight_1",
+      "confidence": 0.70,
+      "sample_values": ["", "", ""],
+      "is_join_key": false,
+      "description": "Gewicht Verpackungseinheit 1"
+    },
+    {
+      "csv_column": "USER_GewVE2",
+      "semantic_type": "packaging_unit_weight_2",
+      "confidence": 0.70,
+      "sample_values": ["", "", ""],
+      "is_join_key": false,
+      "description": "Gewicht Verpackungseinheit 2"
+    },
+    {
+      "csv_column": "USER_MatZusammensetzung",
+      "semantic_type": "material_composition",
+      "confidence": 0.95,
+      "sample_values": ["120 KLS braun / 70 WS / 115 TL braun", "120 KLS / 70 WS / 115 TL"],
+      "is_join_key": false,
+      "description": "Materialzusammensetzung (KLS=Kraftliner, WS=Wellenstoff, TL=Testliner)"
+    },
+    {
+      "csv_column": "USER_Material",
+      "semantic_type": "material_type",
+      "confidence": 0.90,
+      "sample_values": ["1.20e KLS", "1.20e KLS", "1.20E KLS"],
+      "is_join_key": false,
+      "description": "Material-Typ Kodierung"
+    },
+    {
+      "csv_column": "USER_PHArtikel115Pal",
+      "semantic_type": "units_per_pallet",
+      "confidence": 0.85,
+      "sample_values": ["3600", "3000", "3000"],
+      "is_join_key": false,
+      "description": "Artikelanzahl pro Palette"
+    },
+    {
+      "csv_column": "USER_ULBreite",
+      "semantic_type": "packaging_width_cm",
+      "confidence": 0.70,
+      "sample_values": ["20", "37", "37.5"],
+      "is_join_key": false,
+      "description": "Umverpackung/Lager Breite in cm"
+    },
+    {
+      "csv_column": "USER_ULGewicht",
+      "semantic_type": "packaging_weight_kg",
+      "confidence": 0.70,
+      "sample_values": ["2.8", "4.9", "6.005"],
+      "is_join_key": false,
+      "description": "Umverpackung/Lager Gewicht in kg"
+    },
+    {
+      "csv_column": "USER_ULHoehe",
+      "semantic_type": "packaging_height_cm",
+      "confidence": 0.70,
+      "sample_values": ["29.5", "18", "21"],
+      "is_join_key": false,
+      "description": "Umverpackung/Lager Höhe in cm"
+    },
+    {
+      "csv_column": "USER_ULLaenge",
+      "semantic_type": "packaging_length_cm",
+      "confidence": 0.70,
+      "sample_values": ["38", "42.5", "39"],
+      "is_join_key": false,
+      "description": "Umverpackung/Lager Länge in cm"
+    },
+    {
+      "csv_column": "Verkaufsmengeneinheit",
+      "semantic_type": "sales_unit",
+      "confidence": 0.99,
+      "sample_values": ["Stck.", "Stck.", "Stck."],
+      "is_join_key": false,
+      "description": "Verkaufsmengeneinheit"
+    },
+    {
+      "csv_column": "Warennummer",
+      "semantic_type": "customs_tariff_number",
+      "confidence": 0.95,
+      "sample_values": ["48191000", "48191000", "48191000"],
+      "is_join_key": false,
+      "description": "Zolltarifnummer"
+    },
+    {
+      "csv_column": "FEFCO_Code",
+      "semantic_type": "fefco_packaging_code",
+      "confidence": 0.95,
+      "sample_values": ["", "Stanzverp.", "Fefco 0701"],
+      "is_join_key": false,
+      "description": "FEFCO Verpackungscode (Standard für Wellpappe)"
+    }
+  ],
+  "low_confidence_columns": [
+    "GewichtLME",
+    "USER_AI",
+    "USER_GewVE1",
+    "USER_GewVE2",
+    "USER_ULBreite",
+    "USER_ULGewicht",
+    "USER_ULHoehe",
+    "USER_ULLaenge"
+  ],
+  "requires_confirmation": false,
+  "summary": {
+    "product_type": "Versandverpackungen aus Wellpappe (Corrugated shipping packaging)",
+    "key_fields": [
+      "Artikelnummer (unique product code)",
+      "Bezeichnung1 (product name with dimensions)",
+      "USER_Farbe (color: mostly brown)",
+      "USER_MatZusammensetzung (material composition)",
+      "Gewicht (weight in kg)"
+    ],
+    "dimension_fields": [
+      "USER_AABreite/Hoehe/Tiefe (outer dimensions)",
+      "USER_AFBreite/Hoehe/Laenge (carton dimensions)",
+      "USER_AIBreite/Hoehe/Laenge (inner dimensions)"
+    ],
+    "barcode_fields": [
+      "EANNummer (primary EAN)",
+      "USER_EANNummerVerp (packaging EAN)",
+      "USER_EANNummerVerp2 (secondary packaging EAN)"
+    ]
+  }
+}
