@@ -12,6 +12,9 @@ from app.models.merge import (
     MergedProduct,
     MergeResult
 )
+from app.models.image_linking import (
+    ImageLinkResult
+)
 
 __all__ = [
     "UploadSession",
@@ -21,4 +24,5 @@ __all__ = [
     "CSVAnalysisResult",
     "MergedProduct",
     "MergeResult",
+    "ImageLinkResult",
 ]
