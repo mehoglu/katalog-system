@@ -62,7 +62,12 @@ Plans:
   2. System resolves conflicting data using priority rules (EDI Export takes precedence over Preisliste)
   3. Products with missing data (price, dimensions) display with empty fields instead of errors
   4. User can verify that all products from both CSVs are included in merged result  
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — CSV Merge Service with Polars
+- [ ] 03-02-PLAN.md — FastAPI Merge Endpoint + Storage
+- [ ] 03-03-PLAN.md — Integration Tests
 
 ### Phase 4: Automatic Image Linking
 **Goal**: System associates product images with correct articles automatically  
