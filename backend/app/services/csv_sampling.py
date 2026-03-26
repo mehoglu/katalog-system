@@ -7,6 +7,27 @@ from pathlib import Path
 import polars as pl
 
 
+def detect_delimiter(csv_path: Path, encoding: str = "utf8") -> str:
+    """
+    Detect CSV delimiter by checking first line.
+    Common delimiters: comma, semicolon, tab, pipe
+    """
+    with open(csv_path, 'r', encoding=encoding) as f:
+        first_line = f.readline()
+    
+    # Count occurrences of common delimiters
+    delimiters = {
+        ',': first_line.count(','),
+        ';': first_line.count(';'),
+        '\t': first_line.count('\t'),
+        '|': first_line.count('|')
+    }
+    
+    # Return delimiter with highest count (default to comma if all zero)
+    detected = max(delimiters, key=delimiters.get)
+    return detected if delimiters[detected] > 0 else ','
+
+
 def sample_csv_for_llm(csv_path: Path, max_rows: int = 10) -> str:
     """
     Extract representative CSV sample for LLM analysis.
@@ -26,9 +47,16 @@ def sample_csv_for_llm(csv_path: Path, max_rows: int = 10) -> str:
         ValueError: If CSV is empty or unreadable
     """
     # Read CSV lazily (memory-efficient for large files)
-    # Phase 1 guarantees UTF-8 encoding, so encoding="utf-8" is safe
+    # Phase 1 guarantees UTF-8 encoding, so encoding="utf8" is safe
     try:
-        df = pl.read_csv(csv_path, encoding="utf-8", n_rows=1000)
+        delimiter = detect_delimiter(csv_path, encoding="utf8")
+        df = pl.read_csv(
+            csv_path, 
+            encoding="utf8", 
+            separator=delimiter,
+            truncate_ragged_lines=True,
+            n_rows=1000
+        )
     except Exception as e:
         raise ValueError(f"Cannot read CSV: {e}")
     
