@@ -9,6 +9,26 @@ from typing import Optional
 
 from app.models.validation import ValidationError, ValidationResult, ErrorSeverity
 
+def detect_delimiter(csv_path: Path, encoding: str = "utf8") -> str:
+    """
+    Detect CSV delimiter by checking first line.
+    Common delimiters: comma, semicolon, tab, pipe
+    """
+    with open(csv_path, 'r', encoding=encoding) as f:
+        first_line = f.readline()
+    
+    # Count occurrences of common delimiters
+    delimiters = {
+        ',': first_line.count(','),
+        ';': first_line.count(';'),
+        '\t': first_line.count('\t'),
+        '|': first_line.count('|')
+    }
+    
+    # Return delimiter with highest count (default to comma if all zero)
+    detected = max(delimiters, key=delimiters.get)
+    return detected if delimiters[detected] > 0 else ','
+
 def validate_csv_structure(
     csv_path: Path,
     upload_id: str,
@@ -43,12 +63,15 @@ def validate_csv_structure(
     
     # CONTEXT D-12: Early-exit - stop at first critical error
     try:
-        # Try to parse CSV with Polars (lazy evaluation)
-        # Note: Use read_csv (eager) first to detect delimiter, then scan_csv for lazy ops
+        # Detect delimiter first (semicolon for German CSVs, comma for others)
+        delimiter = detect_delimiter(csv_path, encoding)
+        
+        # Try to parse CSV with Polars
+        # Note: Use read_csv (eager) for full validation
         df = pl.read_csv(
             csv_path,
             encoding=encoding,
-            separator=None,  # Auto-detect delimiter (comma, semicolon, tab, etc.)
+            separator=delimiter,  # Use detected delimiter
             ignore_errors=False,  # Fail on parse errors
             truncate_ragged_lines=True  # Handle rows with varying column counts (common in real CSVs)
         )
