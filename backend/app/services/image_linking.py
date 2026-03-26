@@ -69,7 +69,15 @@ def link_images_to_products(
         raise FileNotFoundError(f"merged_products.json not found: {merged_products_path}")
     
     with open(merged_products_path, "r", encoding="utf-8") as f:
-        merged_data = json.load(f)
+        merged_file = json.load(f)
+    
+    # Handle both array format and wrapper object format
+    if isinstance(merged_file, dict) and "products" in merged_file:
+        merged_data = merged_file["products"]
+        metadata = {k: v for k, v in merged_file.items() if k != "products"}
+    else:
+        merged_data = merged_file
+        metadata = {}
     
     # Load image mapping
     if not image_mapping_path.exists():
@@ -104,9 +112,14 @@ def link_images_to_products(
         else:
             product["sources"]["images"] = None
     
-    # Save enhanced merged_products.json
+    # Save enhanced merged_products.json (preserve wrapper structure if present)
+    if metadata:
+        output_data = {**metadata, "products": merged_data}
+    else:
+        output_data = merged_data
+    
     with open(merged_products_path, "w", encoding="utf-8") as f:
-        json.dump(merged_data, f, ensure_ascii=False, indent=2)
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
     
     # Calculate statistics
     total_products = len(merged_data)
