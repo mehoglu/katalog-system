@@ -137,7 +137,24 @@ async def upload_images(
         
         # Save image
         image_path = images_dir / image.filename
-     
+        file_size = 0
+        
+        async with aiofiles.open(image_path, 'wb') as f:
+            while chunk := await image.read(16384):  # 16KB chunks for images
+                file_size += len(chunk)
+                await f.write(chunk)
+        
+        total_size += file_size
+        uploaded_count += 1
+    
+    return ImageUploadResponse(
+        upload_id=upload_id,
+        image_count=uploaded_count,
+        total_size_bytes=total_size,
+        uploaded_at=datetime.now(),
+        image_dir=str(images_dir.relative_to(settings.upload_dir))
+    )
+
 
 @router.post("/upload/csv/{upload_id}/confirm-encoding")
 async def confirm_encoding(
@@ -187,23 +204,8 @@ async def confirm_encoding(
     return {
         "encoding": confirmed_encoding,
         "validation": validation_result.dict()
-    }   file_size = 0
-        
-        async with aiofiles.open(image_path, 'wb') as f:
-            while chunk := await image.read(16384):  # 16KB chunks for images
-                file_size += len(chunk)
-                await f.write(chunk)
-        
-        total_size += file_size
-        uploaded_count += 1
-    
-    return ImageUploadResponse(
-        upload_id=upload_id,
-        image_count=uploaded_count,
-        total_size_bytes=total_size,
-        uploaded_at=datetime.now(),
-        image_dir=str(images_dir.relative_to(settings.upload_dir))
-    )
+    }
+
 
 @router.get("/upload/{upload_id}")
 async def get_upload_session(upload_id: str):
