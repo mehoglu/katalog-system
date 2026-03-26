@@ -48,7 +48,7 @@ def validate_csv_structure(
             csv_path,
             encoding=encoding,
             ignore_errors=False,  # Fail on parse errors
-            truncate_ragged_lines=False  # Detect malformed rows
+            truncate_ragged_lines=True  # Handle rows with varying column counts (common in real CSVs)
         )
         
         # Check 1: Empty file?
