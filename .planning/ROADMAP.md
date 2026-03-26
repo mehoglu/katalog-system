@@ -108,7 +108,12 @@ Plans:
   2. User can edit any cell inline and see changes saved immediately
   3. User can identify which data came from which CSV source
   4. User can trigger catalog regeneration using corrected data  
-**Plans**: TBD  
+**Plans**: 2 plans in 2 waves
+
+Plans:
+- [ ] 06-01-PLAN.md — Review API (GET all products, PATCH single field) (Wave 1, autonomous)
+- [ ] 06-02-PLAN.md — Review UI table with inline editing (Wave 2, has checkpoint)
+
 **UI hint**: yes
 
 ### Phase 7: Professional HTML Catalog Output
