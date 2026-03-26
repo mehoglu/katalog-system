@@ -126,7 +126,10 @@ Plans:
   3. Generated HTML displays correctly in A4 format (210×297mm) for PDF export
   4. HTML uses clean, modern design with proper typography and visual hierarchy
   5. All product fields (name, description, dimensions, price, images) appear correctly in catalog  
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [ ] 07-01-PLAN.md — HTML catalog generation (templates + API + tests) (Wave 1, has checkpoint)
 
 ## Progress
 
