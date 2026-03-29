@@ -579,9 +579,18 @@
         async function exportAll() {
             console.log('Generating complete PDF with all products');
             
-            showMessage('📄 Komplett-PDF wird generiert... Bitte warten.', 'loading');
+            showMessage(
+                '📄 Komplett-PDF wird generiert...<br><br>' +
+                '⏳ Dies kann mehrere Minuten dauern.<br>' +
+                '💡 Bitte nicht schließen oder neu laden!',
+                'loading'
+            );
             
             try {
+                // Increase timeout for large PDF generation (10 minutes)
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 600000);
+                
                 const response = await fetch(`${API_BASE_URL}/api/catalog/generate-pdf`, {
                     method: 'POST',
                     headers: {
@@ -590,8 +599,11 @@
                     body: JSON.stringify({
                         upload_id: UPLOAD_ID,
                         mode: 'complete'
-                    })
+                    }),
+                    signal: controller.signal
                 });
+                
+                clearTimeout(timeoutId);
                 
                 if (!response.ok) {
                     const error = await response.json();
@@ -611,7 +623,11 @@
                 
             } catch (error) {
                 console.error('Complete PDF generation error:', error);
-                showMessage('❌ Fehler beim Generieren des PDFs: ' + error.message, 'error');
+                if (error.name === 'AbortError') {
+                    showMessage('❌ Timeout: PDF-Generierung dauerte zu lange (>10 Minuten)', 'error');
+                } else {
+                    showMessage('❌ Fehler beim Generieren des PDFs: ' + error.message, 'error');
+                }
             }
         }
         
