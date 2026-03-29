@@ -577,9 +577,42 @@
         }
         
         async function exportAll() {
-            const allArtikelnummern = Array.from(document.querySelectorAll('.product-checkbox'))
-                .map(cb => cb.dataset.artikelnummer);
-            await generatePDF(allArtikelnummern);
+            console.log('Generating complete PDF with all products');
+            
+            showMessage('📄 Komplett-PDF wird generiert... Bitte warten.', 'loading');
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/catalog/generate-pdf`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        upload_id: UPLOAD_ID,
+                        mode: 'complete'
+                    })
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.detail || 'PDF-Generierung fehlgeschlagen');
+                }
+                
+                const result = await response.json();
+                console.log('Complete PDF generated:', result);
+                
+                showMessage(
+                    `✅ Komplett-PDF erfolgreich generiert!<br><br>` +
+                    `📄 Alle ${result.total_products} Artikel<br>` +
+                    `📄 Kombiniert in einem PDF<br><br>` +
+                    `Datei: <strong>${result.catalog_file}</strong>`,
+                    'success'
+                );
+                
+            } catch (error) {
+                console.error('Complete PDF generation error:', error);
+                showMessage('❌ Fehler beim Generieren des PDFs: ' + error.message, 'error');
+            }
         }
         
         async function generatePDF(artikelnummern) {

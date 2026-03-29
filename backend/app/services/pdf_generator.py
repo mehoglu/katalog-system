@@ -157,31 +157,57 @@ async def generate_complete_pdf(upload_id: str, upload_dir: str = "uploads") -> 
         browser = await p.chromium.launch()
         page = await browser.new_page()
         
-        # Create a temporary combined HTML file
+        # Collect all HTML file paths
+        html_files_to_merge = []
+        for product in products:
+            artikelnummer = product["artikelnummer"]
+            html_file = catalog_html_path / f"{artikelnummer}.html"
+            if html_file.exists():
+                html_files_to_merge.append(html_file)
+        
+        # Create temporary combined HTML with proper styling
         combined_html = catalog_html_path / "_temp_complete.html"
         
         try:
-            # Build combined HTML content
-            html_parts = ['<html><head><meta charset="UTF-8"></head><body>']
+            # Read first HTML to get head/style content
+            with open(html_files_to_merge[0], "r", encoding="utf-8") as f:
+                first_html = f.read()
             
-            for product in products:
-                artikelnummer = product["artikelnummer"]
-                html_file = catalog_html_path / f"{artikelnummer}.html"
-                
-                if html_file.exists():
-                    # Read HTML content and extract body
-                    with open(html_file, "r", encoding="utf-8") as f:
-                        content = f.read()
-                        # Simple extraction of body content
-                        if '<body' in content and '</body>' in content:
-                            body_start = content.find('<body')
-                            body_start = content.find('>', body_start) + 1
-                            body_end = content.find('</body>')
-                            body_content = content[body_start:body_end]
-                            html_parts.append(body_content)
-                            html_parts.append('<div style="page-break-after: always;"></div>')
+            # Extract head content (including all styles)
+            head_start = first_html.find('<head')
+            head_start = first_html.find('>', head_start) + 1
+            head_end = first_html.find('</head>')
+            head_content = first_html[head_start:head_end]
             
-            html_parts.append('</body></html>')
+            # Build combined HTML
+            html_parts = [
+                '<!DOCTYPE html>',
+                '<html lang="de">',
+                '<head>',
+                head_content,
+                '</head>',
+                '<body>'
+            ]
+            
+            # Add each product page with page break
+            for html_file in html_files_to_merge:
+                with open(html_file, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    
+                # Extract body content
+                if '<body' in content and '</body>' in content:
+                    body_start = content.find('<body')
+                    body_start = content.find('>', body_start) + 1
+                    body_end = content.find('</body>')
+                    body_content = content[body_start:body_end]
+                    
+                    # Wrap in page container with page break
+                    html_parts.append('<div style="page-break-after: always;">')
+                    html_parts.append(body_content)
+                    html_parts.append('</div>')
+            
+            html_parts.append('</body>')
+            html_parts.append('</html>')
             
             # Write combined HTML
             with open(combined_html, "w", encoding="utf-8") as f:
