@@ -217,6 +217,133 @@
             }
         }
         
+        /* === PDF EXPORT CONTROLS === */
+        .export-controls {
+            background: white;
+            padding: 5mm;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            margin-bottom: 5mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3mm;
+        }
+        
+        .selection-info {
+            font-size: 10pt;
+            color: #374151;
+            font-weight: 600;
+        }
+        
+        .selection-count {
+            color: #667eea;
+            font-size: 12pt;
+        }
+        
+        .export-buttons {
+            display: flex;
+            gap: 3mm;
+        }
+        
+        .btn {
+            padding: 3mm 5mm;
+            border: none;
+            border-radius: 8px;
+            font-size: 9.5pt;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+        }
+        
+        .btn-outline {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* === CHECKBOX STYLING === */
+        .checkbox-cell {
+            width: 40px;
+            text-align: center;
+        }
+        
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .selected-row {
+            background: #eff6ff !important;
+        }
+        
+        /* === MESSAGE STYLING === */
+        .message {
+            padding: 4mm;
+            border-radius: 8px;
+            margin-bottom: 5mm;
+            font-weight: 600;
+        }
+        
+        .message-success {
+            background: #d1fae5;
+            color: #065f46;
+            border-left: 4px solid #10b981;
+        }
+        
+        .message-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .message-loading {
+            background: #e0e7ff;
+            color: #3730a3;
+            border-left: 4px solid #6366f1;
+        }
+        
+        @media print {
+            .export-controls, .checkbox-cell, input[type="checkbox"] {
+                display: none !important;
+            }
+        }
+        
         /* === FOOTER === */
         .footer {
             margin-top: 8mm;
@@ -284,33 +411,49 @@
         </div>
     </div>
     
+    <div id="message-container"></div>
+    
+    <div class="export-controls">
+        <div class="selection-info">
+            <span class="selection-count" id="selection-count">0</span> von {{total_products}} Produkten ausgewählt
+        </div>
+        <div class="export-buttons">
+            <button class="btn btn-outline" id="select-all-btn">Alle auswählen</button>
+            <button class="btn btn-outline" id="deselect-all-btn">Alle abwählen</button>
+            <button class="btn btn-primary" id="export-selected-btn" disabled>
+                📄 Auswahl als PDF (<span id="btn-count">0</span>)
+            </button>
+            <button class="btn btn-secondary" id="export-all-btn">
+                📚 Alle als PDF
+            </button>
+        </div>
+    </div>
+    
     <div class="table-container">
         <table>
             <thead>
                 <tr>
+                    <th class="checkbox-cell">
+                        <input type="checkbox" id="select-all-checkbox" title="Alle auswählen">
+                    </th>
                     <th style="width: 100px;">Artikel-Nr</th>
                     <th>Produktbezeichnung</th>
-                    <th style="width: 90px;">Preis</th>
                     <th style="width: 80px; text-align: center;">Bilder</th>
                     <th style="width: 100px; text-align: center;">Details</th>
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
-                <tr>
+                <tr data-artikelnummer="{{product.artikelnummer}}">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" class="product-checkbox" data-artikelnummer="{{product.artikelnummer}}">
+                    </td>
                     <td>{{product.artikelnummer}}</td>
                     <td>
                         {% if product.data.bezeichnung1_enhanced %}
                             <div class="product-name product-name-enhanced">{{product.data.bezeichnung1_enhanced}}</div>
                         {% elif product.data.bezeichnung1 %}
                             <div class="product-name">{{product.data.bezeichnung1}}</div>
-                        {% else %}
-                            <span class="no-data">—</span>
-                        {% endif %}
-                    </td>
-                    <td class="price-cell">
-                        {% if product.data.preis %}
-                            € {{product.data.preis}}
                         {% else %}
                             <span class="no-data">—</span>
                         {% endif %}
@@ -340,5 +483,161 @@
             <span>{{total_products}} Produkte</span>
         </div>
     </div>
+    
+    <script>
+        // PDF Export Functionality
+        const API_BASE_URL = window.location.origin.replace(':8080', ':8000');
+        const UPLOAD_ID = '{{upload_id}}';
+        let selectedArtikelnummern = new Set();
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            setupEventListeners();
+        });
+        
+        function setupEventListeners() {
+            // Select all checkbox
+            document.getElementById('select-all-checkbox').addEventListener('change', handleSelectAll);
+            
+            // Individual checkboxes
+            document.querySelectorAll('.product-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', handleCheckboxChange);
+            });
+            
+            // Buttons
+            document.getElementById('select-all-btn').addEventListener('click', selectAll);
+            document.getElementById('deselect-all-btn').addEventListener('click', deselectAll);
+            document.getElementById('export-selected-btn').addEventListener('click', exportSelected);
+            document.getElementById('export-all-btn').addEventListener('click', exportAll);
+        }
+        
+        function handleSelectAll(event) {
+            const isChecked = event.target.checked;
+            document.querySelectorAll('.product-checkbox').forEach(checkbox => {
+                checkbox.checked = isChecked;
+                const artikelnummer = checkbox.dataset.artikelnummer;
+                const row = checkbox.closest('tr');
+                
+                if (isChecked) {
+                    selectedArtikelnummern.add(artikelnummer);
+                    row.classList.add('selected-row');
+                } else {
+                    selectedArtikelnummern.delete(artikelnummer);
+                    row.classList.remove('selected-row');
+                }
+            });
+            updateSelectionUI();
+        }
+        
+        function handleCheckboxChange(event) {
+            const checkbox = event.target;
+            const artikelnummer = checkbox.dataset.artikelnummer;
+            const row = checkbox.closest('tr');
+            
+            if (checkbox.checked) {
+                selectedArtikelnummern.add(artikelnummer);
+                row.classList.add('selected-row');
+            } else {
+                selectedArtikelnummern.delete(artikelnummer);
+                row.classList.remove('selected-row');
+            }
+            
+            // Update select-all checkbox
+            const allCheckboxes = document.querySelectorAll('.product-checkbox');
+            const checkedCheckboxes = document.querySelectorAll('.product-checkbox:checked');
+            document.getElementById('select-all-checkbox').checked = 
+                allCheckboxes.length === checkedCheckboxes.length && allCheckboxes.length > 0;
+            
+            updateSelectionUI();
+        }
+        
+        function selectAll() {
+            document.getElementById('select-all-checkbox').checked = true;
+            document.getElementById('select-all-checkbox').dispatchEvent(new Event('change'));
+        }
+        
+        function deselectAll() {
+            document.getElementById('select-all-checkbox').checked = false;
+            document.getElementById('select-all-checkbox').dispatchEvent(new Event('change'));
+        }
+        
+        function updateSelectionUI() {
+            const count = selectedArtikelnummern.size;
+            document.getElementById('selection-count').textContent = count;
+            document.getElementById('btn-count').textContent = count;
+            document.getElementById('export-selected-btn').disabled = count === 0;
+        }
+        
+        async function exportSelected() {
+            if (selectedArtikelnummern.size === 0) {
+                showMessage('Bitte wählen Sie mindestens einen Artikel aus.', 'error');
+                return;
+            }
+            await generatePDF(Array.from(selectedArtikelnummern));
+        }
+        
+        async function exportAll() {
+            const allArtikelnummern = Array.from(document.querySelectorAll('.product-checkbox'))
+                .map(cb => cb.dataset.artikelnummer);
+            await generatePDF(allArtikelnummern);
+        }
+        
+        async function generatePDF(artikelnummern) {
+            console.log('Generating PDF for:', artikelnummern.length, 'articles');
+            
+            showMessage('📄 PDF wird generiert... Bitte warten.', 'loading');
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/catalog/generate-pdf`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        upload_id: UPLOAD_ID,
+                        mode: 'individual',
+                        artikelnummern: artikelnummern
+                    })
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.detail || 'PDF-Generierung fehlgeschlagen');
+                }
+                
+                const result = await response.json();
+                console.log('PDF generated:', result);
+                
+                showMessage(
+                    `✅ PDF erfolgreich generiert!<br><br>` +
+                    `📄 ${artikelnummern.length} Artikel<br>` +
+                    `📄 ${result.pages_generated} Seiten erstellt<br><br>` +
+                    `Datei: <strong>${result.catalog_file}</strong>`,
+                    'success'
+                );
+                
+            } catch (error) {
+                console.error('PDF generation error:', error);
+                showMessage(`❌ Fehler bei der PDF-Generierung: ${error.message}`, 'error');
+            }
+        }
+        
+        function showMessage(message, type) {
+            const container = document.getElementById('message-container');
+            const messageClass = type === 'success' ? 'message-success' : 
+                                type === 'error' ? 'message-error' : 'message-loading';
+            
+            container.innerHTML = `<div class="message ${messageClass}">${message}</div>`;
+            
+            // Auto-hide loading messages after 30 seconds
+            if (type === 'loading') {
+                setTimeout(() => {
+                    if (container.querySelector('.message-loading')) {
+                        container.innerHTML = '';
+                    }
+                }, 30000);
+            }
+        }
+    </script>
 </body>
 </html>

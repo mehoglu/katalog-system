@@ -29,9 +29,9 @@ Phase 2 delivers LLM-based automatic CSV structure analysis: The system analyzes
 
 ### LLM Integration-Architektur
 
-- **D-01:** Direkte OpenAI API-Aufrufe ohne Framework (keine LangChain) - volle Kontrolle, minimale Dependencies, transparente Prompt-Verwaltung
-- **D-02:** GPT-4o-mini als primary model für Standard-Analysen (günstig, $0.15/1M input tokens)
-- **D-03:** GPT-4o als fallback für komplexe/mehrdeutige Fälle (höhere Qualität, teurer)
+- **D-01:** Direkte Anthropic API-Aufrufe ohne Framework (keine LangChain) - volle Kontrolle, minimale Dependencies, transparente Prompt-Verwaltung
+- **D-02:** Claude 3.5 Haiku als primary model für Standard-Analysen (günstig, schnell, $0.25/1M input tokens)
+- **D-03:** Claude 3.5 Sonnet als fallback für komplexe/mehrdeutige Fälle (höhere Qualität, $3/1M input tokens)
 - **D-04:** Selbst gebaute Retry-Logic und Rate-Limiting (kein Framework-Overhead)
 
 ### Prompt-Design & Kontext
@@ -43,9 +43,9 @@ Phase 2 delivers LLM-based automatic CSV structure analysis: The system analyzes
 
 ### Mapping-Ausgabeformat
 
-- **D-09:** OpenAI Structured Outputs mit striktem JSON Schema (garantiert valides JSON seit 2024)
+- **D-09:** Claude Tool Use für strukturierte JSON-Outputs (native seit Claude 3, garantiert valides Schema)
 - **D-10:** Schema-Struktur: `{"mappings": [{"csv_column": str, "product_field": str, "confidence": float, "is_join_key": bool, "reasoning": str}]}`
-- **D-11:** Kein Function Calling (vermeidet multiple API-Roundtrips)
+- **D-11:** Tool Use mit Single-Call Pattern (alle Mappings in einem Aufruf)
 - **D-12:** Kein natürlicher Text mit Parsing (fehleranfällig, nicht robust)
 
 ### Confidence & Unsicherheit

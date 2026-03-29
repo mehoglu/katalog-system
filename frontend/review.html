@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produktdaten Review & Korrektur - Katalog</title>
-    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="/frontend/css/review.css?v=4">
 </head>
 <body>
     <div class="container">
@@ -45,17 +45,26 @@
             <table id="review-table">
                 <thead>
                     <tr>
-                        <th class="col-art-nr">Artikel-Nr</th>
-                        <th class="col-bez1">Bezeichnung 1</th>
-                        <th class="col-bez1-enh">Bezeichnung 1 (Verbessert)</th>
-                        <th class="col-bez2">Bezeichnung 2</th>
-                        <th class="col-price">Preis (€)</th>
+                        <th class="col-art-nr" rowspan="2">Artikel-Nr</th>
+                        <th class="col-bez1" rowspan="2">Bezeichnung 1</th>
+                        <th class="col-bez1-enh" rowspan="2">Bezeichnung 1 (Verbessert)</th>
+                        <th class="col-bez2" rowspan="2">Bezeichnung 2</th>
+                        <th class="col-bez2-enh" rowspan="2">Bezeichnung 2 (Verbessert)</th>
+                        <th class="col-staffel" rowspan="2">Abnahmemenge</th>
+                        <th class="col-staffel" rowspan="2">Preis nach Menge (€)</th>
+                        <th colspan="3" class="col-group">Innenseitemaße</th>
+                        <th colspan="3" class="col-group">Außenseitemaße</th>
+                        <th class="col-dim" rowspan="2">Gewicht (kg)</th>
+                        <th class="col-images" rowspan="2">Bilder</th>
+                        <th class="col-sources" rowspan="2">Quellen</th>
+                    </tr>
+                    <tr>
                         <th class="col-dim">Breite (cm)</th>
+                        <th class="col-dim">Länge (cm)</th>
                         <th class="col-dim">Höhe (cm)</th>
-                        <th class="col-dim">Tiefe (cm)</th>
-                        <th class="col-dim">Gewicht (kg)</th>
-                        <th class="col-images">Bilder</th>
-                        <th class="col-sources">Quellen</th>
+                        <th class="col-dim">Breite (cm)</th>
+                        <th class="col-dim">Länge (cm)</th>
+                        <th class="col-dim">Höhe (cm)</th>
                     </tr>
                 </thead>
                 <tbody id="review-table-body">
@@ -69,6 +78,6 @@
         </footer>
     </div>
 
-    <script src="js/review.js"></script>
+    <script src="/frontend/js/review.js?v=12"></script>
 </body>
 </html>

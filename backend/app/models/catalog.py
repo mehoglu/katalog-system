@@ -4,7 +4,7 @@ Phase 7: Professional HTML Catalog Output
 Phase 8: PDF Export Implementation
 """
 from pydantic import BaseModel, Field
-from typing import Literal
+from typing import Literal, Optional, List
 
 
 class GenerateCatalogRequest(BaseModel):
@@ -25,8 +25,12 @@ class GeneratePDFRequest(BaseModel):
     """Request model for PDF generation."""
     upload_id: str
     mode: Literal["individual", "complete", "both"] = Field(
-        default="both",
+        default="complete",
         description="PDF generation mode: individual PDFs, single complete PDF, or both"
+    )
+    artikelnummern: Optional[List[str]] = Field(
+        default=None,
+        description="Optional list of article numbers to include. If None, all articles are included."
     )
 
 
@@ -34,7 +38,6 @@ class GeneratePDFResponse(BaseModel):
     """Response model for PDF generation."""
     success: bool
     total_products: int
-    files_generated: int
-    output_path: str
-    mode: str
+    pages_generated: int
+    catalog_file: str
     message: str = "PDF generated successfully"

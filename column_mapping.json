@@ -1,0 +1,24 @@
+{
+  "edi_export_mapping": {
+    "artikelnummer": "Artikelnummer",
+    "bezeichnung1": "Bezeichnung1",
+    "bezeichnung2": "Bezeichnung2",
+    "ean": "EANNummer",
+    "breite_cm": "USER_AABreite",
+    "hoehe_cm": "USER_AAHoehe",
+    "tiefe_cm": "USER_AATiefe",
+    "gewicht_kg": "Gewicht",
+    "material": "USER_MatZusammensetzung",
+    "farbe": "USER_Farbe",
+    "verkaufseinheit": "Verkaufsmengeneinheit",
+    "warennummer": "Warennummer"
+  },
+  "preisliste_mapping": {
+    "artikelnummer": "HAN",
+    "bezeichnung": "BEZEICHNUNG",
+    "preis": "PREIS0",
+    "einheit": "EINHEIT",
+    "waehrung": "WAEHRUNG"
+  },
+  "join_key": "artikelnummer"
+}

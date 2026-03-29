@@ -8,7 +8,15 @@ from typing import List
 
 from app.core.config import settings
 from app.services.catalog_generator import generate_catalog
-from app.services.pdf_generator import generate_pdfs
+
+# PDF generator - optional import (requires Playwright)
+try:
+    from app.services.pdf_generator import generate_pdfs, PLAYWRIGHT_AVAILABLE
+    PDF_AVAILABLE = PLAYWRIGHT_AVAILABLE
+except ImportError as e:
+    print(f"⚠️  PDF generation not available: {e}")
+    PDF_AVAILABLE = False
+
 from app.models.catalog import (
     GenerateCatalogRequest, 
     GenerateCatalogResponse,
@@ -60,50 +68,55 @@ async def generate_html_catalog(request: GenerateCatalogRequest):
         )
 
 
-@router.post("/generate-pdf", response_model=List[GeneratePDFResponse])
+@router.post("/generate-pdf", response_model=GeneratePDFResponse)
 async def generate_pdf_catalog(request: GeneratePDFRequest):
     """
     Generate PDF catalog from existing HTML files.
     
-    Modes:
-    - "individual": Generate separate PDF for each product
-    - "complete": Generate single PDF with all products
-    - "both": Generate both individual and complete PDFs
-    
     Args:
-        request: GeneratePDFRequest with upload_id and mode
+        request: GeneratePDFRequest with upload_id, mode, and optional artikelnummern filter
         
     Returns:
-        List of GeneratePDFResponse with generation statistics
+        GeneratePDFResponse with generation statistics
         
     Raises:
         HTTPException 404: HTML catalog not found
-        HTTPException 400: Invalid mode
         HTTPException 500: PDF generation failed
+        HTTPException 503: PDF generation not available (missing system dependencies)
     """
+    if not PDF_AVAILABLE:
+        raise HTTPException(
+            status_code=503,
+            detail="PDF generation not available. Install Playwright: pip install playwright && playwright install chromium"
+        )
+    
     try:
         results = await generate_pdfs(
             upload_id=request.upload_id,
+            upload_dir=settings.upload_dir,
             mode=request.mode,
-            upload_dir=settings.upload_dir
+            artikelnummern=request.artikelnummern
         )
         
-        return [
-            GeneratePDFResponse(
-                success=True,
-                total_products=result.total_products,
-                files_generated=result.files_generated,
-                output_path=result.output_path,
-                mode=result.mode
-            )
-            for result in results
-        ]
+        # Get first result (for individual or complete mode) or combined stats for both
+        if len(results) == 1:
+            result = results[0]
+            total_products = result.total_products
+            pages_generated = result.files_generated
+            catalog_file = result.output_path
+        else:
+            # Both mode: combine statistics
+            total_products = sum(r.total_products for r in results)
+            pages_generated = sum(r.files_generated for r in results)
+            catalog_file = f"{results[0].output_path}, {results[1].output_path}"
         
-    except ValueError as e:
-        raise HTTPException(
-            status_code=400,
-            detail=str(e)
+        return GeneratePDFResponse(
+            success=True,
+            total_products=total_products,
+            pages_generated=pages_generated,
+            catalog_file=catalog_file
         )
+        
     except FileNotFoundError as e:
         raise HTTPException(
             status_code=404,

@@ -15,9 +15,15 @@ EDI_MAPPING = {
     "Artikelnummer": "artikelnummer",
     "Bezeichnung1": "bezeichnung1",
     "Bezeichnung2": "bezeichnung2",
-    "USER_AILaenge": "breite_cm",  # Changed from USER_AABreite - using Innenmaße (AI)
-    "USER_AIHoehe": "hoehe_cm",    # Changed from USER_AAHoehe - using Innenmaße (AI)
-    "USER_AIBreite": "tiefe_cm",   # Changed from USER_AATiefe - using Innenmaße (AI)
+    # Innenmaße (AI = Abmessungen Innen)
+    "USER_AILaenge": "breite_cm",
+    "USER_AIHoehe": "hoehe_cm",
+    "USER_AIBreite": "tiefe_cm",
+    # Außenmaße (AA = Abmessungen Außen)
+    "USER_AABreite": "breite_aussen_cm",
+    "USER_AAHoehe": "hoehe_aussen_cm",
+    "USER_AATiefe": "tiefe_aussen_cm",
+    # Other fields
     "Gewicht": "gewicht_kg",
     "USER_MatZusammensetzung": "material",
     "USER_Farbe": "farbe",

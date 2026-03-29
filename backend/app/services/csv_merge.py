@@ -14,6 +14,27 @@ from app.models.merge import MergedProduct, MergeResult
 # Field-specific priority rules (D-05 from CONTEXT)
 PREISLISTE_PRIORITY_FIELDS = {"preis", "menge1", "menge2", "menge3", "menge4", "menge5"}
 
+# Column standardization mapping (Phase 9 - Dimensions)
+# Maps raw CSV column names (after lowercase) to standardized field names
+COLUMN_STANDARDIZATION = {
+    # Innenmaße (AI = Abmessungen Innen)
+    "user_ailaenge": "breite_cm",
+    "user_aihoehe": "hoehe_cm", 
+    "user_aibreite": "tiefe_cm",
+    # Außenmaße (AA = Abmessungen Außen)
+    "user_aabreite": "breite_aussen_cm",
+    "user_aahoehe": "hoehe_aussen_cm",
+    "user_aatiefe": "tiefe_aussen_cm",
+    # Other standardizations
+    "bezeichnung1": "bezeichnung1",
+    "bezeichnung2": "bezeichnung2",
+    "gewicht": "gewicht_kg",
+    "user_matzusammensetzung": "material",
+    "user_farbe": "farbe",
+    "verkaufsmengeneinheit": "verkaufseinheit",
+    "eannummer": "ean"
+}
+
 
 def merge_csv_data(
     edi_csv_path: Union[str, Path],
@@ -73,6 +94,13 @@ def merge_csv_data(
     # Normalize column names to lowercase for consistent access
     df_edi.columns = [col.lower() for col in df_edi.columns]
     df_preisliste.columns = [col.lower() for col in df_preisliste.columns]
+    
+    # Apply column standardization to EDI (rename known columns to standard names)
+    edi_rename_map = {
+        col: COLUMN_STANDARDIZATION.get(col, col)
+        for col in df_edi.columns
+    }
+    df_edi = df_edi.rename(edi_rename_map)
     
     # Rename Preisliste columns (except join key) to add suffix BEFORE join
     # This ensures we can distinguish between EDI and Preisliste fields

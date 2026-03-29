@@ -88,7 +88,8 @@ async def generate_catalog(upload_id: str, upload_dir: str = "uploads") -> Catal
     index_html = index_template.render(
         products=products,
         total_products=total_products,
-        generation_date=generation_date
+        generation_date=generation_date,
+        upload_id=upload_id
     )
     
     index_file_path = catalog_output_path / "index.html"

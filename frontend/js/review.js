@@ -8,17 +8,15 @@ const API_BASE_URL = 'http://localhost:8000';
 let currentUploadId = null;
 let allProducts = [];
 let filteredProducts = [];
+// selectedArtikelnummern is defined in pdf-export.js and available via window.selectedArtikelnummern
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', () => {
     // Get upload_id from localStorage or URL parameter
     const urlParams = new URLSearchParams(window.location.search);
-    currentUploadId = urlParams.get('upload_id') || localStorage.getItem('upload_id');
+    currentUploadId = urlParams.get('upload_id') || localStorage.getItem('upload_id') || 'complete_run_001';
     
-    if (!currentUploadId) {
-        showError('Keine Upload-ID gefunden. Bitte laden Sie zuerst Daten hoch.');
-        return;
-    }
+    console.log('Using upload_id:', currentUploadId);
     
     document.getElementById('upload-id-display').textContent = `Upload: ${currentUploadId}`;
     
@@ -35,11 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
  * Load all products from API
  */
 async function loadProducts() {
+    console.log('Loading products for upload_id:', currentUploadId);
+    
     try {
         showLoading(true);
         hideError();
         
         const response = await fetch(`${API_BASE_URL}/api/review/${currentUploadId}`);
+        
+        console.log('API response status:', response.status);
         
         if (!response.ok) {
             if (response.status === 404) {
@@ -49,13 +51,21 @@ async function loadProducts() {
         }
         
         const data = await response.json();
+        console.log('Received products:', data.products ? data.products.length : 0);
+        
         allProducts = data.products;
         filteredProducts = [...allProducts];
+        
+        // Enable catalog generation button when products loaded
+        document.getElementById('catalog-btn').disabled = false;
         
         updateProductCount(filteredProducts.length, allProducts.length);
         renderTable(filteredProducts);
         
+        console.log('Products rendered successfully');
+        
     } catch (error) {
+        console.error('Error loading products:', error);
         showError(`Fehler beim Laden: ${error.message}`);
     } finally {
         showLoading(false);
@@ -66,18 +76,24 @@ async function loadProducts() {
  * Render table rows
  */
 function renderTable(products) {
+    console.log('renderTable called with', products ? products.length : 0, 'products');
+    
     const tbody = document.getElementById('review-table-body');
     tbody.innerHTML = '';
     
     if (products.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="11" style="text-align: center;">Keine Produkte gefunden</td></tr>';
+        console.log('No products to render');
+        tbody.innerHTML = '<tr><td colspan="16" style="text-align: center;">Keine Produkte gefunden</td></tr>';
         return;
     }
     
-    products.forEach(product => {
+    console.log('Creating rows...');
+    products.forEach((product, index) => {
+        if (index === 0) console.log('First product:', product.artikelnummer);
         const row = createProductRow(product);
         tbody.appendChild(row);
     });
+    console.log('All rows appended to tbody');
 }
 
 /**
@@ -117,27 +133,42 @@ function createProductRow(product) {
         sources.bezeichnung2
     ));
     
-    // Preis (editable)
-    row.appendChild(createEditableCell(
-        data.preis || '',
-        'preis',
-        product.artikelnummer,
-        sources.preis
-    ));
+    // Bezeichnung 2 Enhanced (read-only, styled differently)
+    const bez2Enhanced = data.bezeichnung2_enhanced || '';
+    const cellBez2Enhanced = createCell(bez2Enhanced, false);
+    if (bez2Enhanced) {
+        cellBez2Enhanced.classList.add('enhanced-field');
+    }
+    row.appendChild(cellBez2Enhanced);
     
-    // Dimensions (editable)
+    // Abnahmemenge (read-only, multi-line) - Format as "ab X"
+    const abnahmeCell = document.createElement('td');
+    abnahmeCell.className = 'staffel-cell';
+    if (data.abnahmemenge && data.abnahmemenge.length > 0) {
+        const lines = data.abnahmemenge.map(menge => `ab ${menge}`).join('<br>');
+        abnahmeCell.innerHTML = lines;
+    } else {
+        abnahmeCell.textContent = '-';
+    }
+    row.appendChild(abnahmeCell);
+    
+    // Preis nach Menge (read-only, multi-line)
+    const preisCell = document.createElement('td');
+    preisCell.className = 'staffel-cell';
+    if (data.preis_nach_menge && data.preis_nach_menge.length > 0) {
+        const lines = data.preis_nach_menge.map(preis => preis.toFixed(3) + ' €').join('<br>');
+        preisCell.innerHTML = lines;
+    } else {
+        preisCell.textContent = '-';
+    }
+    row.appendChild(preisCell);
+    
+    // Innenseitemaße (editable) - Order: Breite × Länge × Höhe
     row.appendChild(createEditableCell(
         data.breite_cm || '',
         'breite_cm',
         product.artikelnummer,
         sources.breite_cm
-    ));
-    
-    row.appendChild(createEditableCell(
-        data.hoehe_cm || '',
-        'hoehe_cm',
-        product.artikelnummer,
-        sources.hoehe_cm
     ));
     
     row.appendChild(createEditableCell(
@@ -148,18 +179,66 @@ function createProductRow(product) {
     ));
     
     row.appendChild(createEditableCell(
+        data.hoehe_cm || '',
+        'hoehe_cm',
+        product.artikelnummer,
+        sources.hoehe_cm
+    ));
+    
+    // Außenseitemaße (placeholder - not yet in data)
+    // TODO: Add breite_aussen_cm, tiefe_aussen_cm, hoehe_aussen_cm to merge process
+    const aussenBreite = createCell(data.breite_aussen_cm || '', false);
+    aussenBreite.classList.add('missing-data');
+    aussenBreite.title = 'Außenmaße noch nicht im Merge-Prozess erfasst';
+    row.appendChild(aussenBreite);
+    
+    const aussenTiefe = createCell(data.tiefe_aussen_cm || '', false);
+    aussenTiefe.classList.add('missing-data');
+    aussenTiefe.title = 'Außenmaße noch nicht im Merge-Prozess erfasst';
+    row.appendChild(aussenTiefe);
+    
+    const aussenHoehe = createCell(data.hoehe_aussen_cm || '', false);
+    aussenHoehe.classList.add('missing-data');
+    aussenHoehe.title = 'Außenmaße noch nicht im Merge-Prozess erfasst';
+    row.appendChild(aussenHoehe);
+    
+    row.appendChild(createEditableCell(
         data.gewicht_kg || '',
         'gewicht_kg',
         product.artikelnummer,
         sources.gewicht_kg
     ));
     
-    // Images (read-only, show thumbnails or count)
+    // Images (read-only, show thumbnails with lightbox)
     const imagesCell = document.createElement('td');
     imagesCell.className = 'images-cell';
     if (data.bild_paths && data.bild_paths.length > 0) {
-        imagesCell.textContent = `${data.bild_paths.length} 📷`;
-        imagesCell.title = data.bild_paths.join(', ');
+        const thumbnailContainer = document.createElement('div');
+        thumbnailContainer.className = 'thumbnail-container';
+        data.bild_paths.slice(0, 3).forEach((path, index) => {
+            const img = document.createElement('img');
+            // Path is relative to server root (server runs in project root)
+            img.src = `/${path}`;
+            img.className = 'thumbnail';
+            img.alt = 'Produktbild';
+            img.title = 'Klicken zum Vergrößern';
+            img.onerror = function() {
+                this.style.display = 'none';
+                console.error('Failed to load image:', path);
+            };
+            // Add click handler to open lightbox
+            img.onclick = () => openLightbox(data.bild_paths, index);
+            thumbnailContainer.appendChild(img);
+        });
+        if (data.bild_paths.length > 3) {
+            const more = document.createElement('span');
+            more.className = 'more-images';
+            more.textContent = `+${data.bild_paths.length - 3}`;
+            more.title = 'Klicken um alle Bilder zu sehen';
+            more.onclick = () => openLightbox(data.bild_paths, 3);
+            thumbnailContainer.appendChild(more);
+        }
+        imagesCell.appendChild(thumbnailContainer);
     } else {
         imagesCell.textContent = 'Keine';
         imagesCell.classList.add('no-images');
@@ -399,8 +478,90 @@ function handleFilter(event) {
 /**
  * Handle catalog generation button
  */
-function handleGenerateCatalog() {
-    alert('Katalog-Generierung wird in Phase 7 implementiert.');
+async function handleGenerateCatalog() {
+    const catalogBtn = document.getElementById('catalog-btn');
+    const originalText = catalogBtn.textContent;
+    
+    // Disable button and show loading state
+    catalogBtn.disabled = true;
+    catalogBtn.textContent = '⏳ Generiere Katalog...';
+    
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/catalog/generate`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                upload_id: currentUploadId
+            })
+        });
+        
+        if (!response.ok) {
+            const error = await response.json();
+            throw new Error(error.detail || 'Katalog-Generierung fehlgeschlagen');
+        }
+        
+        const result = await response.json();
+        
+        // Show success message
+        catalogBtn.textContent = '✅ Katalog generiert!';
+        catalogBtn.style.backgroundColor = '#10b981';
+        
+        // Show success alert with link
+        const catalogPath = result.output_path.replace('uploads/', '../uploads/');
+        const catalogUrl = `${window.location.origin}/${catalogPath}/index.html`;
+        
+        const message = `
+✅ HTML-Katalog erfolgreich generiert!
+
+📊 ${result.total_products} Produkte
+📄 ${result.files_generated} Dateien erstellt
+
+🔗 Katalog öffnen:
+${catalogUrl}
+        `.trim();
+        
+        alert(message);
+        
+        // Add "View Catalog" button
+        if (!document.getElementById('view-catalog-btn')) {
+            const viewBtn = document.createElement('button');
+            viewBtn.id = 'view-catalog-btn';
+            viewBtn.className = 'btn-primary';
+            viewBtn.textContent = '👁️ Katalog ansehen';
+            viewBtn.style.marginLeft = '10px';
+            viewBtn.onclick = () => window.open(catalogUrl, '_blank');
+            
+            catalogBtn.parentElement.appendChild(viewBtn);
+            
+            // Add PDF export button (if function exists from pdf-export.js)
+            if (typeof addPDFExportButton === 'function') {
+                setTimeout(() => addPDFExportButton(), 100);
+            }
+        }
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            catalogBtn.textContent = originalText;
+            catalogBtn.style.backgroundColor = '';
+            catalogBtn.disabled = false;
+        }, 3000);
+        
+    } catch (error) {
+        console.error('Catalog generation error:', error);
+        catalogBtn.textContent = '❌ Fehler';
+        catalogBtn.style.backgroundColor = '#ef4444';
+        
+        alert(`Fehler bei der Katalog-Generierung:\n\n${error.message}`);
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            catalogBtn.textContent = originalText;
+            catalogBtn.style.backgroundColor = '';
+            catalogBtn.disabled = false;
+        }, 3000);
+    }
 }
 
 /**
@@ -437,4 +598,127 @@ function showError(message) {
  */
 function hideError() {
     document.getElementById('error-message').style.display = 'none';
+}
+
+/**
+ * Image Lightbox functionality
+ */
+let currentLightboxImages = [];
+let currentLightboxIndex = 0;
+
+function openLightbox(imagePaths, startIndex = 0) {
+    currentLightboxImages = imagePaths;
+    currentLightboxIndex = startIndex;
+    
+    // Create lightbox if it doesn't exist
+    let lightbox = document.getElementById('image-lightbox');
+    if (!lightbox) {
+        lightbox = createLightboxElement();
+        document.body.appendChild(lightbox);
+    }
+    
+    showLightboxImage(currentLightboxIndex);
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function createLightboxElement() {
+    const lightbox = document.createElement('div');
+    lightbox.id = 'image-lightbox';
+    lightbox.className = 'lightbox';
+    
+    lightbox.innerHTML = `
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-image" src="" alt="Produktbild">
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+            <div class="lightbox-counter"></div>
+        </div>
+    `;
+    
+    // Close on background click
+    lightbox.onclick = (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    };
+    
+    // Close button
+    lightbox.querySelector('.lightbox-close').onclick = closeLightbox;
+    
+    // Navigation buttons
+    lightbox.querySelector('.lightbox-prev').onclick = (e) => {
+        e.stopPropagation();
+        navigateLightbox(-1);
+    };
+    
+    lightbox.querySelector('.lightbox-next').onclick = (e) => {
+        e.stopPropagation();
+        navigateLightbox(1);
+    };
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', handleLightboxKeyboard);
+    
+    return lightbox;
+}
+
+function showLightboxImage(index) {
+    const lightbox = document.getElementById('image-lightbox');
+    if (!lightbox || !currentLightboxImages.length) return;
+    
+    const img = lightbox.querySelector('.lightbox-image');
+    const counter = lightbox.querySelector('.lightbox-counter');
+    const prevBtn = lightbox.querySelector('.lightbox-prev');
+    const nextBtn = lightbox.querySelector('.lightbox-next');
+    
+    // Path is relative to server root
+    const path = currentLightboxImages[index];
+    img.src = `/${path}`;
+    
+    // Update counter
+    counter.textContent = `${index + 1} / ${currentLightboxImages.length}`;
+    
+    // Show/hide navigation buttons
+    prevBtn.style.display = currentLightboxImages.length > 1 ? 'block' : 'none';
+    nextBtn.style.display = currentLightboxImages.length > 1 ? 'block' : 'none';
+}
+
+function navigateLightbox(direction) {
+    currentLightboxIndex += direction;
+    
+    // Wrap around
+    if (currentLightboxIndex < 0) {
+        currentLightboxIndex = currentLightboxImages.length - 1;
+    } else if (currentLightboxIndex >= currentLightboxImages.length) {
+        currentLightboxIndex = 0;
+    }
+    
+    showLightboxImage(currentLightboxIndex);
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    if (lightbox) {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+function handleLightboxKeyboard(e) {
+    const lightbox = document.getElementById('image-lightbox');
+    if (!lightbox || lightbox.style.display === 'none') return;
+    
+    switch(e.key) {
+        case 'Escape':
+            closeLightbox();
+            break;
+        case 'ArrowLeft':
+            navigateLightbox(-1);
+            break;
+        case 'ArrowRight':
+            navigateLightbox(1);
+            break;
+    }
 }

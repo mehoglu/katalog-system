@@ -117,13 +117,15 @@ button {
 }
 
 .btn-secondary {
-    background-color: #f3f4f6;
-    color: #374151;
-    border: 1px solid #d1d5db;
+    background-color: #48bb78;
+    color: white;
+    border: 1px solid #38a169;
 }
 
 .btn-secondary:hover {
-    background-color: #e5e7eb;
+    background-color: #38a169;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
 }
 
 /* Loading */
@@ -195,7 +197,29 @@ thead th {
     white-space: nowrap;
 }
 
+/* Column Group Headers */
+thead th.col-group {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    border-right: 2px solid #c7d2fe;
+}
+
+thead th.col-group:last-of-type {
+    border-right: none;
+}
+
 /* Column Widths */
+.col-select {
+    min-width: 40px;
+    width: 40px;
+    text-align: center;
+}
+
 .col-art-nr {
     min-width: 120px;
 }
@@ -212,8 +236,16 @@ thead th {
     min-width: 180px;
 }
 
-.col-price {
-    min-width: 100px;
+.col-staffel {
+    min-width: 120px;
+}
+
+.staffel-cell {
+    font-size: 12px;
+    line-height: 1.6;
+    vertical-align: top;
+    padding: 8px !important;
+    white-space: normal;
 }
 
 .col-dim {
@@ -277,6 +309,47 @@ td.enhanced-field {
     font-style: italic;
 }
 
+/* Missing Data */
+td.missing-data {
+    background-color: #fef2f2;
+    color: #dc2626;
+    font-style: italic;
+    text-align: center;
+}
+
+td.missing-data:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1f2937;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+/* Checkbox Cell */
+td.checkbox-cell {
+    text-align: center;
+    padding: 5px !important;
+}
+
+.article-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+#select-all-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
 /* Cell States */
 td.saving {
     background-color: #fef3c7 !important;
@@ -317,6 +390,130 @@ td.save-error {
 .no-images {
     color: #9ca3af;
     font-style: italic;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.more-images {
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.more-images:hover {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+/* Image Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: #ef4444;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.lightbox-prev {
+    left: -60px;
+}
+
+.lightbox-next {
+    right: -60px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 4px;
 }
 
 /* Source Badges */
