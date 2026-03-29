@@ -7,6 +7,8 @@ No system dependencies required - Chromium is downloaded automatically.
 """
 from pathlib import Path
 import json
+import re
+import base64
 from typing import List, Optional
 from pydantic import BaseModel
 import asyncio
@@ -27,6 +29,85 @@ class PDFGenerationResult(BaseModel):
     files_generated: int
     output_path: str
     mode: str  # "individual" or "complete"
+
+
+def embed_images_as_base64(html_content: str, base_path: Path) -> str:
+    """
+    Convert all image src paths to base64 data URLs for reliable PDF generation.
+    
+    Args:
+        html_content: HTML content with image paths
+        base_path: Base directory path for resolving relative paths
+        
+    Returns:
+        HTML content with base64-encoded images
+    """
+    def replace_img_src(match):
+        img_tag = match.group(0)
+        src_match = re.search(r'src=["\']([^"\']+)["\']', img_tag)
+        
+        if not src_match:
+            return img_tag
+        
+        src_path = src_match.group(1)
+        
+        # Skip if already a data URL
+        if src_path.startswith('data:'):
+            return img_tag
+        
+        # Resolve relative path
+        if src_path.startswith('../'):
+            image_path = (base_path / src_path).resolve()
+        else:
+            image_path = Path(src_path)
+        
+        # Check if file exists
+        if not image_path.exists():
+            print(f"Warning: Image not found: {image_path}")
+            return img_tag
+        
+        # Read image and encode as base64
+        try:
+            with open(image_path, 'rb') as img_file:
+                img_data = img_file.read()
+                img_base64 = base64.b64encode(img_data).decode('utf-8')
+            
+            # Determine MIME type from extension
+            ext = image_path.suffix.lower()
+            mime_types = {
+                '.jpg': 'image/jpeg',
+                '.jpeg': 'image/jpeg',
+                '.png': 'image/png',
+                '.gif': 'image/gif',
+                '.tif': 'image/tiff',
+                '.tiff': 'image/tiff',
+                '.webp': 'image/webp'
+            }
+            mime_type = mime_types.get(ext, 'image/jpeg')
+            
+            # Replace src with base64 data URL
+            data_url = f'data:{mime_type};base64,{img_base64}'
+            new_img_tag = re.sub(
+                r'src=["\'][^"\']+["\']',
+                f'src="{data_url}"',
+                img_tag
+            )
+            
+            return new_img_tag
+            
+        except Exception as e:
+            print(f"Error encoding image {image_path}: {e}")
+            return img_tag
+    
+    # Replace all <img> tags
+    html_content = re.sub(
+        r'<img[^>]+>',
+        replace_img_src,
+        html_content,
+        flags=re.IGNORECASE
+    )
+    
+    return html_content
 
 
 async def generate_individual_pdfs(
@@ -82,24 +163,41 @@ async def generate_individual_pdfs(
         page = await browser.new_page()
         
         for html_file in product_html_files:
-            pdf_filename = html_file.stem + ".pdf"
-            pdf_file_path = pdf_output_path / pdf_filename
+            # Read HTML and fix image paths
+            with open(html_file, "r", encoding="utf-8") as f:
+                html_content = f.read()
             
-            # Navigate to HTML file and print to PDF
-            await page.goto(f"file://{html_file.absolute()}")
-            await page.pdf(
-                path=str(pdf_file_path),
-                format="A4",
-                print_background=True,
-                margin={
-                    "top": "12mm",
-                    "right": "12mm",
-                    "bottom": "12mm",
-                    "left": "12mm"
-                }
-            )
+            # Embed images as base64 for reliable PDF generation
+            html_content_fixed = embed_images_as_base64(html_content, html_file.parent)
             
-            files_generated += 1
+            # Create temporary HTML file with base64 images
+            temp_html = html_file.parent / f"_temp_{html_file.name}"
+            with open(temp_html, "w", encoding="utf-8") as f:
+                f.write(html_content_fixed)
+            
+            try:
+                pdf_filename = html_file.stem + ".pdf"
+                pdf_file_path = pdf_output_path / pdf_filename
+                
+                # Navigate to temporary HTML file
+                await page.goto(f"file://{temp_html.absolute()}")
+                await page.pdf(
+                    path=str(pdf_file_path),
+                    format="A4",
+                    print_background=True,
+                    margin={
+                        "top": "12mm",
+                        "right": "12mm",
+                        "bottom": "12mm",
+                        "left": "12mm"
+                    }
+                )
+                
+                files_generated += 1
+            finally:
+                # Clean up temporary file
+                if temp_html.exists():
+                    temp_html.unlink()
         
         await browser.close()
     
@@ -193,6 +291,9 @@ async def generate_complete_pdf(upload_id: str, upload_dir: str = "uploads") -> 
             for html_file in html_files_to_merge:
                 with open(html_file, "r", encoding="utf-8") as f:
                     content = f.read()
+                
+                # Embed images as base64 for reliable PDF generation
+                content = embed_images_as_base64(content, html_file.parent)
                     
                 # Extract body content
                 if '<body' in content and '</body>' in content:
@@ -213,8 +314,13 @@ async def generate_complete_pdf(upload_id: str, upload_dir: str = "uploads") -> 
             with open(combined_html, "w", encoding="utf-8") as f:
                 f.write('\n'.join(html_parts))
             
-            # Navigate to combined HTML and print to PDF
-            await page.goto(f"file://{combined_html.absolute()}")
+            # Navigate to combined HTML and wait for all images to load
+            await page.goto(f"file://{combined_html.absolute()}", wait_until="networkidle")
+            
+            # Wait for all images to load
+            await page.wait_for_load_state("load")
+            await page.wait_for_timeout(2000)  # Extra time for all images to render
+            
             await page.pdf(
                 path=str(complete_pdf_path),
                 format="A4",
